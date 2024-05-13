@@ -1,13 +1,6 @@
-public abstract class Harvestable extends Card {
-    private Integer weight_or_age;
-    private Integer HarvestLimit;
-    
-    abstract Product Harvest();
-
-    public boolean isReady();
-
-    public void delay();
-
-    public void instantHarvest();
-    
+public interface Harvestable extends Kelas{
+  public Kartu panenKartu();
+  public void addweight(int w);
+  public boolean isSiapPanen();
+  public int getberat();
 }

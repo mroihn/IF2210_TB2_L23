@@ -69,6 +69,12 @@ public class HelloController {
             if (pane instanceof Pane) {
                 pane.getStyleClass().add("card-style");
                 pane.setId("d"+i);
+
+                Card card = new Card();
+                card.setId("c"+i);
+                ((Pane) pane).getChildren().add(card);
+
+                System.out.println(card.getName());
                 makeDraggable(pane);
 
                 i++;
@@ -81,6 +87,7 @@ public class HelloController {
             if (pane instanceof Pane) {
                 pane.getStyleClass().add("card-style");
                 pane.setId("l"+i);
+
                 makeDraggable(pane);
 
                 //pane.setOnDragDetected();
@@ -153,6 +160,8 @@ public class HelloController {
     protected void shuffleDeck(){
 
     }
+
+
 //    protected void onHelloButtonClick() {
 //        welcomeText.setText("Welcome to JavaFX Application!");
 //    }

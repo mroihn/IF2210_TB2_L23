@@ -1,9 +1,101 @@
 .card-style {
     -fx-background-color: lightblue;
+    -fx-background-radius: 6px;
     -fx-border-color: gray;
     -fx-border-width: 1px;
     -fx-border-radius: 6px;
     -fx-padding: 10px 20px 10px 20px;
+}
+
+.bear-style{
+    -fx-background-image: url(./Hewan/bear.png);
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.chicken-style{
+    -fx-background-image: url(./Hewan/chicken.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+}
+
+.cow-style{
+    -fx-background-image: url(./Hewan/cow.png);
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.hiu-darat-style{
+    -fx-background-image: url(./Hewan/hiu_darat.png);
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.horse-style{
+    -fx-background-image: url(./Hewan/horse.png);
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.sheep-style{
+    -fx-background-image: url(./Hewan/sheep.png);
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.accelerate-style{
+    -fx-background-image: url(./Item/Accelerate.png);
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.bear_trap-style{
+    -fx-background-image: url(./Item/bear_trap.png);
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.delay-style{
+    -fx-background-image: url(./Item/Delay.png);
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.destroy-style{
+    -fx-background-image: url(./Item/Destroy.png);
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.instant_harvest-style{
+    -fx-background-image: url(./Item/Instant_Harvest.png);
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.protect-style{
+    -fx-background-image: url(./Item/Protect.png);
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.corn-style{
+    -fx-background-image: url(./Item/bear_trap.png);
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
 }
 
 .button-style {
@@ -17,6 +109,7 @@
 
 .button-highlight-style {
     -fx-background-color: lightcyan;
+    -fx-background-radius: 3px;
     -fx-border-color: gray;
     -fx-border-width: 2px;
     -fx-border-radius: 3px;
@@ -26,6 +119,7 @@
 
 .button-click-highlight-style {
     -fx-background-color: cyan;
+    -fx-background-radius: 3px;
     -fx-border-color: gray;
     -fx-border-width: 2px;
     -fx-border-radius: 3px;
@@ -34,7 +128,8 @@
 }
 
 .container-style {
-    -fx-background-color: #B9B9B9;
+    /*-fx-background-color: #B9B9B9;*/
+    -fx-background-radius: 2px;
     -fx-border-radius: 2px;
 }
 

@@ -1,5 +1,5 @@
 .card-style {
-    -fx-background-color: lightblue;
+    -fx-background-color: rgba(255,255,179,0.65);
     -fx-background-radius: 6px;
     -fx-border-color: gray;
     -fx-border-width: 1px;
@@ -146,3 +146,6 @@
     -fx-font-family: "JetBrains Mono";
 }
 
+.encompassing-style{
+    -fx-background-image: url('./backgroundField1.png');
+}

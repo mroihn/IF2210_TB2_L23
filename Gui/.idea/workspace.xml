@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d91d162f-74cf-4864-ae76-10a03ae7e10c" name="Changes" comment="" />
+    <list default="true" id="d91d162f-74cf-4864-ae76-10a03ae7e10c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/Daging Beruang.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/Daging_Beruang.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/Daging Domba.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/Daging_Domba.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/Daging Kuda.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/Daging_Kuda.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Tanaman/corn seeds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Tanaman/corn_seeds.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Tanaman/pumpkin seeds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Tanaman/pumpkin_seeds.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Tanaman/strawberry seeds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Tanaman/strawberry_seeds.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Card.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,10 +30,13 @@
       </list>
     </option>
   </component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -43,9 +59,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "git-widget-placeholder": "GUI",
     "go.import.settings.migrated": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/maula/OneDrive/Documents/ITB/S4/PBO/tesguistandalone",
+    "last_opened_file_path": "C:/Users/maula/AppData/Local/SceneBuilder/SceneBuilder.exe",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -94,6 +111,7 @@
       <workItem from="1716228876822" duration="29000" />
       <workItem from="1716253672080" duration="12840000" />
       <workItem from="1716275932192" duration="3334000" />
+      <workItem from="1716295096816" duration="1903000" />
     </task>
     <servers />
   </component>

@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lamongan234.gui.HelloController">
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lamongan234.gui.HelloController">
    <children>
       <GridPane fx:id="ladangA" hgap="10.0" layoutX="100.0" layoutY="120.0" vgap="8.0">
         <columnConstraints>
@@ -28,25 +28,25 @@
         </rowConstraints>
          <children>
             <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cow-style" />
-            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" styleClass="horse-style"/>
-            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" styleClass="hiu-darat-style"/>
-            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" styleClass="chicken-style"/>
-            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" styleClass="ladang"/>
-            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" styleClass="ladang"/>
-            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" styleClass="ladang"/>
-            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" styleClass="ladang"/>
-            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1" styleClass="ladang"/>
-            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1" styleClass="ladang"/>
-            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2" styleClass="ladang"/>
-            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" styleClass="ladang"/>
-            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" styleClass="ladang"/>
-            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2" styleClass="ladang"/>
-            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="2" styleClass="ladang"/>
-            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3" styleClass="ladang"/>
-            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" styleClass="ladang"/>
-            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3" styleClass="ladang"/>
-            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3" styleClass="ladang"/>
-            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="3" styleClass="ladang"/>
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="horse-style" GridPane.columnIndex="1" />
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="hiu-darat-style" GridPane.columnIndex="2" />
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="chicken-style" GridPane.columnIndex="3" />
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="ladang" GridPane.columnIndex="4" />
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="ladang" GridPane.rowIndex="1" />
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="ladang" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="ladang" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="ladang" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="ladang" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="ladang" GridPane.rowIndex="2" />
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="ladang" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="ladang" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="ladang" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="ladang" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="ladang" GridPane.rowIndex="3" />
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="ladang" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="ladang" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="ladang" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="ladang" GridPane.columnIndex="4" GridPane.rowIndex="3" />
          </children>
       </GridPane>
       <VBox fx:id="buttonContainer" layoutX="640.0" layoutY="120.0" prefHeight="424.0" prefWidth="200.0">

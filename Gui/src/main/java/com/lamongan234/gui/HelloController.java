@@ -7,11 +7,15 @@ import javafx.scene.control.Label;
 import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.Dragboard;
 import javafx.scene.input.TransferMode;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 
 public class HelloController {
+    @FXML
+    private AnchorPane anchor;
+
     @FXML
     private VBox buttonContainer;
 
@@ -62,6 +66,8 @@ public class HelloController {
 
     @FXML
     public void initialize() {
+        anchor.getStyleClass().add("encompassing-style");
+
         // deck
         int i;
         i=0;

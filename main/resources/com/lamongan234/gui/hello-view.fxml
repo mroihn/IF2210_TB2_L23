@@ -99,12 +99,16 @@
          </children>
       </GridPane>
       <Button fx:id="b0Next" layoutX="665.0" layoutY="41.0" minHeight="40.0" minWidth="150.0" mnemonicParsing="false" text="Next" />
-      <Label fx:id="player1Gold" layoutX="76.0" layoutY="41.0" text="Player 1: " />
-      <Label fx:id="player2Gold" layoutX="76.0" layoutY="61.0" text="Player 2: " />
-      <Pane fx:id="turnClock" layoutX="548.0" layoutY="18.0" prefHeight="86.0" prefWidth="86.0">
+      <Pane fx:id="turnClock" layoutX="540.0" layoutY="11.0" prefHeight="100.0" prefWidth="97.0">
          <children>
-            <Label layoutX="30.0" layoutY="26.0" text="Turn:" />
-            <Label fx:id="clockCounter" layoutX="31.0" layoutY="43.0" text="0/20" />
+            <Label fx:id="clockLabel" layoutX="35.0" layoutY="33.0" text="Turn:" />
+            <Label fx:id="clockCounter" layoutX="36.0" layoutY="50.0" text="0/20" />
+         </children>
+      </Pane>
+      <Pane fx:id="playerGoldContainer" layoutX="47.0" layoutY="28.0" prefHeight="66.0" prefWidth="194.0">
+         <children>
+            <Label fx:id="player1Gold" layoutX="14.0" layoutY="15.0" text="Player 1: " />
+            <Label fx:id="player2Gold" layoutX="14.0" layoutY="35.0" text="Player 2: " />
          </children>
       </Pane>
    </children>

@@ -27,10 +27,10 @@
           <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cow-style" />
-            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="horse-style" GridPane.columnIndex="1" />
-            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="hiu-darat-style" GridPane.columnIndex="2" />
-            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="chicken-style" GridPane.columnIndex="3" />
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="ladang" />
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="ladang" GridPane.columnIndex="1" />
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="ladang" GridPane.columnIndex="2" />
+            <Pane prefHeight="200.0" prefWidth="200.0" styleClass="ladang" GridPane.columnIndex="3" />
             <Pane prefHeight="200.0" prefWidth="200.0" styleClass="ladang" GridPane.columnIndex="4" />
             <Pane prefHeight="200.0" prefWidth="200.0" styleClass="ladang" GridPane.rowIndex="1" />
             <Pane prefHeight="200.0" prefWidth="200.0" styleClass="ladang" GridPane.columnIndex="1" GridPane.rowIndex="1" />

@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.input.ClipboardContent;
 import javafx.scene.input.Dragboard;
 import javafx.scene.input.TransferMode;
@@ -81,7 +82,7 @@ public class HelloController {
                 ((Pane) pane).getChildren().add(card);
 
                 System.out.println(card.getName());
-                makeDraggable(pane);
+                makeDraggable((Pane) pane);
 
                 i++;
             }
@@ -94,7 +95,7 @@ public class HelloController {
                 pane.getStyleClass().add("card-style");
                 pane.setId("l"+i);
 
-                makeDraggable(pane);
+                makeDraggable((Pane) pane);
 
                 //pane.setOnDragDetected();
                 i++;
@@ -124,21 +125,28 @@ public class HelloController {
 
     }
 
-    protected void makeDraggable(Node node) {
-        node.setOnDragDetected(
+    protected void makeDraggable(Pane pane) {
+        pane.setOnDragDetected(
                 event -> {
-                    System.out.println("Start Drag: " + node.getId());
-                    Dragboard db = node.startDragAndDrop(TransferMode.MOVE);
-                    ClipboardContent content = new ClipboardContent();
-                    content.putString("pane");
-                    db.setContent(content);
+                    if (!pane.getChildren().isEmpty()) {
+                        System.out.println("Start Drag: " + pane.getId());
+
+                        Dragboard db = pane.startDragAndDrop(TransferMode.MOVE);
+                        ClipboardContent content = new ClipboardContent();
+
+                        content.putString(pane.getId());
+                        db.setContent(content);
+
+                        Image snapshot = pane.getChildren().get(0).snapshot(null,null);
+                        db.setDragView(snapshot);
+                    }
                     event.consume();
                 }
         );
-        node.setOnDragOver(
+        pane.setOnDragOver(
                 event -> {
-                    System.out.println("Hovering Over: " + node.getId());
-                    if (event.getGestureSource() != node && event.getDragboard().hasString()) {
+                    //System.out.println("Hovering Over: " + node.getId());
+                    if (event.getGestureSource() != pane && event.getDragboard().hasString()) {
                         event.acceptTransferModes(TransferMode.MOVE);
                     }
                     event.consume();
@@ -150,16 +158,40 @@ public class HelloController {
 //                    event.consume();
 //                }
 //        );
-        node.setOnDragDropped(event -> {
-//            Dragboard db = event.getDragboard();
-//            boolean success = false;
-//            if (db.hasString() && "circle".equals(db.getString())) {
-//                sourcePane.getChildren().remove(draggableCircle);
-//                targetPane.getChildren().add(draggableCircle);
-//                success = true;
-//            }
-//            event.setDropCompleted(success);
-            System.out.println("Drag Dropped: " + node.getId());
+        pane.setOnDragDropped(event -> {
+            Dragboard db = event.getDragboard();
+            if (db.hasString()) {
+                String id = db.getString();
+                Pane sourcePane = new Pane();
+                Pane card = new Pane();
+
+                if (id.charAt(0) == 'l'){
+                    int idx = Integer.parseInt(id.substring(1));
+                    Node outerNode = ladangA.getChildren().get(idx);
+                    if (outerNode instanceof Pane) {
+                        sourcePane = (Pane) outerNode;
+                        Node innerNode = sourcePane.getChildren().get(0);
+                        if (innerNode instanceof Pane) {
+                            card = (Pane) innerNode;
+                        }
+                    }
+                }
+                else{
+                    int idx = Integer.parseInt(id.substring(1));
+                    Node outerNode = deck.getChildren().get(idx);
+                    if (outerNode instanceof Pane) {
+                        sourcePane = (Pane) outerNode;
+                        Node innerNode = sourcePane.getChildren().get(0);
+                        if (innerNode instanceof Pane) {
+                            card = (Pane) innerNode;
+                        }
+                    }
+                }
+                sourcePane.getChildren().clear();
+                pane.getChildren().add(card);
+            }
+            //event.setDropCompleted(success);
+            System.out.println("Drag Dropped: " + pane.getId());
             event.consume();
         });
     }
@@ -167,7 +199,9 @@ public class HelloController {
 
     }
 
-
+    protected boolean isValid(){
+        return true;
+    }
 //    protected void onHelloButtonClick() {
 //        welcomeText.setText("Welcome to JavaFX Application!");
 //    }

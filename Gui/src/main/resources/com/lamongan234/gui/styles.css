@@ -207,7 +207,7 @@
 }
 
 .container-style {
-    /*-fx-background-color: #B9B9B9;*/
+    -fx-background-color: #B9B9B9;
     -fx-background-radius: 2px;
     -fx-border-radius: 2px;
 }

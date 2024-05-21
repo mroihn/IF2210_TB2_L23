@@ -22,12 +22,12 @@ public class Card extends Pane {
         this.getStyleClass().add("hiu-darat-style");
     }
 
-    public Card(String name){
+    public Card(String name,String type){
         Name = name;
-        Type = "temp";
+        Type = type;
         this.getStyleClass().add("card-style");
         this.setPrefSize(80,100);
-        this.getStyleClass().add("hiu-darat-style");
+        this.getStyleClass().add(name + "-style");
     }
 
     public String getName() {
@@ -36,5 +36,14 @@ public class Card extends Pane {
 
     public String getType(){
         return Type;
+    }
+
+    public void setName(String name){
+        Name = name;
+        this.getStyleClass().add(name + "-style");
+    }
+
+    public void setType(String type){
+        Type = type;
     }
 }

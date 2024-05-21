@@ -9,9 +9,9 @@
 
 .bear-style{
     -fx-background-image: url(./Hewan/bear.png);
-    -fx-background-size: contain;
+    -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
-    -fx-background-position: center;
+    -fx-background-position: center top;
 }
 
 .chicken-style{
@@ -23,79 +23,158 @@
 
 .cow-style{
     -fx-background-image: url(./Hewan/cow.png);
-    -fx-background-size: contain;
+    -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
-    -fx-background-position: center;
+    -fx-background-position: center top;
 }
 
 .hiu-darat-style{
     -fx-background-image: url(./Hewan/hiu_darat.png);
-    -fx-background-size: contain;
+    -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
-    -fx-background-position: center;
+    -fx-background-position: center top;
 }
 
 .horse-style{
     -fx-background-image: url(./Hewan/horse.png);
-    -fx-background-size: contain;
+    -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
-    -fx-background-position: center;
+    -fx-background-position: center top;
 }
 
 .sheep-style{
     -fx-background-image: url(./Hewan/sheep.png);
-    -fx-background-size: contain;
+    -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
-    -fx-background-position: center;
+    -fx-background-position: center top;
 }
 
 .accelerate-style{
     -fx-background-image: url(./Item/Accelerate.png);
-    -fx-background-size: contain;
+    -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
-    -fx-background-position: center;
+    -fx-background-position: center top;
 }
 
-.bear_trap-style{
+.bear-trap-style{
     -fx-background-image: url(./Item/bear_trap.png);
-    -fx-background-size: contain;
+    -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
-    -fx-background-position: center;
+    -fx-background-position: center top;
 }
 
 .delay-style{
     -fx-background-image: url(./Item/Delay.png);
-    -fx-background-size: contain;
+    -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
-    -fx-background-position: center;
+    -fx-background-position: center top;
 }
 
 .destroy-style{
     -fx-background-image: url(./Item/Destroy.png);
-    -fx-background-size: contain;
+    -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
-    -fx-background-position: center;
+    -fx-background-position: center top;
 }
 
-.instant_harvest-style{
+.instant-harvest-style{
     -fx-background-image: url(./Item/Instant_Harvest.png);
-    -fx-background-size: contain;
+    -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
-    -fx-background-position: center;
+    -fx-background-position: center top;
 }
 
 .protect-style{
     -fx-background-image: url(./Item/Protect.png);
-    -fx-background-size: contain;
+    -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
-    -fx-background-position: center;
+    -fx-background-position: center top;
 }
 
 .corn-style{
-    -fx-background-image: url(./Item/bear_trap.png);
-    -fx-background-size: contain;
+    -fx-background-image: url(./Produk/corn.png);
+    -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
-    -fx-background-position: center;
+    -fx-background-position: center top;
+}
+
+.daging-beruang-style{
+    -fx-background-image: url(./Produk/Daging_Beruang.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+}
+
+
+.daging-domba-style{
+    -fx-background-image: url(./Produk/Daging_Domba.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+}
+
+
+.Daging_Kuda-style{
+    -fx-background-image: url(./Produk/Daging_Kuda.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+}
+
+.pumpkin-style{
+    -fx-background-image: url(./Produk/pumpkin.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+}
+
+.shark-fin-style{
+    -fx-background-image: url(./Produk/shark-fin.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+}
+
+.strawberry-style{
+    -fx-background-image: url(./Produk/strawberry.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+}
+
+.susu-style{
+    -fx-background-image: url(./Produk/susu.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+}
+
+.telur-style{
+    -fx-background-image: url(./Produk/telur.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+}
+
+.corn-seeds-style{
+    -fx-background-image: url(./Tanaman/corn_seeds.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+}
+
+.pumpkin-seeds-style{
+    -fx-background-image: url(./Tanaman/pumpkin_seeds.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+}
+
+.strawberry-seeds-style{
+    -fx-background-image: url(./Tanaman/strawberry_seeds.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
 }
 
 .button-style {
@@ -128,7 +207,7 @@
 }
 
 .container-style {
-    /*-fx-background-color: #B9B9B9;*/
+    -fx-background-color: #B9B9B9;
     -fx-background-radius: 2px;
     -fx-border-radius: 2px;
 }

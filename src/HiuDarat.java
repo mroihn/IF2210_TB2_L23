@@ -1,11 +1,11 @@
 public class HiuDarat extends Karnivora {
   public HiuDarat(){
-    super(0, 20);
+    super("Hiu Darat", 0, 20);
   }
-  public Kartu panenKartu(){
+  public Product panenKartu(){
     if(isSiapPanen()){
       System.out.println("Hiu darat dipanen!");
-      return new Kartu("sirip hiu", new HiuDarat());
+      return new DagingDomba();
     }else{
       System.out.println("Hiu darat belum bisa dipanen!");
     }

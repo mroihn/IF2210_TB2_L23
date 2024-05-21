@@ -1,11 +1,11 @@
 public class BijiLabu extends Tanaman{
   public BijiLabu(){
-    super(0, 5);
+    super("Biji Labu", 0, 5);
   }
-  public Kartu panenKartu(){
+  public Product panenKartu(){
     if(isSiapPanen()){
       System.out.println("Biji Labu berhasil dipanen");
-      return new Kartu("Labu", new Nabati(30, 10));
+      return new DagingDomba();
     }else{
       System.out.println("Umur belum cukup");
       return null;

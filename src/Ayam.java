@@ -1,11 +1,11 @@
 public class Ayam extends Omnivora {
   public Ayam(){
-    super(0, 5);
+    super("Ayam", 0, 5);
   }
-  public Kartu panenKartu(){
+  public Product panenKartu(){
     if(isSiapPanen()){
       System.out.println("Ayam dipanen!");
-      return new Kartu("daging Ayam", new Ayam());
+      return new DagingDomba();
     }else{
       System.out.println("Ayam belum bisa dipanen!");
     }

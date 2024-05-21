@@ -1,11 +1,11 @@
 public class Beruang extends Omnivora {
   public Beruang(){
-    super(0, 25);
+    super("Beruang", 0, 25);
   }
-  public Kartu panenKartu(){
+  public Product panenKartu(){
     if(isSiapPanen()){
       System.out.println("Beruang dipanen!");
-      return new Kartu("daging Beruang", new Beruang());
+      return new DagingDomba();
     }else{
       System.out.println("Beruang belum bisa dipanen!");
     }

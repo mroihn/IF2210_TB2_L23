@@ -1,11 +1,11 @@
 public class Domba extends Herbivora {
   public Domba(){
-    super(0, 12);
+    super("Domba", 0, 12);
   }
-  public Kartu panenKartu(){
+  public Product panenKartu(){
     if(isSiapPanen()){
       System.out.println("Domba dipanen!");
-      return new Kartu("daging Domba", new Domba());
+      return new DagingDomba();
     }else{
       System.out.println("Domba belum bisa dipanen!");
     }

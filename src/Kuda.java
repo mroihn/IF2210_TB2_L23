@@ -1,11 +1,11 @@
 public class Kuda extends Herbivora {
   public Kuda(){
-    super(0, 14);
+    super("Kuda", 0, 14);
   }
-  public Kartu panenKartu(){
+  public Product panenKartu(){
     if(isSiapPanen()){
       System.out.println("Kuda dipanen!");
-      return new Kartu("daging Kuda", new Kuda());
+      return new DagingDomba();
     }else{
       System.out.println("Kuda belum bisa dipanen!");
     }

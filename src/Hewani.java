@@ -1,5 +1,5 @@
 public class Hewani extends Product{
-  public Hewani(int added_weight, int price){
-    super(added_weight, price);
+  public Hewani(String nama, int added_weight, int price){
+    super(nama, added_weight, price);
   }
 }

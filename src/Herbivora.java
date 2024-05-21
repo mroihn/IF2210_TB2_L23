@@ -1,11 +1,12 @@
 public abstract class Herbivora extends Hewan {
-  public Herbivora(int berat, int weight_to_harvest){
-    super(berat,weight_to_harvest);
+  public Herbivora(String nama, int berat, int weight_to_harvest){
+    super(nama, berat,weight_to_harvest);
   }
-  public void makan(Kartu makanan){
-    if(makanan.isEatable() && makanan.getEatable() instanceof Nabati){
+  public void makan(Product makanan){
+    if(makanan instanceof Nabati){
       System.out.println("Herbivora makan " + makanan.getName());
-      berat += makanan.getEatable().getaddedweight();
+      Nabati vegan = (Nabati) makanan;
+      berat += vegan.getaddedweight();
     }else{
       System.out.println("Makanan tidak cocok");
     }

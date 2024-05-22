@@ -42,7 +42,7 @@ public class HelloController {
     private GridPane ladangA;
 
     @FXML
-    private GridPane deck;
+    private GridPane hand;
 
     @FXML
     private Button b0Next;
@@ -69,19 +69,15 @@ public class HelloController {
     public void initialize() {
         anchor.getStyleClass().add("encompassing-style");
 
-        // deck
+        // hand
         int i;
         i=0;
-        for (Node pane : deck.getChildren()) {
+        for (Node pane : hand.getChildren()) {
             if (pane instanceof Pane) {
                 pane.getStyleClass().add("card-style");
                 pane.setId("d"+i);
 
-                Card card = new Card();
-                card.setId("c"+i);
-                ((Pane) pane).getChildren().add(card);
-
-                System.out.println(card.getName());
+                fillDeckRandom();
                 makeDraggable((Pane) pane);
 
                 i++;
@@ -169,7 +165,7 @@ public class HelloController {
                 if (id.charAt(0) == 'l'){
                     outerNode = ladangA.getChildren().get(idx);}
                 else{
-                    outerNode = deck.getChildren().get(idx);}
+                    outerNode = hand.getChildren().get(idx);}
 
                 if (outerNode instanceof Pane) {
                     sourcePane = (Pane) outerNode;
@@ -186,8 +182,15 @@ public class HelloController {
             event.consume();
         });
     }
-    protected void shuffleDeck(){
-
+    protected void fillDeckRandom(){
+        for(int i = 0; i<6; i++){
+            Pane pane = (Pane) hand.getChildren().get(i);
+            if (hand.getChildren().isEmpty()) {
+                Card card = new Card();
+                card.setId("cd"+i);
+                pane.getChildren().add(card);
+            }
+        }
     }
 
     protected boolean isValid(){

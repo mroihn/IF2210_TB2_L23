@@ -164,27 +164,18 @@ public class HelloController {
                 String id = db.getString();
                 Pane sourcePane = new Pane();
                 Pane card = new Pane();
-
+                int idx = Integer.parseInt(id.substring(1));
+                Node outerNode;
                 if (id.charAt(0) == 'l'){
-                    int idx = Integer.parseInt(id.substring(1));
-                    Node outerNode = ladangA.getChildren().get(idx);
-                    if (outerNode instanceof Pane) {
-                        sourcePane = (Pane) outerNode;
-                        Node innerNode = sourcePane.getChildren().get(0);
-                        if (innerNode instanceof Pane) {
-                            card = (Pane) innerNode;
-                        }
-                    }
-                }
+                    outerNode = ladangA.getChildren().get(idx);}
                 else{
-                    int idx = Integer.parseInt(id.substring(1));
-                    Node outerNode = deck.getChildren().get(idx);
-                    if (outerNode instanceof Pane) {
-                        sourcePane = (Pane) outerNode;
-                        Node innerNode = sourcePane.getChildren().get(0);
-                        if (innerNode instanceof Pane) {
-                            card = (Pane) innerNode;
-                        }
+                    outerNode = deck.getChildren().get(idx);}
+
+                if (outerNode instanceof Pane) {
+                    sourcePane = (Pane) outerNode;
+                    Node innerNode = sourcePane.getChildren().get(0);
+                    if (innerNode instanceof Pane) {
+                        card = (Pane) innerNode;
                     }
                 }
                 sourcePane.getChildren().clear();

@@ -6,29 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d91d162f-74cf-4864-ae76-10a03ae7e10c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/Card.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Card.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/HelloController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Hewan/bear.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Hewan/chicken.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Hewan/cow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Hewan/hiu_darat.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Hewan/horse.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Hewan/sheep.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Item/Instant_Harvest.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Item/bear_trap.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Produk/Daging_Beruang.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Produk/Daging_Domba.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Produk/Daging_Kuda.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Produk/corn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Produk/pumpkin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Produk/shark-fin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Produk/strawberry.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Tanaman/corn_seeds.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Tanaman/pumpkin_seeds.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Tanaman/strawberry_seeds.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/hello-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -136,6 +115,16 @@
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

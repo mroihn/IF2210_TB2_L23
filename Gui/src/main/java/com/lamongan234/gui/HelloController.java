@@ -13,7 +13,19 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class HelloController {
+    private static int currTurn = 0;
+    private static boolean currPlayer1 = false;
+
+    private Card[] handPlayer1 = new Card[6];
+    private Card[] handPlayer2 = new Card[6];
+
+    private Card[] ladangPlayer1 = new Card[20];
+    private Card[] ladangPlayer2 = new Card[20];
+
     @FXML
     private AnchorPane anchor;
 
@@ -112,6 +124,7 @@ public class HelloController {
 
         //button style
         b0Next.getStyleClass().add("button-style");
+        nextButtonFunc(b0Next);
 
         b1Ladangku.getStyleClass().add("button-style");
         b2LadangLawan.getStyleClass().add("button-style");
@@ -195,9 +208,63 @@ public class HelloController {
             }
         }
     }
+    protected void nextButtonFunc(Button button){
+        button.setOnAction(event -> {
+            nextTurn();
+        });
+    }
+    protected void nextTurn(){
+        if (currTurn <= 20){
+            clockCounter.setText(currTurn+"/"+"20");
+            if (currPlayer1){
+                saveAll(handPlayer1,hand);
+                saveAll(ladangPlayer1,ladangA);
+                clearAll(hand);
+                clearAll(ladangA);
+               loadAll(handPlayer2,hand);
+                loadAll(ladangPlayer2,ladangA);
+            }
+            else{
+                saveAll(handPlayer2,hand);
+                saveAll(ladangPlayer2,ladangA);
+                clearAll(hand);
+                clearAll(ladangA);
+                loadAll(handPlayer1,hand);
+                loadAll(ladangPlayer1,ladangA);
+            }
+            currPlayer1 = !currPlayer1;
+            currTurn++;
+        }
+    }
 
     protected boolean isValid(){
         return true;
+    }
+
+    protected void clearAll(GridPane Container){
+        for (int i = 0; i < Container.getChildren().size(); i++) {
+            ((Pane) Container.getChildren().get(i)).getChildren().clear();
+        }
+    }
+
+    protected void saveAll(Card[] list, GridPane Container){
+        for (int i = 0; i < Container.getChildren().size(); i++) {
+            //System.out.println(Container.getChildren());
+
+            if (!((Pane) Container.getChildren().get(i)).getChildren().isEmpty()) {
+                Card card = (Card) ((Pane) Container.getChildren().get(i)).getChildren().get(0);
+                list[i] = card;
+            }
+            System.out.println(list[i]);
+        }
+    }
+
+    protected void loadAll(Card[] list, GridPane Container){
+        for (int i = 0; i < Container.getChildren().size(); i++) {
+            if (list[i]!=null) {
+                ((Pane) Container.getChildren().get(i)).getChildren().add(list[i]);
+            }
+        }
     }
 //    protected void onHelloButtonClick() {
 //        welcomeText.setText("Welcome to JavaFX Application!");

@@ -11,6 +11,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/HelloController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +110,7 @@
       <workItem from="1716306725906" duration="126000" />
       <workItem from="1716306863279" duration="536000" />
       <workItem from="1716307424063" duration="7146000" />
-      <workItem from="1716373006717" duration="7884000" />
+      <workItem from="1716373006717" duration="8192000" />
     </task>
     <servers />
   </component>

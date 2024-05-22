@@ -6,7 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="d91d162f-74cf-4864-ae76-10a03ae7e10c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Hewan/bear.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Hewan/Beruang.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Hewan/chicken.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Hewan/Ayam.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Hewan/cow.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Hewan/Sapi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Hewan/hiu_darat.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Hewan/Hiu_Darat.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Hewan/horse.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Hewan/Kuda.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Hewan/sheep.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Hewan/Domba.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Item/bear_trap.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Item/Trap.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/corn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/Jagung.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/pumpkin.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/Labu.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/shark-fin.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/Sirip_Hiu.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/strawberry.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/Stroberi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/susu.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/Susu.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/telur.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/Telur.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Tanaman/corn_seeds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Tanaman/Biji_Jagung.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

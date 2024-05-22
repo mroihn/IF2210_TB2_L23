@@ -7,7 +7,27 @@
     <list default="true" id="d91d162f-74cf-4864-ae76-10a03ae7e10c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Hewan/bear.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Hewan/Beruang.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Hewan/chicken.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Hewan/Ayam.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Hewan/cow.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Hewan/Sapi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Hewan/hiu_darat.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Hewan/Hiu-Darat.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Hewan/horse.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Hewan/Kuda.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Hewan/sheep.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Hewan/Domba.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Item/Instant_Harvest.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Item/Instant-Harvest.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Item/bear_trap.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Item/Trap.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/Daging_Beruang.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/Daging-Beruang.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/Daging_Domba.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/Daging-Domba.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/Daging_Kuda.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/Daging-Kuda.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/corn.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/Jagung.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/pumpkin.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/Labu.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/shark-fin.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/Sirip-Hiu.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/strawberry.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/Stroberi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/susu.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/Susu.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/telur.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Produk/Telur.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Tanaman/corn_seeds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Tanaman/Biji-Jagung.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Tanaman/pumpkin_seeds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Tanaman/Biji-Labu.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Tanaman/strawberry_seeds.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/Tanaman/Biji-Stroberi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,29 +63,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ControllerApp.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;GUI&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/maula/OneDrive/Documents/ITB/S4/PBO/IF2210_TB2_L23/Gui&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ControllerApp.executor": "Run",
+    "Application.HelloApplication.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "git-widget-placeholder": "Merging GUI",
+    "go.import.settings.migrated": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/maula/OneDrive/Documents/ITB/S4/PBO/IF2210_TB2_L23/Gui",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "Errors",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\maula\OneDrive\Documents\ITB\S4\PBO\Gui\src\main\resources\com\lamongan234\gui" />
@@ -105,8 +125,7 @@
       <workItem from="1716295096816" duration="6202000" />
       <workItem from="1716306725906" duration="126000" />
       <workItem from="1716306863279" duration="536000" />
-      <workItem from="1716307424063" duration="11378000" />
-      <workItem from="1716360637076" duration="846000" />
+      <workItem from="1716307424063" duration="7146000" />
     </task>
     <servers />
   </component>

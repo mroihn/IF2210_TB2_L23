@@ -10,15 +10,19 @@ import java.util.Random;
 
 public class Card extends Pane {
     private final List<String> cardNames = new ArrayList<>(
-            Arrays.asList("hiu-darat","cow","sheep","horse","chicken","bear","Labu","Jagung","Stroberi","Susu","Telur","Sirip_Hiu","Daging_Kuda","Daging_Domba","Daging_Beruang","Biji_Labu","Biji_Jagung","Biji_Stroberi","Accelerate","Delay","Instant_Harvest","Destroy","Protect","Trap"));
+            Arrays.asList("Hiu Darat","Sapi","Domba","Kuda","Ayam","Beruang","Labu","Jagung","Stroberi","Susu","Telur","Sirip Hiu","Daging Kuda","Daging Domba","Daging Beruang","Biji Labu","Biji Jagung","Biji Stroberi","Accelerate","Delay","Instant Harvest","Destroy","Protect","Trap"));
     private String Name;
     private ImageView imageCard;
 
     public Card(){
-        Name = "hiu-darat";
+        Random rand = new Random();
+        int idx = rand.nextInt(cardNames.size());
+        String temp = cardNames.get(idx);
+        Name = temp;
+        temp = temp.replaceAll(" \\s+","-");
         this.getStyleClass().add("card-style");
         this.setPrefSize(80,100);
-        this.getStyleClass().add("hiu-darat-style");
+        this.getStyleClass().add(temp+"-style");
     }
 
     public Card(String name){

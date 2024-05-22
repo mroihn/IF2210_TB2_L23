@@ -7,107 +7,107 @@
     -fx-padding: 10px 20px 10px 20px;
 }
 
-.bear-style{
-    -fx-background-image: url(./Hewan/bear.png);
+.Beruang-style{
+    -fx-background-image: url(Hewan/Beruang.png);
     -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center top;
 }
 
-.chicken-style{
-    -fx-background-image: url(./Hewan/chicken.png);
+.Ayam-style{
+    -fx-background-image: url(Hewan/Ayam.png);
     -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center top;
 }
 
-.cow-style{
-    -fx-background-image: url(./Hewan/cow.png);
+.Sapi-style{
+    -fx-background-image: url(Hewan/Sapi.png);
     -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center top;
 }
 
-.hiu-darat-style{
-    -fx-background-image: url(./Hewan/hiu_darat.png);
+.Hiu-Darat-style{
+    -fx-background-image: url(Hewan/Hiu-Darat.png);
     -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center top;
 }
 
-.horse-style{
-    -fx-background-image: url(./Hewan/horse.png);
+.Kuda-style{
+    -fx-background-image: url(Hewan/Kuda.png);
     -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center top;
 }
 
-.sheep-style{
-    -fx-background-image: url(./Hewan/sheep.png);
+.Domba-style{
+    -fx-background-image: url(Hewan/Domba.png);
     -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center top;
 }
 
-.accelerate-style{
+.Accelerate-style{
     -fx-background-image: url(./Item/Accelerate.png);
     -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center top;
 }
 
-.bear-trap-style{
-    -fx-background-image: url(./Item/bear_trap.png);
+.Trap-style{
+    -fx-background-image: url(Item/Trap.png);
     -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center top;
 }
 
-.delay-style{
+.Delay-style{
     -fx-background-image: url(./Item/Delay.png);
     -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center top;
 }
 
-.destroy-style{
+.Destroy-style{
     -fx-background-image: url(./Item/Destroy.png);
     -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center top;
 }
 
-.instant-harvest-style{
-    -fx-background-image: url(./Item/Instant_Harvest.png);
+.Instant-Harvest-style{
+    -fx-background-image: url(Item/Instant-Harvest.png);
     -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center top;
 }
 
-.protect-style{
+.Protect-style{
     -fx-background-image: url(./Item/Protect.png);
     -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center top;
 }
 
-.corn-style{
-    -fx-background-image: url(./Produk/corn.png);
+.Jagung-style{
+    -fx-background-image: url(Produk/Jagung.png);
     -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center top;
 }
 
-.daging-beruang-style{
-    -fx-background-image: url(./Produk/Daging_Beruang.png);
+.Daging-Beruang-style{
+    -fx-background-image: url(Produk/Daging-Beruang.png);
     -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center top;
 }
 
 
-.daging-domba-style{
-    -fx-background-image: url(./Produk/Daging_Domba.png);
+.Daging-Domba-style{
+    -fx-background-image: url(Produk/Daging-Domba.png);
     -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center top;
@@ -115,63 +115,63 @@
 
 
 .Daging_Kuda-style{
-    -fx-background-image: url(./Produk/Daging_Kuda.png);
+    -fx-background-image: url(Produk/Daging-Kuda.png);
     -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center top;
 }
 
-.pumpkin-style{
-    -fx-background-image: url(./Produk/pumpkin.png);
+.Labu-style{
+    -fx-background-image: url(Produk/Labu.png);
     -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center top;
 }
 
-.shark-fin-style{
-    -fx-background-image: url(./Produk/shark-fin.png);
+.Sirip-Hiu-style{
+    -fx-background-image: url(Produk/Sirip-Hiu.png);
     -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center top;
 }
 
-.strawberry-style{
-    -fx-background-image: url(./Produk/strawberry.png);
+.Stroberi-style{
+    -fx-background-image: url(Produk/Stroberi.png);
     -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center top;
 }
 
-.susu-style{
-    -fx-background-image: url(./Produk/susu.png);
+.Susu-style{
+    -fx-background-image: url(Produk/Susu.png);
     -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center top;
 }
 
-.telur-style{
-    -fx-background-image: url(./Produk/telur.png);
+.Telur-style{
+    -fx-background-image: url(Produk/Telur.png);
     -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center top;
 }
 
-.corn-seeds-style{
-    -fx-background-image: url(./Tanaman/corn_seeds.png);
+.Biji-Jagung-style{
+    -fx-background-image: url(Tanaman/Biji-Jagung.png);
     -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center top;
 }
 
-.pumpkin-seeds-style{
-    -fx-background-image: url(./Tanaman/pumpkin_seeds.png);
+.Biji-Labu-style{
+    -fx-background-image: url(Tanaman/Biji-Labu.png);
     -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center top;
 }
 
-.strawberry-seeds-style{
-    -fx-background-image: url(./Tanaman/strawberry_seeds.png);
+.Biji-Stroberi-style{
+    -fx-background-image: url(Tanaman/Biji-Stroberi.png);
     -fx-background-size: 70% 70%;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center top;

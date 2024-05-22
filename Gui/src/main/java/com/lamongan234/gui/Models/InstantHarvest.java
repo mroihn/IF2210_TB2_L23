@@ -1,3 +1,5 @@
+package com.lamongan234.gui.Models;
+
 public class InstantHarvest extends Item{
   public InstantHarvest(){
     super("Instant Harvest");

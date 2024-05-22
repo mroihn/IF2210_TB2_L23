@@ -1,3 +1,5 @@
+package com.lamongan234.gui.Models;
+
 public class HiuDarat extends Karnivora {
   public HiuDarat(){
     super("Hiu Darat", 0, 20);

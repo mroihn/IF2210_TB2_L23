@@ -1,3 +1,5 @@
+package com.lamongan234.gui.Models;
+
 public class Sapi extends Herbivora {
   public Sapi(){
     super("Sapi", 0, 10);

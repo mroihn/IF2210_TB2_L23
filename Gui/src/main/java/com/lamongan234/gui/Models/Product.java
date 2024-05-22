@@ -1,3 +1,5 @@
+package com.lamongan234.gui.Models;
+
 public abstract class Product extends Kartu{
   private int added_weight;
   private int price;

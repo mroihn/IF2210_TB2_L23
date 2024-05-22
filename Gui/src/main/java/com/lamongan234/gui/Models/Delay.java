@@ -1,3 +1,5 @@
+package com.lamongan234.gui.Models;
+
 public class Delay extends Item{
   public Delay(){
     super("Delay");

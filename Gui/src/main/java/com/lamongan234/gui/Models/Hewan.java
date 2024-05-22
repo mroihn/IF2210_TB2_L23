@@ -1,3 +1,5 @@
+package com.lamongan234.gui.Models;
+
 import java.util.Map;
 
 public abstract class Hewan extends Kartu implements Harvestable{

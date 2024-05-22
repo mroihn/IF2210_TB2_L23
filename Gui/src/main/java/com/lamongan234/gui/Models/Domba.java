@@ -1,3 +1,5 @@
+package com.lamongan234.gui.Models;
+
 public class Domba extends Herbivora {
   public Domba(){
     super("Domba", 0, 12);

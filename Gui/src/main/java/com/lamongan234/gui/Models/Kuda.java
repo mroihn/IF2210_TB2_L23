@@ -1,3 +1,5 @@
+package com.lamongan234.gui.Models;
+
 public class Kuda extends Herbivora {
   public Kuda(){
     super("Kuda", 0, 14);

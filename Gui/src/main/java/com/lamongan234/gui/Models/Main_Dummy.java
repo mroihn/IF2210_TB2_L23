@@ -1,3 +1,5 @@
+package com.lamongan234.gui.Models;
+
 public class Main_Dummy {
     public static void main(String[] args) {
         Hewan hiuDarat = new HiuDarat();

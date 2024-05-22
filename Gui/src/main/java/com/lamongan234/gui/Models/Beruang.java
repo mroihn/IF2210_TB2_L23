@@ -1,3 +1,5 @@
+package com.lamongan234.gui.Models;
+
 public class Beruang extends Omnivora {
   public Beruang(){
     super("Beruang", 0, 25);

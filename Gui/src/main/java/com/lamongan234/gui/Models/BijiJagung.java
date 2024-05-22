@@ -1,3 +1,5 @@
+package com.lamongan234.gui.Models;
+
 public class BijiJagung extends Tanaman{
   public BijiJagung(){
     super("Biji Jagung", 0, 3);

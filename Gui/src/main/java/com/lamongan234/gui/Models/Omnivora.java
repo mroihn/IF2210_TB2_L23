@@ -1,3 +1,5 @@
+package com.lamongan234.gui.Models;
+
 public abstract class Omnivora extends Hewan {
   public Omnivora(String nama, int berat, int weight_to_harvest){
     super(nama, berat,weight_to_harvest);

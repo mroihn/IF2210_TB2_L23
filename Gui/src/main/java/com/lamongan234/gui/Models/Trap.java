@@ -1,3 +1,5 @@
+package com.lamongan234.gui.Models;
+
 public class Trap extends Item{
   public Trap(){
     super("Trap");

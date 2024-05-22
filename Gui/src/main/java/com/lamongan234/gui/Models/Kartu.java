@@ -1,3 +1,5 @@
+package com.lamongan234.gui.Models;
+
 public class Kartu {
     private String name;
     

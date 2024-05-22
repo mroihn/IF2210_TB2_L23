@@ -1,3 +1,5 @@
+package com.lamongan234.gui.Models;
+
 public class Ayam extends Omnivora {
   public Ayam(){
     super("Ayam", 0, 5);

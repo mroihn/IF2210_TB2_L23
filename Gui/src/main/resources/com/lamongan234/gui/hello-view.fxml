@@ -111,5 +111,6 @@
             <Label fx:id="player2Gold" layoutX="14.0" layoutY="35.0" text="Player 2: " />
          </children>
       </Pane>
+      <Button fx:id="b7Deck" layoutX="665.0" layoutY="600.0" maxWidth="150.0" minHeight="40.0" minWidth="150.0" mnemonicParsing="false" prefWidth="150.0" text="Deck" />
    </children>
 </AnchorPane>

@@ -19,6 +19,7 @@ import java.util.List;
 public class HelloController {
     private static int currTurn = 0;
     private static boolean currPlayer1 = false;
+    private static boolean onLadangku = true;
 
     private Card[] handPlayer1 = new Card[6];
     private Card[] handPlayer2 = new Card[6];
@@ -78,6 +79,9 @@ public class HelloController {
     private Button b6LoadPlugin;
 
     @FXML
+    private Button b7Deck;
+
+    @FXML
     public void initialize() {
         anchor.getStyleClass().add("encompassing-style");
 
@@ -124,14 +128,34 @@ public class HelloController {
 
         //button style
         b0Next.getStyleClass().add("button-style");
-        nextButtonFunc(b0Next);
+        b0Next.setOnAction(event -> {
+            nextTurn();
+        });
 
         b1Ladangku.getStyleClass().add("button-style");
+        b1Ladangku.getStyleClass().add("button-style-toggled");
+        b1Ladangku.setOnAction(event -> {
+            showLadangku();
+            b1Ladangku.getStyleClass().add("button-style-toggled");
+            b2LadangLawan.getStyleClass().remove("button-style-toggled");
+        });
+
         b2LadangLawan.getStyleClass().add("button-style");
+        b2LadangLawan.setOnAction(event -> {
+            showLadangLawan();
+            b1Ladangku.getStyleClass().remove("button-style-toggled");
+            b2LadangLawan.getStyleClass().add("button-style-toggled");
+        });
+
         b3Toko.getStyleClass().add("button-style");
         b4SaveState.getStyleClass().add("button-style");
         b5LoadState.getStyleClass().add("button-style");
         b6LoadPlugin.getStyleClass().add("button-style");
+
+        b7Deck.getStyleClass().add("button-style");
+        b7Deck.setOnAction(event -> {
+            fillHandRandom();
+        });
 
         buttonContainer.getStyleClass().add("container-style");
         buttonContainer.setAlignment(javafx.geometry.Pos.CENTER);
@@ -208,32 +232,51 @@ public class HelloController {
             }
         }
     }
-    protected void nextButtonFunc(Button button){
-        button.setOnAction(event -> {
-            nextTurn();
-        });
-    }
-    protected void nextTurn(){
-        if (currTurn <= 20){
-            clockCounter.setText(currTurn+"/"+"20");
+
+        protected void nextTurn(){
+        if (currTurn < 20){
+
             if (currPlayer1){
-                saveAll(handPlayer1,hand);
-                saveAll(ladangPlayer1,ladangA);
-                clearAll(hand);
-                clearAll(ladangA);
-               loadAll(handPlayer2,hand);
-                loadAll(ladangPlayer2,ladangA);
+                if (!onLadangku){
+                    saveAll(handPlayer1, hand);
+                    saveAll(ladangPlayer2, ladangA);
+                    clearAll(hand);
+                    clearAll(ladangA);
+                    loadAll(handPlayer2, hand);
+                    loadAll(ladangPlayer1, ladangA);
+                }
+                else {
+                    saveAll(handPlayer1, hand);
+                    saveAll(ladangPlayer1, ladangA);
+                    clearAll(hand);
+                    clearAll(ladangA);
+                    loadAll(handPlayer2, hand);
+                    loadAll(ladangPlayer2, ladangA);
+                }
             }
             else{
-                saveAll(handPlayer2,hand);
-                saveAll(ladangPlayer2,ladangA);
-                clearAll(hand);
-                clearAll(ladangA);
-                loadAll(handPlayer1,hand);
-                loadAll(ladangPlayer1,ladangA);
+                if (!onLadangku){
+                    saveAll(handPlayer2, hand);
+                    saveAll(ladangPlayer1, ladangA);
+                    clearAll(hand);
+                    clearAll(ladangA);
+                    loadAll(handPlayer1, hand);
+                    loadAll(ladangPlayer2, ladangA);
+                }
+
+                else {
+                    saveAll(handPlayer2, hand);
+                    saveAll(ladangPlayer2, ladangA);
+                    clearAll(hand);
+                    clearAll(ladangA);
+                    loadAll(handPlayer1, hand);
+                    loadAll(ladangPlayer1, ladangA);
+                }
             }
+
             currPlayer1 = !currPlayer1;
             currTurn++;
+            clockCounter.setText(currTurn+"/"+"20");
         }
     }
 
@@ -255,7 +298,7 @@ public class HelloController {
                 Card card = (Card) ((Pane) Container.getChildren().get(i)).getChildren().get(0);
                 list[i] = card;
             }
-            System.out.println(list[i]);
+            //System.out.println(list[i]);
         }
     }
 
@@ -265,6 +308,34 @@ public class HelloController {
                 ((Pane) Container.getChildren().get(i)).getChildren().add(list[i]);
             }
         }
+    }
+
+    protected void showLadangku(){
+        if (!currPlayer1){
+            saveAll(ladangPlayer1,ladangA);
+            clearAll(ladangA);
+            loadAll(ladangPlayer2,ladangA);
+        }
+        else{
+            saveAll(ladangPlayer2,ladangA);
+            clearAll(ladangA);
+            loadAll(ladangPlayer1,ladangA);
+        }
+        onLadangku=true;
+    }
+
+    protected void showLadangLawan(){
+        if (currPlayer1){
+            saveAll(ladangPlayer1,ladangA);
+            clearAll(ladangA);
+            loadAll(ladangPlayer2,ladangA);
+        }
+        else{
+            saveAll(ladangPlayer2,ladangA);
+            clearAll(ladangA);
+            loadAll(ladangPlayer1,ladangA);
+        }
+        onLadangku=false;
     }
 //    protected void onHelloButtonClick() {
 //        welcomeText.setText("Welcome to JavaFX Application!");

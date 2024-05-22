@@ -179,6 +179,7 @@
 
 .button-style {
     -fx-background-color: lightgray;
+    -fx-background-radius: 3px;
     -fx-border-color: gray;
     -fx-border-width: 2px;
     -fx-border-radius: 3px;
@@ -186,24 +187,16 @@
     -fx-font-size: 14px;
 }
 
-.button-highlight-style {
+.button-style:hover {
     -fx-background-color: lightcyan;
-    -fx-background-radius: 3px;
-    -fx-border-color: gray;
-    -fx-border-width: 2px;
-    -fx-border-radius: 3px;
-    -fx-padding: 10px 20px;
-    -fx-font-size: 14px;
 }
 
-.button-click-highlight-style {
-    -fx-background-color: cyan;
-    -fx-background-radius: 3px;
-    -fx-border-color: gray;
-    -fx-border-width: 2px;
-    -fx-border-radius: 3px;
-    -fx-padding: 10px 20px;
-    -fx-font-size: 14px;
+.button-style:pressed {
+    -fx-background-color: lightyellow;
+}
+
+.button-style-toggled {
+    -fx-background-color: lightgreen;
 }
 
 .container-style {

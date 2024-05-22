@@ -77,7 +77,11 @@ public class HelloController {
                 pane.getStyleClass().add("card-style");
                 pane.setId("d"+i);
 
-                fillDeckRandom();
+//                Card card = new Card();
+//                card.setId("c"+i);
+//                ((Pane) pane).getChildren().add(card);
+//                System.out.println(card.getName());
+                fillHandRandom();
                 makeDraggable((Pane) pane);
 
                 i++;
@@ -182,13 +186,12 @@ public class HelloController {
             event.consume();
         });
     }
-    protected void fillDeckRandom(){
+    protected void fillHandRandom(){
         for(int i = 0; i<6; i++){
-            Pane pane = (Pane) hand.getChildren().get(i);
-            if (hand.getChildren().isEmpty()) {
+            if (((Pane) hand.getChildren().get(i)).getChildren().isEmpty()) {
                 Card card = new Card();
                 card.setId("cd"+i);
-                pane.getChildren().add(card);
+                ((Pane) hand.getChildren().get(i)).getChildren().add(card);
             }
         }
     }

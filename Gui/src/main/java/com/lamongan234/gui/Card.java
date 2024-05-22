@@ -19,7 +19,8 @@ public class Card extends Pane {
         int idx = rand.nextInt(cardNames.size());
         String temp = cardNames.get(idx);
         Name = temp;
-        temp = temp.replaceAll(" \\s+","-");
+        temp = temp.replaceAll(" ","-");
+        System.out.println(temp);
         this.getStyleClass().add("card-style");
         this.setPrefSize(80,100);
         this.getStyleClass().add(temp+"-style");

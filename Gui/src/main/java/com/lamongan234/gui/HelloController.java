@@ -21,6 +21,9 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import java.util.List;
+import java.util.ArrayList;
+
 import java.io.IOException;
 
 public class HelloController {
@@ -363,6 +366,7 @@ public class HelloController {
 
             ShufflePopupController popupController = fxmlLoader.getController();
             popupController.setMainController(this);
+            popupController.setFreeslot();
             popupController.setOverlay(overlay);
 
             Stage popupStage = new Stage();
@@ -381,11 +385,17 @@ public class HelloController {
     }
 
     protected void addToCurHand(Card[] cards){
-        int idx=0;
+        Card temp;
         for (int i = 0;i< 6;i++){
-            if (((Pane) hand.getChildren().get(i)).getChildren().isEmpty()) {
-                ((Pane) hand.getChildren().get(i)).getChildren().add(cards[idx]);
+            //System.out.println("ini adalah idx: " + idx);
+            if (((Pane) hand.getChildren().get(i)).getChildren().isEmpty()){
+                temp = pop(cards);
+
+                if (temp!=null) {
+                    ((Pane) hand.getChildren().get(i)).getChildren().add(temp);
+                }
             }
+
         }
     }
 
@@ -400,6 +410,17 @@ public class HelloController {
         return cnt;
     }
 
+    public Card pop(Card[] cards){
+        for (int i = 0; i < cards.length; i++) {
+            System.out.println("i = " + i);
+            if (cards[i]!=null){
+                Card temp = cards[i];
+                cards[i] = null;
+                return temp;
+            }
+        }
+        return null;
+    }
 //    protected void onHelloButtonClick() {
 //        welcomeText.setText("Welcome to JavaFX Application!");
 //    }

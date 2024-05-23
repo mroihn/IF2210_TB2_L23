@@ -82,7 +82,7 @@ public class Player {
     public int sizeActiveDeck(){
         return activeDeck.length;
     }
-
+    
     public void printDeck(){
         System.out.println("Deck: ");
         for (Kartu k : deck){
@@ -96,7 +96,7 @@ public class Player {
     // kosongAwal = jumlah slot terisi activeDeck saat pemain shuffle di awal turn
     // return True kalau shuffle berhasil, False kalau tidak
     public void Panen(int row, int cols){
-        if(activeDeck.size()>5){
+        if(filledSlotActiveDeck()>5){
             System.out.println("Active Deck penuh");
         }
         int pos = row*5 + cols;
@@ -105,9 +105,7 @@ public class Player {
         ladang[pos] = null;
     }
 
-    
-    public boolean shuffleKartu(int isiAwalActiveDeck, boolean isAwalTurn){
-        System.out.println("shuffleKartu running....");
+        
     public int emptySlotActiveDeck(){
         int count = 0;
         for (int i = 0; i < 6; i++){

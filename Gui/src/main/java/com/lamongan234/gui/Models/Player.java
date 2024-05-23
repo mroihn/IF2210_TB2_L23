@@ -7,10 +7,40 @@ import java.util.Random;
 public class Player {
     private List<Kartu> deck;
     private List<Kartu> activeDeck;
+    public Kartu[][] ladang;
+    private int uang;
 
     public Player(){
         deck = new ArrayList<>();
         activeDeck = new ArrayList<>();
+        ladang = new Kartu[4][5];
+        uang = 0;
+    }
+
+    public int getUang(){
+        return uang;
+    }
+
+    public void addUang(int uang){
+        this.uang += uang;
+    }
+
+    public void printLadang(){
+        for (int i = 0; i < 4; i++){
+            for (int j = 0; j < 5; j++){
+                if (ladang[i][j] != null){
+                    System.out.println(ladang[i][j].getName()); 
+                } else{
+                    System.out.println(ladang[i][j]);
+                }
+            }
+        }
+    }
+
+    public void addToActiveDeck(Kartu kartu){
+        if (activeDeck.size() < 6){
+            activeDeck.add(kartu);
+        }
     }
 
     public void printDeck(){
@@ -106,6 +136,11 @@ public class Player {
             System.out.println("ukuran activeDeck: " + activeDeck.size());
             return true;
         }
+    }
+
+    //
+    public void setLadang(Kartu kartu, int x, int y){
+        ladang[x][y] = kartu;
     }
 
     public void generateRandomCards(int numberOfCards) {

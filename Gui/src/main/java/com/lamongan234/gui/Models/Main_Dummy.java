@@ -61,25 +61,33 @@ public class Main_Dummy {
         } while (isShuffleDimungkinkan && mauShuffleLagi);
         // scanner.close();
 
-        isiAwalActiveDeck = p.sizeActiveDeck();
-        do{
-          System.out.println("isi awal: " + isiAwalActiveDeck);
-          System.out.println(isAwalTurn);
-          isShuffleDimungkinkan = p.shuffleKartu(isiAwalActiveDeck, isAwalTurn);
-          isAwalTurn = false;
-          if (isShuffleDimungkinkan) {
-            System.out.println("Shuffle lagi? (y/n)");
-            String shuffleLagi = scanner.nextLine();
-            if (shuffleLagi.equals("n")) {
-            mauShuffleLagi = false;
-            } else{
-              mauShuffleLagi = true;
-              System.out.println("Shuffling....");
-            }
-          } else {
-            mauShuffleLagi = false;
-          }
-        } while (isShuffleDimungkinkan && mauShuffleLagi);
+        // isiAwalActiveDeck = p.sizeActiveDeck();
+        // do{
+        //   System.out.println("isi awal: " + isiAwalActiveDeck);
+        //   System.out.println(isAwalTurn);
+        //   isShuffleDimungkinkan = p.shuffleKartu(isiAwalActiveDeck, isAwalTurn);
+        //   isAwalTurn = false;
+        //   if (isShuffleDimungkinkan) {
+        //     System.out.println("Shuffle lagi? (y/n)");
+        //     String shuffleLagi = scanner.nextLine();
+        //     if (shuffleLagi.equals("n")) {
+        //     mauShuffleLagi = false;
+        //     } else{
+        //       mauShuffleLagi = true;
+        //       System.out.println("Shuffling....");
+        //     }
+        //   } else {
+        //     mauShuffleLagi = false;
+        //   }
+        // } while (isShuffleDimungkinkan && mauShuffleLagi);
         scanner.close();
+
+        p.setLadang(jagung, 0, 0);
+        p.printLadang();
+        System.out.println("Uang: " + p.getUang());
+        p.addUang(100);
+        System.out.println("Uang: " + p.getUang());
+        p.addToActiveDeck(delay);
+        
   }
 }

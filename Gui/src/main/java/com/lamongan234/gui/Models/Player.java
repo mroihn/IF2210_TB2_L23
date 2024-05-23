@@ -42,6 +42,9 @@ public class Player {
             activeDeck.add(kartu);
         }
     }
+    public void removeFromActiveDeck(Kartu kartu){
+        activeDeck.remove(kartu);
+    }
 
     public void printDeck(){
         System.out.println("Deck: ");

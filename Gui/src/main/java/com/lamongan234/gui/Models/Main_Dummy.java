@@ -8,19 +8,28 @@ public class Main_Dummy {
         Product daging = new DagingDomba();
         Product tempe = new Tempe();
 
+        //Test generating Cards
         Player p = new Player();
         p.generateRandomCards(40);
         p.printDeck();
+
+        //Test Using Items
         Item accelerate = new Accelerate();
         Item delay = new Delay();
         jagung.panenKartu();
         System.out.println("");
         System.out.println("berat awal hiu darat: " + hiuDarat.getberat());
         accelerate.Efek(hiuDarat);
+        accelerate.Efek(hiuDarat);
+        accelerate.Efek(hiuDarat);
         System.out.println("Accelerating!!!!");
+        hiuDarat.Display();
         System.out.println(hiuDarat.getberat());
         delay.Efek(hiuDarat);
+        delay.Efek(hiuDarat);
+        delay.Efek(hiuDarat);
         System.out.println("Delaying!!!!");
+        hiuDarat.Display();
         System.out.println(hiuDarat.getberat());
         hiuDarat.panenKartu();
         hiuDarat.makan(daging);
@@ -30,6 +39,12 @@ public class Main_Dummy {
         
         p.printDeck();
         p.printActiveDeck();
+
+        Toko t = new Toko();
+        System.out.println("Uang: " + p.getUang());
+        t.beli(tempe, p);
+        System.out.println("Uang: " + p.getUang());
+        t.displayToko();
 
 
         //tes shuffle

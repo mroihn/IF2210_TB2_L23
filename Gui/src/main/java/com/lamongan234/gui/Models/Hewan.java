@@ -3,7 +3,7 @@ package com.lamongan234.gui.Models;
 import java.util.HashMap;
 import java.util.Map;
 
-public abstract class Hewan extends Kartu implements Harvestable{
+public abstract class Hewan extends Harvestable{
   protected int berat;
   protected int weight_to_harvest;
   protected boolean isProtected;

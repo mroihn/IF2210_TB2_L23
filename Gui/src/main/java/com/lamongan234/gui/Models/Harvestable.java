@@ -1,6 +1,9 @@
 package com.lamongan234.gui.Models;
 
-public interface Harvestable{
+public abstract class Harvestable extends Kartu{
+  public Harvestable(String nama){
+    super(nama);
+  }
   public abstract Product panenKartu();
-  public void AppliedItem(Item item);
+  public abstract void AppliedItem(Item item);
 }

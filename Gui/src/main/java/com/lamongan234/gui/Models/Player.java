@@ -7,13 +7,13 @@ import java.util.Random;
 public class Player {
     private List<Kartu> deck;
     private List<Kartu> activeDeck;
-    public Kartu[][] ladang;
+    public Harvestable[] ladang;
     private int uang;
 
     public Player(){
         deck = new ArrayList<>();
         activeDeck = new ArrayList<>();
-        ladang = new Kartu[4][5];
+        ladang = new Harvestable[20];
         uang = 0;
     }
 
@@ -28,17 +28,22 @@ public class Player {
     public void printLadang(){
         for (int i = 0; i < 4; i++){
             for (int j = 0; j < 5; j++){
-                if (ladang[i][j] != null){
-                    System.out.println(ladang[i][j].getName()); 
+                if (ladang[i] != null){
+                    System.out.println(ladang[i].getName()); 
                 } else{
-                    System.out.println(ladang[i][j]);
+                    System.out.println(ladang[i]);
                 }
             }
         }
     }
 
     public void setLadang(Kartu kartu, int x, int y){
-        ladang[x][y] = kartu;
+        int row = x*5;
+        int pos = row+y;
+        if(kartu instanceof Harvestable){
+            Harvestable h = (Harvestable) kartu;
+            ladang[pos] = h;
+        }
     }
 
     public void addToActiveDeck(Kartu kartu){
@@ -73,6 +78,17 @@ public class Player {
     //else, shuffle sejumlah 4 kartu
     // kosongAwal = jumlah slot terisi activeDeck saat pemain shuffle di awal turn
     // return True kalau shuffle berhasil, False kalau tidak
+    public void Panen(int row, int cols){
+        if(activeDeck.size()>5){
+            System.out.println("Active Deck penuh");
+        }
+        int pos = row*5 + cols;
+        Product hasilPanen = ladang[pos].panenKartu();
+        addToActiveDeck(hasilPanen);
+        ladang[pos] = null;
+    }
+
+    
     public boolean shuffleKartu(int isiAwalActiveDeck, boolean isAwalTurn){
         System.out.println("shuffleKartu running....");
         Random random = new Random();

@@ -37,16 +37,13 @@ public class Player {
         }
     }
 
+    public void setLadang(Kartu kartu, int x, int y){
+        ladang[x][y] = kartu;
+    }
+
     public void addToActiveDeck(Kartu kartu){
         if (activeDeck.size() < 6){
             activeDeck.add(kartu);
-        }
-    }
-
-    public void printDeck(){
-        System.out.println("Deck: ");
-        for (Kartu k : deck){
-            System.out.println(k.getName());
         }
     }
 
@@ -59,6 +56,13 @@ public class Player {
 
     public int sizeActiveDeck(){
         return activeDeck.size();
+    }
+
+    public void printDeck(){
+        System.out.println("Deck: ");
+        for (Kartu k : deck){
+            System.out.println(k.getName());
+        }
     }
 
     //bila deck kosong atau activeDeck penuh, return false
@@ -110,10 +114,6 @@ public class Player {
             Kartu balikinKeDeck = activeDeck.remove(lastIdx);
             deck.add(balikinKeDeck);
         }
-    }
-
-    public void setLadang(Kartu kartu, int x, int y){
-        ladang[x][y] = kartu;
     }
 
     public void generateRandomCards(int numberOfCards) {

@@ -37,6 +37,10 @@ public class Player {
         }
     }
 
+    public void setLadang(Kartu kartu, int x, int y){
+        ladang[x][y] = kartu;
+    }
+
     public void addToActiveDeck(Kartu kartu){
         if (activeDeck.size() < 6){
             activeDeck.add(kartu);
@@ -44,13 +48,6 @@ public class Player {
     }
     public void removeFromActiveDeck(Kartu kartu){
         activeDeck.remove(kartu);
-    }
-
-    public void printDeck(){
-        System.out.println("Deck: ");
-        for (Kartu k : deck){
-            System.out.println(k.getName());
-        }
     }
 
     public void printActiveDeck(){
@@ -64,21 +61,31 @@ public class Player {
         return activeDeck.size();
     }
 
-    //bila deck kosong, do nothing
-    //bila activeDeck penuh, do nothing
+    public void printDeck(){
+        System.out.println("Deck: ");
+        for (Kartu k : deck){
+            System.out.println(k.getName());
+        }
+    }
+
+    //bila deck kosong atau activeDeck penuh, return false
     //bila slot kosong di activeDeck kurang dari 4, shuffle kartu sejumlah slot kosong
-    //else, shuffle 4 kartu
+    //else, shuffle sejumlah 4 kartu
     // kosongAwal = jumlah slot terisi activeDeck saat pemain shuffle di awal turn
     // return True kalau shuffle berhasil, False kalau tidak
     public boolean shuffleKartu(int isiAwalActiveDeck, boolean isAwalTurn){
         System.out.println("shuffleKartu running....");
         Random random = new Random();
-        int randomNumber = random.nextInt(deck.size()); // generate probrably 0-39
-        int reserveSlotActiveDeck = 6 - activeDeck.size();
-        System.out.println("flag10");
+        int randomNumber = random.nextInt(deck.size()); // generate inclusive 0-39
+            // kalau ini adalah bukan awal turn maka hapus shuffle yang gak jadi
+            if (!isAwalTurn){
+                hapusShuffleSebelumnya(isiAwalActiveDeck, deck, activeDeck);
+            }
+            int reserveSlotActiveDeck = 6 - activeDeck.size();
 
-        if (isAwalTurn){
-            System.out.println("flag20");
+            System.out.println("ukuran deck1: " + deck.size());
+            System.out.println("ukuran activeDeck1: " + activeDeck.size());
+
             if(deck.isEmpty() || reserveSlotActiveDeck == 0){
                 System.out.println("Deck kosong atau activeDeck penuh");
                 return false;
@@ -101,49 +108,15 @@ public class Player {
             printDeck();
             printActiveDeck();
             return true;
-        }
-        else{ 
-            // bila masuk sini, berarti terjadi shuffle ulang
-            //membalikkan kondisi deck dan activeDeck seperti kondisi semula (kondisi di awal turn)
-            System.out.println("ukuran acd: ~~~~~~~~~~~~~~~~~~:" + activeDeck.size());
-            System.out.println(isiAwalActiveDeck);
-            int currentActiveDeckSize = activeDeck.size();
-            for (int j = isiAwalActiveDeck; j < currentActiveDeckSize; j++){
-                int lastIdx = activeDeck.size() - 1;
-                Kartu balikinKeDeck = activeDeck.remove(lastIdx);
-                deck.add(balikinKeDeck);
-                System.out.println("flag");
-            }
-            // nah, shuffle lagi
-            reserveSlotActiveDeck = 6 - activeDeck.size();
-            System.out.println("ukuran acd: ~~~~~~~~~~~~~~~~~~" + activeDeck.size());
-            System.out.println("ukuran deck: ~~~~~~~~~~~~~~~~~~" + deck.size());
-            printActiveDeck();
-            if(deck.isEmpty() || reserveSlotActiveDeck == 0){
-                System.out.println("Deck kosong atau activeDeck penuh");
-                return false;
-            } else if(reserveSlotActiveDeck < 4){
-                for(int i = 0; i < reserveSlotActiveDeck; i++){
-                    activeDeck.add(deck.get(randomNumber));
-                    deck.remove(randomNumber);
-                }
-            } else {
-                for(int i = 0; i < 4; i++){
-                    activeDeck.add(deck.get(randomNumber));
-                    deck.remove(randomNumber);
-                }
-            }
-            printDeck();
-            printActiveDeck();
-            System.out.println("ukuran deck: " + deck.size());
-            System.out.println("ukuran activeDeck: " + activeDeck.size());
-            return true;
-        }
     }
 
-    //
-    public void setLadang(Kartu kartu, int x, int y){
-        ladang[x][y] = kartu;
+    public void hapusShuffleSebelumnya(int isiAwalActiveDeck, List<Kartu> deck, List<Kartu> activeDeck){
+        int currentActiveDeckSize = activeDeck.size();
+        for (int j = isiAwalActiveDeck; j < currentActiveDeckSize; j++){
+            int lastIdx = activeDeck.size() - 1;
+            Kartu balikinKeDeck = activeDeck.remove(lastIdx);
+            deck.add(balikinKeDeck);
+        }
     }
 
     public void generateRandomCards(int numberOfCards) {

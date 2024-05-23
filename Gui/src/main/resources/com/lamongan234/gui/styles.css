@@ -1,0 +1,223 @@
+.card-style {
+    -fx-background-color: rgba(255,255,179,0.65);
+    -fx-background-radius: 6px;
+    -fx-border-color: gray;
+    -fx-border-width: 1px;
+    -fx-border-radius: 6px;
+    -fx-padding: 10px 20px 10px 20px;
+}
+
+.Beruang-style{
+    -fx-background-image: url(Hewan/Beruang.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+}
+
+.Ayam-style{
+    -fx-background-image: url(Hewan/Ayam.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+}
+
+.Sapi-style{
+    -fx-background-image: url(Hewan/Sapi.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+}
+
+.Hiu-Darat-style{
+    -fx-background-image: url(Hewan/Hiu-Darat.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+}
+
+.Kuda-style{
+    -fx-background-image: url(Hewan/Kuda.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+}
+
+.Domba-style{
+    -fx-background-image: url(Hewan/Domba.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+}
+
+.Accelerate-style{
+    -fx-background-image: url(./Item/Accelerate.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+}
+
+.Trap-style{
+    -fx-background-image: url(Item/Trap.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+}
+
+.Delay-style{
+    -fx-background-image: url(./Item/Delay.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+}
+
+.Destroy-style{
+    -fx-background-image: url(./Item/Destroy.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+}
+
+.Instant-Harvest-style{
+    -fx-background-image: url(Item/Instant-Harvest.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+}
+
+.Protect-style{
+    -fx-background-image: url(./Item/Protect.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+}
+
+.Jagung-style{
+    -fx-background-image: url(Produk/Jagung.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+}
+
+.Daging-Beruang-style{
+    -fx-background-image: url(Produk/Daging-Beruang.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+}
+
+
+.Daging-Domba-style{
+    -fx-background-image: url(Produk/Daging-Domba.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+}
+
+
+.Daging-Kuda-style{
+    -fx-background-image: url(Produk/Daging-Kuda.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+}
+
+.Labu-style{
+    -fx-background-image: url(Produk/Labu.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+}
+
+.Sirip-Hiu-style{
+    -fx-background-image: url(Produk/Sirip-Hiu.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+}
+
+.Stroberi-style{
+    -fx-background-image: url(Produk/Stroberi.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+}
+
+.Susu-style{
+    -fx-background-image: url(Produk/Susu.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+}
+
+.Telur-style{
+    -fx-background-image: url(Produk/Telur.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+}
+
+.Biji-Jagung-style{
+    -fx-background-image: url(Tanaman/Biji-Jagung.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+}
+
+.Biji-Labu-style{
+    -fx-background-image: url(Tanaman/Biji-Labu.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+}
+
+.Biji-Stroberi-style{
+    -fx-background-image: url(Tanaman/Biji-Stroberi.png);
+    -fx-background-size: 70% 70%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center top;
+}
+
+.button-style {
+    -fx-background-color: lightgray;
+    -fx-background-radius: 3px;
+    -fx-border-color: gray;
+    -fx-border-width: 2px;
+    -fx-border-radius: 3px;
+    -fx-padding: 10px 20px;
+    -fx-font-size: 14px;
+}
+
+.button-style:hover {
+    -fx-background-color: lightcyan;
+}
+
+.button-style:pressed {
+    -fx-background-color: lightyellow;
+}
+
+.button-style-toggled {
+    -fx-background-color: lightgreen;
+}
+
+.container-style {
+    -fx-background-color: #B9B9B9;
+    -fx-background-radius: 2px;
+    -fx-border-radius: 2px;
+}
+
+.clock-style{
+    -fx-background-color: #CECECE;
+    -fx-background-radius: 60px;
+    -fx-border-color: gray;
+    -fx-border-width: 2px;
+    -fx-border-radius: 60px;
+}
+
+.label-style{
+    -fx-font-size: 14px;
+    -fx-font-family: "JetBrains Mono";
+}
+
+.encompassing-style{
+    -fx-background-image: url('./backgroundField1.png');
+}

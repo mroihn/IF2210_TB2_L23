@@ -173,9 +173,6 @@ public class Player {
     public Kartu[] shuffleKartu(){
         selectedKartu.clear();
         shuffleArr = new Kartu[4];
-
-    public boolean shuffleKartu(int isiAwalActiveDeck, boolean isAwalTurn){
-        System.out.println("shuffleKartu running....");
         Random random = new Random();
         List <Integer> alreadyRandomNumber = new ArrayList<>();
         while (alreadyRandomNumber.size() < 4){

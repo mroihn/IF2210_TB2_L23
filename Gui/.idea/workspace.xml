@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d91d162f-74cf-4864-ae76-10a03ae7e10c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/ShufflePopupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/ShufflePopupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/shufflePopup.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/shufflePopup.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/HelloController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/GameManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/GameManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Harvestable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Harvestable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Hewan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Hewan.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Main_Dummy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Main_Dummy.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Tanaman.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Tanaman.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/ShufflePopupController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/ShufflePopupController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/shufflePopup.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/shufflePopup.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="d91d162f-74cf-4864-ae76-10a03ae7e10c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -121,7 +107,7 @@
       <workItem from="1716307424063" duration="7146000" />
       <workItem from="1716373006717" duration="8192000" />
       <workItem from="1716391559882" duration="783000" />
-      <workItem from="1716461461044" duration="22705000" />
+      <workItem from="1716461461044" duration="23010000" />
     </task>
     <servers />
   </component>

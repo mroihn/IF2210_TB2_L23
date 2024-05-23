@@ -24,8 +24,11 @@ public abstract class Hewan extends Harvestable{
     isTrapped = true;
   }
   // Getter and setter
-  public int getberat() {
+  public int getBerat() {
     return berat;
+  }
+  public void setBerat(int berat) {
+    this.berat = berat;
   }
   public int getweight_to_harvest() {
     return weight_to_harvest;

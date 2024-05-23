@@ -20,19 +20,20 @@ public class Player {
     public int getUang(){
         return uang;
     }
+    public void setUang(int uang){
+        this.uang = uang;
+    }
 
     public void addUang(int uang){
         this.uang += uang;
     }
 
     public void printLadang(){
-        for (int i = 0; i < 4; i++){
-            for (int j = 0; j < 5; j++){
-                if (ladang[i] != null){
-                    System.out.println(ladang[i].getName()); 
-                } else{
-                    System.out.println(ladang[i]);
-                }
+        for (int i = 0; i < 20; i++){
+            if (ladang[i] != null){
+                System.out.println(ladang[i].getName() + " " + i); 
+            } else{
+                System.out.println("coord: " + i);
             }
         }
     }
@@ -73,6 +74,14 @@ public class Player {
         }
     }
 
+    public void printDetails(){
+        System.out.println("Uang: " + uang);
+        System.out.println("Deck Count: " + deck.size());
+        printActiveDeck();
+        System.out.println("Ladang:");
+        printLadang();
+    }
+
     //bila deck kosong atau activeDeck penuh, return false
     //bila slot kosong di activeDeck kurang dari 4, shuffle kartu sejumlah slot kosong
     //else, shuffle sejumlah 4 kartu
@@ -88,7 +97,7 @@ public class Player {
         ladang[pos] = null;
     }
 
-    
+
     public boolean shuffleKartu(int isiAwalActiveDeck, boolean isAwalTurn){
         System.out.println("shuffleKartu running....");
         Random random = new Random();

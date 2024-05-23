@@ -7,6 +7,13 @@ public class Main_Dummy {
         Tanaman jagung = new BijiJagung();
         Product daging = new DagingDomba();
         Product tempe = new Tempe();
+        GameManager g = new GameManager();
+        SaveAndLoad load = new TxtSaveAndLoad();
+        System.out.println(" ");
+        load.loadState(g, "statefiles");
+        g.getToko().displayToko();
+        g.getPlayer1().printDetails();
+        g.getPlayer2().printDetails();
 
         //Test generating Cards
         Player p = new Player();
@@ -18,22 +25,22 @@ public class Main_Dummy {
         Item delay = new Delay();
         jagung.panenKartu();
         System.out.println("");
-        System.out.println("berat awal hiu darat: " + hiuDarat.getberat());
+        System.out.println("berat awal hiu darat: " + hiuDarat.getBerat());
         accelerate.Efek(hiuDarat);
         accelerate.Efek(hiuDarat);
         accelerate.Efek(hiuDarat);
         System.out.println("Accelerating!!!!");
         hiuDarat.Display();
-        System.out.println(hiuDarat.getberat());
+        System.out.println(hiuDarat.getBerat());
         delay.Efek(hiuDarat);
         delay.Efek(hiuDarat);
         delay.Efek(hiuDarat);
         System.out.println("Delaying!!!!");
         hiuDarat.Display();
-        System.out.println(hiuDarat.getberat());
+        System.out.println(hiuDarat.getBerat());
         hiuDarat.panenKartu();
         hiuDarat.makan(daging);
-        System.out.println(hiuDarat.getberat());
+        System.out.println(hiuDarat.getBerat());
         hiuDarat.panenKartu();
         hiuDarat.makan(tempe);
         

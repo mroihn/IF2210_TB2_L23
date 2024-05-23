@@ -3,7 +3,7 @@ package com.lamongan234.gui.Models;
 import java.util.HashMap;
 import java.util.Map;
 
-public abstract class Tanaman extends Kartu implements Harvestable{
+public abstract class Tanaman extends Harvestable{
   int umur;
   int age_to_harvest;
   protected boolean isProtected;

@@ -1,7 +1,10 @@
 package com.lamongan234.gui;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -12,9 +15,13 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.io.IOException;
 
 public class HelloController {
     private static int currTurn = 0;
@@ -26,6 +33,7 @@ public class HelloController {
 
     private Card[] ladangPlayer1 = new Card[20];
     private Card[] ladangPlayer2 = new Card[20];
+
 
     @FXML
     private AnchorPane anchor;
@@ -97,7 +105,7 @@ public class HelloController {
 //                card.setId("c"+i);
 //                ((Pane) pane).getChildren().add(card);
 //                System.out.println(card.getName());
-                fillHandRandom();
+                //fillHandRandom();
                 makeDraggable((Pane) pane);
 
                 i++;
@@ -133,18 +141,18 @@ public class HelloController {
         });
 
         b1Ladangku.getStyleClass().add("button-style");
-        b1Ladangku.getStyleClass().add("button-style-toggled");
+        b1Ladangku.getStyleClass().add("style-toggled");
         b1Ladangku.setOnAction(event -> {
             showLadangku();
-            b1Ladangku.getStyleClass().add("button-style-toggled");
-            b2LadangLawan.getStyleClass().remove("button-style-toggled");
+            b1Ladangku.getStyleClass().add("style-toggled");
+            b2LadangLawan.getStyleClass().remove("style-toggled");
         });
 
         b2LadangLawan.getStyleClass().add("button-style");
         b2LadangLawan.setOnAction(event -> {
             showLadangLawan();
-            b1Ladangku.getStyleClass().remove("button-style-toggled");
-            b2LadangLawan.getStyleClass().add("button-style-toggled");
+            b1Ladangku.getStyleClass().remove("style-toggled");
+            b2LadangLawan.getStyleClass().add("style-toggled");
         });
 
         b3Toko.getStyleClass().add("button-style");
@@ -154,7 +162,7 @@ public class HelloController {
 
         b7Deck.getStyleClass().add("button-style");
         b7Deck.setOnAction(event -> {
-            fillHandRandom();
+            openPopup();
         });
 
         buttonContainer.getStyleClass().add("container-style");
@@ -233,10 +241,13 @@ public class HelloController {
         }
     }
 
-        protected void nextTurn(){
+    protected void nextTurn(){
         if (currTurn < 20){
 
             if (currPlayer1){
+                if(currTurn <2){
+                    fillHandRandom();
+                }
                 if (!onLadangku){
                     saveAll(handPlayer1, hand);
                     saveAll(ladangPlayer2, ladangA);
@@ -255,6 +266,7 @@ public class HelloController {
                 }
             }
             else{
+
                 if (!onLadangku){
                     saveAll(handPlayer2, hand);
                     saveAll(ladangPlayer1, ladangA);
@@ -337,6 +349,57 @@ public class HelloController {
         }
         onLadangku=false;
     }
+
+    @FXML
+    private void openPopup(){
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("shufflePopup.fxml"));
+        try {
+
+            Rectangle overlay = new Rectangle(anchor.getWidth(), anchor.getHeight());
+            overlay.setFill(Color.rgb(0, 0, 0, 0.5));
+            anchor.getChildren().add(overlay);
+
+            Parent root = fxmlLoader.load();
+
+            ShufflePopupController popupController = fxmlLoader.getController();
+            popupController.setMainController(this);
+            popupController.setOverlay(overlay);
+
+            Stage popupStage = new Stage();
+            popupStage.initModality(Modality.APPLICATION_MODAL);
+            popupStage.initStyle(StageStyle.UNDECORATED);
+            Scene scene = new Scene(root);
+            //scene.setFill(null);
+            popupStage.setScene(scene);
+            popupStage.showAndWait();
+
+            anchor.getChildren().remove(overlay);
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    protected void addToCurHand(Card[] cards){
+        int idx=0;
+        for (int i = 0;i< 6;i++){
+            if (((Pane) hand.getChildren().get(i)).getChildren().isEmpty()) {
+                ((Pane) hand.getChildren().get(i)).getChildren().add(cards[idx]);
+            }
+        }
+    }
+
+    protected int GetFreeSlotHand(){
+        int cnt = 0;
+        for (int i = 0; i < hand.getChildren().size(); i++) {
+            if (((Pane) hand.getChildren().get(i)).getChildren().isEmpty()){
+                cnt++;
+            }
+            System.out.println(cnt);
+        }
+        return cnt;
+    }
+
 //    protected void onHelloButtonClick() {
 //        welcomeText.setText("Welcome to JavaFX Application!");
 //    }

@@ -1,6 +1,4 @@
 package com.lamongan234.gui.Models;
-
-import java.util.Scanner;
 public class Main_Dummy {
     public static void main(String[] args) {
         Hewan hiuDarat = new HiuDarat();
@@ -55,54 +53,10 @@ public class Main_Dummy {
 
 
         //tes shuffle
-        boolean mauShuffleLagi;
-        boolean isShuffleDimungkinkan;
-        Scanner scanner = new Scanner(System.in);
-        boolean isAwalTurn = true;
-        int isiAwalActiveDeck = p.sizeActiveDeck();
 
         System.out.println("===========================================");
 
-        do{
-          System.out.println("isi awal: " + isiAwalActiveDeck);
-          System.out.println(isAwalTurn);
-          isShuffleDimungkinkan = p.shuffleKartu(isiAwalActiveDeck, isAwalTurn);
-          isAwalTurn = false;
-          if (isShuffleDimungkinkan) {
-            System.out.println("Shuffle lagi? (y/n)");
-            String shuffleLagi = scanner.nextLine();
-            if (shuffleLagi.equals("n")) {
-            mauShuffleLagi = false;
-            } else{
-              mauShuffleLagi = true;
-              System.out.println("Shuffling....");
-            }
-          } else {
-            mauShuffleLagi = false;
-          }
-        } while (isShuffleDimungkinkan && mauShuffleLagi);
-        // scanner.close();
-
-        // isiAwalActiveDeck = p.sizeActiveDeck();
-        // do{
-        //   System.out.println("isi awal: " + isiAwalActiveDeck);
-        //   System.out.println(isAwalTurn);
-        //   isShuffleDimungkinkan = p.shuffleKartu(isiAwalActiveDeck, isAwalTurn);
-        //   isAwalTurn = false;
-        //   if (isShuffleDimungkinkan) {
-        //     System.out.println("Shuffle lagi? (y/n)");
-        //     String shuffleLagi = scanner.nextLine();
-        //     if (shuffleLagi.equals("n")) {
-        //     mauShuffleLagi = false;
-        //     } else{
-        //       mauShuffleLagi = true;
-        //       System.out.println("Shuffling....");
-        //     }
-        //   } else {
-        //     mauShuffleLagi = false;
-        //   }
-        // } while (isShuffleDimungkinkan && mauShuffleLagi);
-        scanner.close();
+        p.startShuffle();
 
         p.setLadang(jagung, 0, 0);
         p.printLadang();
@@ -110,6 +64,6 @@ public class Main_Dummy {
         p.addUang(100);
         System.out.println("Uang: " + p.getUang());
         p.addToActiveDeck(delay);
-        
+
   }
 }

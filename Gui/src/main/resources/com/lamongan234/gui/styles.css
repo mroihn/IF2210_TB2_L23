@@ -221,3 +221,11 @@
 .encompassing-style{
     -fx-background-image: url('./backgroundField1.png');
 }
+
+.shuffle-popup-style{
+    -fx-background-color: rgba(255, 255, 255, 0.0); /* Transparent background */
+    -fx-border-color: black; /* Optional: Add border to distinguish the pop-up */
+    -fx-border-width: 2; /* Optional: Width of the border */
+    -fx-border-radius: 10; /* Optional: Rounded corners for the border */
+    -fx-background-radius: 10; /* Optional: Rounded corners for the background */
+}

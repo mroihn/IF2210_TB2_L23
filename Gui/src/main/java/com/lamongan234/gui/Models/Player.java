@@ -76,7 +76,8 @@ public class Player {
             System.out.println(isiAwalActiveDeck);
             int currentActiveDeckSize = activeDeck.size();
             for (int j = isiAwalActiveDeck; j < currentActiveDeckSize; j++){
-                Kartu balikinKeDeck = activeDeck.removeLast();
+                int lastIdx = activeDeck.size() - 1;
+                Kartu balikinKeDeck = activeDeck.remove(lastIdx);
                 deck.add(balikinKeDeck);
                 System.out.println("flag");
             }

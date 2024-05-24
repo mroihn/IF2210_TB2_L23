@@ -5,14 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d91d162f-74cf-4864-ae76-10a03ae7e10c" name="Changes" comment="merge">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/ShufflePopupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/ShufflePopupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/shufflePopup.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/shufflePopup.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/Models/Main_Dummy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/Models/Main_Dummy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/DetailPopupController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/DetailPopupController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/HelloController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Accelerate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Accelerate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Ayam.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Ayam.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Beruang.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Beruang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/BijiJagung.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/BijiJagung.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/BijiLabu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/BijiLabu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/BijiStroberi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/BijiStroberi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Delay.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Delay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Domba.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Domba.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/GameManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/GameManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Harvestable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Harvestable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Herbivora.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Herbivora.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Hewan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Hewan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/HiuDarat.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/HiuDarat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/InstantHarvest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/InstantHarvest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Karnivora.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Karnivora.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Kuda.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Kuda.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Main_Dummy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Main_Dummy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Omnivora.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Omnivora.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Player$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Player$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Player$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Player$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Sapi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Sapi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/SeranganBeruang.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/SeranganBeruang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/ShuffleState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/ShuffleState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Tanaman.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Tanaman.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Toko.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Toko.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/TxtSaveAndLoad.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/TxtSaveAndLoad.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/ShufflePopupController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/ShufflePopupController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/shufflePopup.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/shufflePopup.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,30 +74,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ControllerApp.executor": "Run",
-    "Application.HelloApplication.executor": "Run",
-    "Application.Main_Dummy.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "git-widget-placeholder": "main",
-    "go.import.settings.migrated": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/maula/AppData/Local/SceneBuilder/SceneBuilder.exe",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.JavaFX",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ControllerApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main_Dummy.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/maula/AppData/Local/SceneBuilder/SceneBuilder.exe&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\maula\OneDrive\Documents\ITB\S4\PBO\IF2210_TB2_L23\Gui\src\main\resources\com\lamongan234\gui" />
@@ -117,6 +142,7 @@
       <workItem from="1716373006717" duration="8192000" />
       <workItem from="1716391559882" duration="783000" />
       <workItem from="1716461461044" duration="18007000" />
+      <workItem from="1716547585557" duration="4850000" />
     </task>
     <servers />
   </component>

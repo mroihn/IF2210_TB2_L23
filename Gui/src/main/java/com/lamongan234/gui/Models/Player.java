@@ -145,16 +145,16 @@ public class Player {
             }
         }
         System.out.println("finished generating red area");
-        MapRedArea.forEach((key, value) -> {
-            System.out.println("redArea: " + key);
-            if(value.isEmpty()){
-                System.out.println("empty list");
-            }
-            for(Integer i : value){
-                System.out.print(" "+ i);
-                System.out.println("");
-            }
-        });
+        // MapRedArea.forEach((key, value) -> {
+        //     System.out.println("redArea: " + key);
+        //     if(value.isEmpty()){
+        //         System.out.println("empty list");
+        //     }
+        //     for(Integer i : value){
+        //         System.out.print(" "+ i);
+        //         System.out.println("");
+        //     }
+        // });
     }
 
     public void SeranganBeruang(){

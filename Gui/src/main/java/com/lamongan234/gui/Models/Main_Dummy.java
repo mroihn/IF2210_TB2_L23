@@ -19,7 +19,7 @@ public class Main_Dummy {
         Player p = new Player();
         p.generateRandomCards(40);
         p.printDeck();
-
+        g.SeranganBeruang();
         //Test Using Items
         Item accelerate = new Accelerate();
         Item delay = new Delay();

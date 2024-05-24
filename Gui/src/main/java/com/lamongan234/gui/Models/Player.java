@@ -1,9 +1,13 @@
 package com.lamongan234.gui.Models;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class Player {
     private List<Kartu> deck;
@@ -12,6 +16,7 @@ public class Player {
     private Kartu[] activeDeck;
     public Harvestable[] ladang;
     private int uang;
+    private Map<Integer, List<Integer>> MapRedArea;
 
     public Player(){
         deck = new ArrayList<>();
@@ -19,6 +24,7 @@ public class Player {
         ladang = new Harvestable[20];
         shuffleArr = new Kartu[4];
         selectedKartu = new ArrayList<>();
+        generateRedArea();
         uang = 0;
     }
 
@@ -106,6 +112,98 @@ public class Player {
         printActiveDeck();
         System.out.println("Ladang:");
         printLadang();
+    }
+
+    private void generateRedArea(){
+        MapRedArea = new HashMap<>();
+        Integer idx = 0;
+        for (int startRow = 0; startRow < 4; startRow++) {
+            for (int startCol = 0; startCol < 5; startCol++) {
+                for (int endRow = startRow; endRow < 4; endRow++) {
+                    for (int endCol = startCol; endCol < 5; endCol++) {
+                        int width = endCol - startCol;
+                        int height = endRow - startRow;
+                        int area = width * height;
+                        if (area <= 6 && area>0) {    
+                            List<Integer> listpos = new ArrayList<>();
+                            for(Integer row = startRow; row< endRow; row++){
+                                for(Integer col = startCol; col< endCol; col++){
+                                    Integer pos1 = col + row*5;
+                                    listpos.add(pos1);
+                                }
+                            }
+                            if(!(startRow==endRow && startCol==endCol)){
+                                MapRedArea.put(idx, listpos);
+                                idx++;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        System.out.println("finished generating red area");
+        MapRedArea.forEach((key, value) -> {
+            System.out.println("redArea: " + key);
+            if(value.isEmpty()){
+                System.out.println("empty list");
+            }
+            for(Integer i : value){
+                System.out.print(" "+ i);
+                System.out.println("");
+            }
+        });
+    }
+
+    public void SeranganBeruang(){
+        Random random = new Random();
+        int key = random.nextInt(MapRedArea.size());
+        List<Integer> listpos = MapRedArea.get(key);
+        // Randomize duration between 30 to 60 seconds
+        int duration = 3000 + random.nextInt(3001);
+        long attackEndTime = System.currentTimeMillis() + duration;
+        // Set a timer for 30 seconds
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                checkLadangAfterAttack(listpos);
+                timer.cancel();
+                // Cek apakah ada trap di petak seranganBeruang
+            }
+        }, duration); // 30 seconds in milliseconds
+        // Start a thread to update the timer every 0.1 seconds
+        Thread timerThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    while (System.currentTimeMillis() < attackEndTime) {
+                        long remainingTime = attackEndTime - System.currentTimeMillis();
+                        System.out.println("Remaining Time: " + remainingTime / 1000.0 + " seconds");
+                        Thread.sleep(100); // Update every 0.1 seconds
+                    }
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        timerThread.start();
+    }
+    private synchronized void checkLadangAfterAttack(List<Integer> listpos) {
+        for (Integer i : listpos) {
+            if (ladang[i] != null && ladang[i].isTrapped()) {
+                addToActiveDeck(new Beruang());
+                return;
+            }
+        }
+
+        // Hapus Tanaman/Hewan Jika tidak diprotect
+        for (Integer i : listpos) {
+            if (ladang[i] != null && !ladang[i].isProtected()) {
+                System.out.println(ladang[i].getName() + " Deleted!");
+                ladang[i] = null;
+            }
+        }
+        System.out.println("Bear attack finished and ladang checked.");
     }
 
     //bila deck kosong atau activeDeck penuh, return false

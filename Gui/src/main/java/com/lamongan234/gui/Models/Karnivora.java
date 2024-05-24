@@ -7,7 +7,7 @@ public abstract class Karnivora extends Hewan {
   public void makan(Product makanan){
     if(makanan instanceof Hewani){
       System.out.println("Karnivora makan " + makanan.getName());
-      berat += makanan.getaddedweight();
+      berat_or_umur += makanan.getaddedweight();
     }else{
       System.out.println("Makanan tidak cocok");
     }

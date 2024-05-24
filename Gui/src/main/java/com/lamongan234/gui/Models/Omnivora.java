@@ -6,6 +6,6 @@ public abstract class Omnivora extends Hewan {
   }
   public void makan(Product makanan){
     System.out.println("Omnivora makan " + makanan.getName());
-    berat += makanan.getaddedweight();
+    berat_or_umur += makanan.getaddedweight();
   }
 }

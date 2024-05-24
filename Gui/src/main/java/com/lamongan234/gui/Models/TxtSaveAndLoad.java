@@ -180,7 +180,7 @@ public class TxtSaveAndLoad implements SaveAndLoad {
             Kartu card = DictKartu.get(itemName);
             if(card instanceof Hewan){
               Hewan hewan = (Hewan) card;
-              hewan.setBerat(umur_or_berat);
+              hewan.setBeratOrUmur(umur_or_berat);
               for(int i = 0; i< appliedItems; i++){
                 Item item = (Item) DictKartu.get(parts[4+i]);
                 hewan.AppliedItem(item);
@@ -248,7 +248,7 @@ public class TxtSaveAndLoad implements SaveAndLoad {
             Kartu card = DictKartu.get(itemName);
             if(card instanceof Hewan){
               Hewan hewan = (Hewan) card;
-              hewan.setBerat(umur_or_berat);
+              hewan.setBeratOrUmur(umur_or_berat);
               for(int i = 0; i< appliedItems; i++){
                 Item item = (Item) DictKartu.get(parts[4+i]);
                 hewan.AppliedItem(item);

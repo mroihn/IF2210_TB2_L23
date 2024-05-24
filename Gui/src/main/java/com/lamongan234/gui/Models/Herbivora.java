@@ -8,7 +8,7 @@ public abstract class Herbivora extends Hewan {
     if(makanan instanceof Nabati){
       System.out.println("Herbivora makan " + makanan.getName());
       Nabati vegan = (Nabati) makanan;
-      berat += vegan.getaddedweight();
+      berat_or_umur += vegan.getaddedweight();
     }else{
       System.out.println("Makanan tidak cocok");
     }

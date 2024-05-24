@@ -76,7 +76,7 @@ public class TxtSaveAndLoad implements SaveAndLoad {
         bw.newLine();
         for (int i = 0; i<player.sizeActiveDeck(); i++) {
           if(player.getActiveDeck()[i] != null){
-            bw.write("A0" + i + " " + player.getActiveDeck()[i].getName().toUpperCase().replace(" ", "_"));
+            bw.write("A0" + (i+1) + " " + player.getActiveDeck()[i].getName().toUpperCase().replace(" ", "_"));
             bw.newLine();
           }
         }

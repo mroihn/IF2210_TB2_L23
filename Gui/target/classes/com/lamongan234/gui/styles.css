@@ -1,10 +1,21 @@
-.card-style {
+.card-container-style {
     -fx-background-color: rgba(255,255,179,0.65);
     -fx-background-radius: 6px;
     -fx-border-color: gray;
     -fx-border-width: 1px;
     -fx-border-radius: 6px;
     -fx-padding: 10px 20px 10px 20px;
+
+}
+
+.card-style{
+    -fx-background-color: rgba(255,255,179,0.65);
+    -fx-background-radius: 6px;
+    -fx-border-color: gray;
+    -fx-border-width: 1px;
+    -fx-border-radius: 6px;
+    -fx-padding: 10px 20px 10px 20px;
+    -fx-cursor: hand;
 }
 
 .Beruang-style{
@@ -185,6 +196,7 @@
     -fx-border-radius: 3px;
     -fx-padding: 10px 20px;
     -fx-font-size: 14px;
+    -fx-cursor: hand;
 }
 
 .button-style:hover {
@@ -223,9 +235,18 @@
 }
 
 .shuffle-popup-style{
-    -fx-background-color: rgba(255, 255, 255, 0.0); /* Transparent background */
-    -fx-border-color: black; /* Optional: Add border to distinguish the pop-up */
-    -fx-border-width: 2; /* Optional: Width of the border */
-    -fx-border-radius: 10; /* Optional: Rounded corners for the border */
-    -fx-background-radius: 10; /* Optional: Rounded corners for the background */
+    -fx-background-color: rgba(255, 255, 255, 0.0);
+    -fx-border-color: black;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+.reshuffle-button-style{
+    -fx-background-image: url('./arrow-redo.png');
+    -fx-background-size: 60% 60%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-border-radius: 60px;
+    -fx-background-radius: 60px;
 }

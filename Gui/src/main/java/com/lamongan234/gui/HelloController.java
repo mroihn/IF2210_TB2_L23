@@ -101,7 +101,7 @@ public class HelloController {
         i=0;
         for (Node pane : hand.getChildren()) {
             if (pane instanceof Pane) {
-                pane.getStyleClass().add("card-style");
+                pane.getStyleClass().add("card-container-style");
                 pane.setId("d"+i);
 
 //                Card card = new Card();
@@ -119,7 +119,7 @@ public class HelloController {
         i=0;
         for (Node pane : ladangA.getChildren()) {
             if (pane instanceof Pane) {
-                pane.getStyleClass().add("card-style");
+                pane.getStyleClass().add("card-container-style");
                 pane.setId("l"+i);
 
                 makeDraggable((Pane) pane);

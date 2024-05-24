@@ -72,7 +72,7 @@ public class TxtSaveAndLoad implements SaveAndLoad {
         //     bw.newLine();
         // }
         // Save active deck state
-        bw.write(String.valueOf(player.sizeActiveDeck()));
+        bw.write(String.valueOf(player.filledSlotActiveDeck()));
         bw.newLine();
         for (int i = 0; i<player.sizeActiveDeck(); i++) {
           if(player.getActiveDeck()[i] != null){
@@ -82,7 +82,7 @@ public class TxtSaveAndLoad implements SaveAndLoad {
           }
         }
         // Save ladang state
-        bw.write(String.valueOf(player.getLadang().length));
+        bw.write(String.valueOf(player.jumlahSlotLadangTerisi()));
         bw.newLine();
         for (int i =0; i < player.getLadang().length; i ++) {
           if(player.getLadang()[i] != null){

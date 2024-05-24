@@ -55,6 +55,16 @@ public class Player {
         }
     }
 
+    public int jumlahSlotLadangTerisi(){
+        int count = 0;
+        for (int i = 0; i < 20; i++){
+            if (ladang[i] != null){
+                count++;
+            }
+        }
+        return count;
+    }
+
     public void setLadang(Kartu kartu, int x, int y){
         int row = x*5;
         int pos = row+y;

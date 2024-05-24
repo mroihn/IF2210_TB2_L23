@@ -7,7 +7,6 @@ public class Main_Dummy {
         Tanaman jagung = new BijiJagung();
         Product daging = new DagingDomba();
         Product tempe = new Tempe();
-        GameManager g = new GameManager();
 
 
         //SECTION UNTUK SEDDING GAMEMANAGER
@@ -77,5 +76,10 @@ public class Main_Dummy {
         p.addUang(100);
         System.out.println("Uang: " + p.getUang());
         p.addToActiveDeck(delay);
+
+
+
+        //tes serangan beruang
+        gameManager.SeranganBeruang();
     }
 }

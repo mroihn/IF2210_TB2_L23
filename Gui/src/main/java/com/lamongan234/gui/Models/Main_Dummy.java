@@ -13,6 +13,8 @@ public class Main_Dummy {
         g.getPlayer1().printDetails();
         g.getPlayer2().printDetails();
 
+        load.saveState(g, "tes");
+
         //Test generating Cards
         Player p = new Player();
         p.generateRandomCards(40);
@@ -23,22 +25,22 @@ public class Main_Dummy {
         Item delay = new Delay();
         jagung.panenKartu();
         System.out.println("");
-        System.out.println("berat awal hiu darat: " + hiuDarat.getBerat());
+        System.out.println("berat awal hiu darat: " + hiuDarat.getUmurOrBerat());
         accelerate.Efek(hiuDarat);
         accelerate.Efek(hiuDarat);
         accelerate.Efek(hiuDarat);
         System.out.println("Accelerating!!!!");
         hiuDarat.Display();
-        System.out.println(hiuDarat.getBerat());
+        System.out.println(hiuDarat.getUmurOrBerat());
         delay.Efek(hiuDarat);
         delay.Efek(hiuDarat);
         delay.Efek(hiuDarat);
         System.out.println("Delaying!!!!");
         hiuDarat.Display();
-        System.out.println(hiuDarat.getBerat());
+        System.out.println(hiuDarat.getUmurOrBerat());
         hiuDarat.panenKartu();
         hiuDarat.makan(daging);
-        System.out.println(hiuDarat.getBerat());
+        System.out.println(hiuDarat.getUmurOrBerat());
         hiuDarat.panenKartu();
         hiuDarat.makan(tempe);
         
@@ -64,6 +66,5 @@ public class Main_Dummy {
         p.addUang(100);
         System.out.println("Uang: " + p.getUang());
         p.addToActiveDeck(delay);
-
   }
 }

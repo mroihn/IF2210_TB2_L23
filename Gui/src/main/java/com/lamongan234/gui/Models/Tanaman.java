@@ -26,8 +26,11 @@ public abstract class Tanaman extends Harvestable{
     isTrapped = true;
   }
   // Getter and setter
-  public int getUmur() {
+  public int getUmurOrBerat() {
     return umur;
+  }
+  public Map<String, Integer> getListAppliedItem(){
+    return ListItem;
   }
   public void setUmur(int umur) {
     this.umur = umur;

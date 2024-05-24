@@ -25,6 +25,12 @@ public class Player {
     public int getUang(){
         return uang;
     }
+    public Kartu[] getActiveDeck(){
+        return activeDeck;
+    }
+    public Harvestable[] getLadang(){
+        return ladang;
+    }
     public void setUang(int uang){
         this.uang = uang;
     }
@@ -82,6 +88,9 @@ public class Player {
 
     public int sizeActiveDeck(){
         return activeDeck.length;
+    }
+    public int sizeDeck(){
+        return deck.size();
     }
     
     public void printDeck(){

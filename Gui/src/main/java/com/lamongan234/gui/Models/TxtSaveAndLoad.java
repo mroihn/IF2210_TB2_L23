@@ -76,7 +76,8 @@ public class TxtSaveAndLoad implements SaveAndLoad {
         bw.newLine();
         for (int i = 0; i<player.sizeActiveDeck(); i++) {
           if(player.getActiveDeck()[i] != null){
-            bw.write("A0" + (i+1) + " " + player.getActiveDeck()[i].getName().toUpperCase().replace(" ", "_"));
+            char rowChar = (char) ('A' + i);
+            bw.write(rowChar + "01" + " " + player.getActiveDeck()[i].getName().toUpperCase().replace(" ", "_"));
             bw.newLine();
           }
         }
@@ -87,10 +88,10 @@ public class TxtSaveAndLoad implements SaveAndLoad {
           if(player.getLadang()[i] != null){
             int row = i/5;
             int col = i - row;
-            char rowLetter = (char) ('A' + row);
+            char colNumber = (char) ('A' + col);
   
             // Format column index to start from 1
-            String colNumber = String.format("%02d", col + 1);
+            String rowLetter = String.format("%02d", row + 1);
             bw.write(rowLetter + colNumber + " " + player.getLadang()[i].getName().toUpperCase().replace(" ", "_") + " " +
             player.getLadang()[i].getUmurOrBerat() + " " + player.getLadang()[i].getListAppliedItem().size());
             for (Map.Entry<String, Integer> entry : player.getLadang()[i].getListAppliedItem().entrySet()) {
@@ -170,8 +171,8 @@ public class TxtSaveAndLoad implements SaveAndLoad {
           String[] parts = line.split(" ");
           if (parts.length >= 4) {
             String position = parts[0];
-            int row = position.charAt(0) - 'A';
-            int col = Integer.parseInt(position.substring(1)) - 1;
+            int col = position.charAt(0) - 'A';
+            int row = Integer.parseInt(position.substring(1)) - 1;
             System.out.println("coordinates" + row + " " + col);
             String itemName = parts[1];
             int umur_or_berat = Integer.parseInt(parts[2]);
@@ -240,8 +241,8 @@ public class TxtSaveAndLoad implements SaveAndLoad {
           String[] parts = line.split(" ");
           if (parts.length >= 4) {
             String position = parts[0];
-            int row = position.charAt(0) - 'A';
-            int col = Integer.parseInt(position.substring(1)) - 1;
+            int col = position.charAt(0) - 'A';
+            int row = Integer.parseInt(position.substring(1)) - 1;
             String itemName = parts[1];
             int umur_or_berat = Integer.parseInt(parts[2]);
             int appliedItems = Integer.parseInt(parts[3]);

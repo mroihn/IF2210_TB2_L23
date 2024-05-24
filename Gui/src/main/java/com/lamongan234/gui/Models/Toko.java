@@ -7,18 +7,24 @@ import java.util.Map;
 
 public class Toko {
   private List<Product> ListProduk;
-  private Map<String, Integer> ListHarga;
+  private Map<String, Integer> ListQuantity;
   public Toko(){
     ListProduk = new ArrayList<>();
-    ListHarga = new HashMap<>();
+    ListQuantity = new HashMap<>();
   }
   public Toko(List<Product> p){
     ListProduk = p;
   }
+  public int getUniqueItemCnt(){
+    return ListQuantity.size();
+  }
+  public Map<String, Integer> getListQuantity(){
+    return ListQuantity;
+  }
 
   public void displayToko(){
     System.out.println("===================== Items =======================");
-     for (Map.Entry<String, Integer> entry : ListHarga.entrySet()) {
+     for (Map.Entry<String, Integer> entry : ListQuantity.entrySet()) {
         String itemName = entry.getKey();
         Integer itemQuantity = entry.getValue();
         System.out.println(itemName + " " + itemQuantity);
@@ -27,10 +33,10 @@ public class Toko {
 
   public void AddKartu(Product card){
     ListProduk.add(card);
-    if(ListHarga.get(card.getName()) == null){
-      ListHarga.put(card.getName(), 1);
+    if(ListQuantity.get(card.getName()) == null){
+      ListQuantity.put(card.getName(), 1);
     }else{
-      ListHarga.put(card.getName(), ListHarga.get(card.getName()) +1);
+      ListQuantity.put(card.getName(), ListQuantity.get(card.getName()) +1);
     }
   }
 

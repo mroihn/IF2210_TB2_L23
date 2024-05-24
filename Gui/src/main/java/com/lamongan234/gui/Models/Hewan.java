@@ -24,8 +24,12 @@ public abstract class Hewan extends Harvestable{
     isTrapped = true;
   }
   // Getter and setter
-  public int getBerat() {
+  public int getUmurOrBerat() {
     return berat;
+  }
+
+  public Map<String, Integer> getListAppliedItem(){
+    return ListItem;
   }
   public void setBerat(int berat) {
     this.berat = berat;

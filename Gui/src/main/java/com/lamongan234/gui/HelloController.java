@@ -123,7 +123,7 @@ public class HelloController {
                 pane.setId("l"+i);
 
                 makeDraggable((Pane) pane);
-
+                showDetail((Pane) pane);
                 //pane.setOnDragDetected();
                 i++;
             }
@@ -146,16 +146,20 @@ public class HelloController {
         b1Ladangku.getStyleClass().add("button-style");
         b1Ladangku.getStyleClass().add("style-toggled");
         b1Ladangku.setOnAction(event -> {
-            showLadangku();
-            b1Ladangku.getStyleClass().add("style-toggled");
-            b2LadangLawan.getStyleClass().remove("style-toggled");
+            if (!onLadangku) {
+                showLadangku();
+                b1Ladangku.getStyleClass().add("style-toggled");
+                b2LadangLawan.getStyleClass().remove("style-toggled");
+            }
         });
 
         b2LadangLawan.getStyleClass().add("button-style");
         b2LadangLawan.setOnAction(event -> {
-            showLadangLawan();
-            b1Ladangku.getStyleClass().remove("style-toggled");
-            b2LadangLawan.getStyleClass().add("style-toggled");
+            if(onLadangku) {
+                showLadangLawan();
+                b1Ladangku.getStyleClass().remove("style-toggled");
+                b2LadangLawan.getStyleClass().add("style-toggled");
+            }
         });
 
         b3Toko.getStyleClass().add("button-style");
@@ -171,6 +175,15 @@ public class HelloController {
         buttonContainer.getStyleClass().add("container-style");
         buttonContainer.setAlignment(javafx.geometry.Pos.CENTER);
 
+    }
+
+    protected void showDetail(Pane pane) {
+        pane.setOnMouseClicked(event -> {
+            if (!pane.getChildren().isEmpty()) {
+//                System.out.println(((Card)pane.getChildren().get(0)).getName());
+                openDetail(((Card)pane.getChildren().get(0)));
+            }
+        });
     }
 
     protected void makeDraggable(Pane pane) {
@@ -376,6 +389,36 @@ public class HelloController {
             //scene.setFill(null);
             popupStage.setScene(scene);
             popupStage.showAndWait();
+
+            anchor.getChildren().remove(overlay);
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void openDetail(Card card){
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("detailPopup.fxml"));
+        try {
+
+            Rectangle overlay = new Rectangle(anchor.getWidth(), anchor.getHeight());
+            overlay.setFill(Color.rgb(0, 0, 0, 0.5));
+            anchor.getChildren().add(overlay);
+
+            Parent root = fxmlLoader.load();
+
+            DetailPopupController popupController = fxmlLoader.getController();
+            popupController.setMainController(this);
+            popupController.setOverlay(overlay);
+            popupController.setCard(card);
+
+            Stage detailStage = new Stage();
+            detailStage.initModality(Modality.APPLICATION_MODAL);
+            detailStage.initStyle(StageStyle.UNDECORATED);
+            Scene scene = new Scene(root);
+            //scene.setFill(null);
+            detailStage.setScene(scene);
+            detailStage.showAndWait();
 
             anchor.getChildren().remove(overlay);
 

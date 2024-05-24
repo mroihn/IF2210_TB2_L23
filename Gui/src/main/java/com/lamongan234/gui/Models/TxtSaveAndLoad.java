@@ -1,13 +1,16 @@
 package com.lamongan234.gui.Models;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
 public class TxtSaveAndLoad implements SaveAndLoad {
   private Map<String, Kartu> DictKartu;
+
   public TxtSaveAndLoad(){
     DictKartu = new HashMap<>();
     DictKartu.put("HIU_DARAT", new HiuDarat());
@@ -33,9 +36,73 @@ public class TxtSaveAndLoad implements SaveAndLoad {
     DictKartu.put("DESTROY", new Destroy());
     DictKartu.put("INSTANT_HARVEST", new InstantHarvest());
     DictKartu.put("PROTECT", new Protect());
-    DictKartu.put("TRAP", new Trap());
+    DictKartu.put("TRAP", new Trap());    
   }
-  public void saveState(GameManager g, String fileDir){}
+  public void saveState(GameManager g, String fileDir) {
+    fileDir = "Gui\\src\\main\\java\\com\\lamongan234\\gui\\Models\\" + fileDir;
+    String gamestate = fileDir + "\\gamestate.txt";
+    String player1 = fileDir + "\\player1.txt";
+    String player2 = fileDir + "\\player2.txt";
+
+    try (BufferedWriter bw = new BufferedWriter(new FileWriter(gamestate))) {
+      bw.write(String.valueOf(g.getTurn()));
+      bw.newLine();
+      bw.write(String.valueOf(g.getToko().getUniqueItemCnt()));
+      bw.newLine();
+      for (Map.Entry<String, Integer> entry : g.getToko().getListQuantity().entrySet()) {
+        bw.write(entry.getKey().toUpperCase().replace(" ", "_") + " " + entry.getValue());
+        bw.newLine();
+      }
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+
+    savePlayerState(g.getPlayer1(), player1);
+    savePlayerState(g.getPlayer2(), player2);
+  }
+  private void savePlayerState(Player player, String filePath) {
+    try (BufferedWriter bw = new BufferedWriter(new FileWriter(filePath))) {
+        bw.write(String.valueOf(player.getUang()));
+        bw.newLine();
+        bw.write(String.valueOf(player.sizeDeck()));
+        bw.newLine();
+        // Save deck state
+        // for (Kartu kartu : player.getDeck()) {
+        //     bw.write(kartu.getName());
+        //     bw.newLine();
+        // }
+        // Save active deck state
+        bw.write(String.valueOf(player.sizeActiveDeck()));
+        bw.newLine();
+        for (int i = 0; i<player.sizeActiveDeck(); i++) {
+          if(player.getActiveDeck()[i] != null){
+            bw.write("A0" + (i+1) + " " + player.getActiveDeck()[i].getName().toUpperCase().replace(" ", "_"));
+            bw.newLine();
+          }
+        }
+        // Save ladang state
+        bw.write(String.valueOf(player.getLadang().length));
+        bw.newLine();
+        for (int i =0; i < player.getLadang().length; i ++) {
+          if(player.getLadang()[i] != null){
+            int row = i/5;
+            int col = i - row;
+            char rowLetter = (char) ('A' + row);
+  
+            // Format column index to start from 1
+            String colNumber = String.format("%02d", col + 1);
+            bw.write(rowLetter + colNumber + " " + player.getLadang()[i].getName().toUpperCase().replace(" ", "_") + " " +
+            player.getLadang()[i].getUmurOrBerat() + " " + player.getLadang()[i].getListAppliedItem().size());
+            for (Map.Entry<String, Integer> entry : player.getLadang()[i].getListAppliedItem().entrySet()) {
+              bw.write(" " + entry.getKey().toUpperCase().replace(" ", "_"));
+            }
+            bw.newLine();
+          }
+        }
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+  }
   public void loadState(GameManager g, String fileDir){
     fileDir = "Gui\\src\\main\\java\\com\\lamongan234\\gui\\Models\\" + fileDir;
     String gamestate = fileDir + "\\gamestate.txt";

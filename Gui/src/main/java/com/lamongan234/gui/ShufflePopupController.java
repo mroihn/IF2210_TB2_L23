@@ -9,12 +9,15 @@ import javafx.scene.layout.Pane;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class  ShufflePopupController {
     @FXML
     AnchorPane shuffleAnchor;
 
     @FXML
-    GridPane ShuffleCointainer;
+    GridPane ShuffleContainer;
 
     @FXML
     Button b11Accept;
@@ -34,11 +37,16 @@ public class  ShufflePopupController {
         this.overlay = overlay;
     }
 
+    public void setFreeslot(){
+        freeslot = mainController.GetFreeSlotHand();
+        System.out.println("this is a test");
+    }
+
     @FXML
     public void initialize() {
         int i = 0;
 
-        for (Node pane : ShuffleCointainer.getChildren()) {
+        for (Node pane : ShuffleContainer.getChildren()) {
 
             if (pane instanceof Pane) {
                 pane.getStyleClass().add("card-style");
@@ -73,17 +81,35 @@ public class  ShufflePopupController {
     @FXML
     private void closePopup() {
         Stage stage = (Stage) b11Accept.getScene().getWindow();
+        Card[] cards = new Card[4];
+        for (int i = 0; i < 4; i++) {
+            if (( ShuffleContainer.getChildren().get(i)).getStyleClass().contains("style-toggled")) {
+                Card card = (Card) ((Pane) ShuffleContainer.getChildren().get(i)).getChildren().get(0);
+                cards[i] = card;
+            }
+        }
+        mainController.addToCurHand(cards);
+//        for (int i = 0; i < 6; i++) {
+//            if (((Pane) ShuffleContainer.getChildren().get(i)).getChildren().isEmpty()) {
+//                ((Pane) ShuffleContainer.getChildren().get(i)).getChildren().add(cards[i]);
+//            }
+//        }
         stage.close();
     }
 
     protected void makeClickable(Pane pane){
         pane.setOnMouseClicked(event -> {
-            if (!pane.getStyleClass().contains("style-toggled")) {
-                pane.getStyleClass().add("style-toggled");
-                freeslot--;
-            } else {
+            if (pane.getStyleClass().contains("style-toggled")) {
                 pane.getStyleClass().remove("style-toggled");
                 freeslot++;
+            } else {
+                if (freeslot>0) {
+                    pane.getStyleClass().add("style-toggled");
+                    freeslot--;
+                }
+                else{
+                    System.out.println("toilet");
+                }
             }
             System.out.println(freeslot);
         });

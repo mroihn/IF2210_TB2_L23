@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="240.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@styles.css" fx:controller="com.lamongan234.gui.ShufflePopupController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="240.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lamongan234.gui.ShufflePopupController">
    <children>
       <GridPane fx:id="ShuffleContainer" hgap="10.0" layoutX="35.0" layoutY="14.0" vgap="8.0">
         <columnConstraints>
@@ -26,5 +26,6 @@
          </children>
       </GridPane>
       <Button fx:id="b11Accept" layoutX="14.0" layoutY="250.0" mnemonicParsing="false" onAction="#closePopup" prefHeight="40.0" prefWidth="150.0" text="Accept" />
+      <Button fx:id="b12Reshuffle" layoutX="185.0" layoutY="250.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" />
    </children>
 </AnchorPane>

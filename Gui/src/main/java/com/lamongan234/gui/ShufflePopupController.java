@@ -22,6 +22,9 @@ public class  ShufflePopupController {
     @FXML
     Button b11Accept;
 
+    @FXML
+    Button b12Reshuffle;
+
     private HelloController mainController;
     private Rectangle overlay;
     private int freeslot;
@@ -44,26 +47,13 @@ public class  ShufflePopupController {
 
     @FXML
     public void initialize() {
-        int i = 0;
-
-        for (Node pane : ShuffleContainer.getChildren()) {
-
-            if (pane instanceof Pane) {
-                pane.getStyleClass().add("card-style");
-                makeClickable((Pane) pane);
-                pane.setId("s"+i);
-
-                Card card = new Card();
-                card.setId("c"+i);
-
-                System.out.println(i);
-                ((Pane) pane).getChildren().add(card);
-                System.out.println(card.getName());
-                i++;
-            }
-        }
-
+        getShuffle();
         b11Accept.getStyleClass().add("button-style");
+        b12Reshuffle.getStyleClass().add("button-style");
+        b12Reshuffle.getStyleClass().add("reshuffle-button-style");
+        b12Reshuffle.setOnAction(event -> {
+            getShuffle();
+        });
         //freeslot = mainController.GetFreeSlotHand();
         if (mainController != null) {
             freeslot = mainController.GetFreeSlotHand();
@@ -113,5 +103,26 @@ public class  ShufflePopupController {
             }
             System.out.println(freeslot);
         });
+    }
+
+    protected void getShuffle(){
+        int i=0;
+        for (Node pane : ShuffleContainer.getChildren()) {
+
+            if (pane instanceof Pane) {
+                pane.getStyleClass().add("card-container-style");
+                makeClickable((Pane) pane);
+                pane.setId("s"+i);
+                ((Pane) pane).getChildren().clear();
+
+                Card card = new Card();
+                card.setId("c"+i);
+
+                System.out.println(i);
+                ((Pane) pane).getChildren().add(card);
+                System.out.println(card.getName());
+                i++;
+            }
+        }
     }
 }

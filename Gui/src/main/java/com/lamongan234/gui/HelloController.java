@@ -101,7 +101,7 @@ public class HelloController {
         i=0;
         for (Node pane : hand.getChildren()) {
             if (pane instanceof Pane) {
-                pane.getStyleClass().add("card-style");
+                pane.getStyleClass().add("card-container-style");
                 pane.setId("d"+i);
 
 //                Card card = new Card();
@@ -119,7 +119,7 @@ public class HelloController {
         i=0;
         for (Node pane : ladangA.getChildren()) {
             if (pane instanceof Pane) {
-                pane.getStyleClass().add("card-style");
+                pane.getStyleClass().add("card-container-style");
                 pane.setId("l"+i);
 
                 makeDraggable((Pane) pane);
@@ -146,16 +146,20 @@ public class HelloController {
         b1Ladangku.getStyleClass().add("button-style");
         b1Ladangku.getStyleClass().add("style-toggled");
         b1Ladangku.setOnAction(event -> {
-            showLadangku();
-            b1Ladangku.getStyleClass().add("style-toggled");
-            b2LadangLawan.getStyleClass().remove("style-toggled");
+            if (!onLadangku) {
+                showLadangku();
+                b1Ladangku.getStyleClass().add("style-toggled");
+                b2LadangLawan.getStyleClass().remove("style-toggled");
+            }
         });
 
         b2LadangLawan.getStyleClass().add("button-style");
         b2LadangLawan.setOnAction(event -> {
-            showLadangLawan();
-            b1Ladangku.getStyleClass().remove("style-toggled");
-            b2LadangLawan.getStyleClass().add("style-toggled");
+            if(onLadangku) {
+                showLadangLawan();
+                b1Ladangku.getStyleClass().remove("style-toggled");
+                b2LadangLawan.getStyleClass().add("style-toggled");
+            }
         });
 
         b3Toko.getStyleClass().add("button-style");

@@ -1,5 +1,8 @@
 package com.lamongan234.gui.Models;
 
+import java.io.File;
+import java.net.URL;
+import java.net.URLClassLoader;
 
 public class GameManager {
   private Player p1;
@@ -48,4 +51,14 @@ public class GameManager {
   }
 
 
+  public void saveState(String jarPath, String pluginClassName){
+  File jarFile = new File(jarPath);
+  try (URLClassLoader urlClassLoader = new URLClassLoader(new URL[]{jarFile.toURI().toURL()})) {
+      Class<?> pluginClass = urlClassLoader.loadClass(pluginClassName);
+      SaveAndLoad load = (SaveAndLoad) pluginClass.getDeclaredConstructor().newInstance();
+      load.saveState(this, "tes");
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+  }
 }

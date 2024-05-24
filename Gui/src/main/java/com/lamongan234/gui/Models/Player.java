@@ -72,6 +72,9 @@ public class Player {
             }
         }
     }
+    public void addToActiveDeck(Kartu kartu, int index){
+        activeDeck[index] = kartu;
+    }
     public void removeFromActiveDeck(Kartu kartu){
         for (int i = 0; i < 6; i++){
             if (activeDeck[i] == kartu){

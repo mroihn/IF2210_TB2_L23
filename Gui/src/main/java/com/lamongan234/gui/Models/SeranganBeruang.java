@@ -1,6 +1,6 @@
 package com.lamongan234.gui.Models;
 
-public class SeranganBeruang implements GameState, Runnable{
+public class SeranganBeruang implements Runnable{
   public void handle(GameManager g, int turnCount){
     if(g==null){
       return;
@@ -16,6 +16,4 @@ public class SeranganBeruang implements GameState, Runnable{
   public void run() {
     handle(null, 0);
   }
-    
-
 }

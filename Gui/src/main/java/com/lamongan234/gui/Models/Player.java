@@ -72,7 +72,7 @@ public class Player {
             ladang[posLadang] = null;
         }
     }
-    public void moveLadangToLadang(int posAwal,int posAkhir){
+    public synchronized void moveLadangToLadang(int posAwal,int posAkhir){
         if(ladang[posAkhir]==null && ladang[posAwal]!=null){
             ladang[posAkhir] = ladang[posAwal];
             ladang[posAwal] = null;
@@ -229,10 +229,8 @@ public class Player {
         Random random = new Random();
         int key = random.nextInt(MapRedArea.size());
         List<Integer> listpos = MapRedArea.get(key);
-        // Randomize duration between 30 to 60 seconds
-        int duration = 3000 + random.nextInt(3001);
+        int duration = 30000 + random.nextInt(30000);
         long attackEndTime = System.currentTimeMillis() + duration;
-        // Set a timer for 30 seconds
         Timer timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override

@@ -24,18 +24,25 @@ public class Main_Dummy {
         // txtSaveAndLoad.saveState(gameManager, "tes");
 
 
-        //SECTION untuk mencoba save and load plugin, dalam hal ini test buat txt
-        GameManager gameManager2 = new GameManager();
-        String jarPath = "TxtSaveAndLoad.jar";
-        SaveAndLoad txtPluginSaveAndLoad = gameManager2.SaveAndLoadPlugin(jarPath, "com.lamongan234.gui.Models.TxtSaveAndLoad");
-        txtPluginSaveAndLoad.loadState(gameManager2, "tes");
-        //cek isi player2.txt
-        gameManager2.getPlayer2().printDetails();
-        gameManager2.getPlayer1().setUang(2024);
-        //simpan perubahan
-        txtPluginSaveAndLoad.saveState(gameManager2, "tes");
-        // harusnya uang berubah jadi 2024 untuk player1, lihat di player1.txt
+        // //SECTION untuk mencoba save and load plugin, dalam hal ini test buat txt
+        // GameManager gameManager2 = new GameManager();
+        // String jarPath = "TxtSaveAndLoad.jar";
+        // SaveAndLoad txtPluginSaveAndLoad = gameManager2.SaveAndLoadPlugin(jarPath, "com.lamongan234.gui.Models.TxtSaveAndLoad");
+        // txtPluginSaveAndLoad.loadState(gameManager2, "tes");
+        // //cek isi player2.txt
+        // gameManager2.getPlayer2().printDetails();
+        // gameManager2.getPlayer1().setUang(2024);
+        // //simpan perubahan
+        // txtPluginSaveAndLoad.saveState(gameManager2, "tes");
+        // // harusnya uang berubah jadi 2024 untuk player1, lihat di player1.txt
 
+
+        //SECTION tes JsonSaveAndLoad
+        GameManager gameManager = new GameManager();
+        XmlSaveAndLoad xmlSaveAndLoad = new XmlSaveAndLoad();
+        xmlSaveAndLoad.loadState(gameManager, "tes");
+        gameManager.getPlayer1().setUang(2211);
+        xmlSaveAndLoad.saveState(gameManager, "tes");
 
 
         //SECTION UNTUK MANUAL MENGGUNAKAN PLAYER, tidak ada hubungan dengan GameManager di atas

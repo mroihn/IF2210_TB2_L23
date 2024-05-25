@@ -1,0 +1,32 @@
+{
+  "uang": 2000,
+  "deckSize": 4,
+  "activeDeck": [
+      {
+          "position": "A01",
+          "name": "BERUANG"
+      },
+      {
+          "position": "B01",
+          "name": "KUDA"
+      }
+  ],
+  "ladang": [
+      {
+          "position": "A01",
+          "name": "STROBERI",
+          "umurOrBerat": 7,
+          "appliedItems": [
+              "BIJI_STROBERI"
+          ]
+      },
+      {
+          "position": "B02",
+          "name": "LABU",
+          "umurOrBerat": 3,
+          "appliedItems": [
+              "BIJI_LABU"
+          ]
+      }
+  ]
+}

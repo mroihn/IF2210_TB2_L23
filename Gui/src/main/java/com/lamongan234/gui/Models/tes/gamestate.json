@@ -1,0 +1,20 @@
+{
+  "turn": 5,
+  "toko": {
+      "uniqueItemCount": 3,
+      "items": [
+          {
+              "name": "HIU_DARAT",
+              "quantity": 2
+          },
+          {
+              "name": "SAPI",
+              "quantity": 1
+          },
+          {
+              "name": "DOMBA",
+              "quantity": 3
+          }
+      ]
+  }
+}

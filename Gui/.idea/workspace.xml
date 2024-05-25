@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d91d162f-74cf-4864-ae76-10a03ae7e10c" name="Changes" comment="Merge remote-tracking branch 'origin/main'">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/Models/JsonSaveAndLoad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_17_0_6.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/DetailPopupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/DetailPopupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/Models/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/Models/GameManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/Models/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/Models/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/detailPopup.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/detailPopup.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/Models/Main_Dummy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/Models/Main_Dummy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/DetailPopupController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/DetailPopupController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/HelloController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/GameManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/GameManager.class" afterDir="false" />
@@ -19,7 +19,7 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Player$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Player$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Toko.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Toko.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/detailPopup.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/detailPopup.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,34 +58,38 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2gY132z9tpPVTgS0sU7loZhcQvx" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ControllerApp.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main_Dummy.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/maula/AppData/Local/SceneBuilder/SceneBuilder.exe&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.ControllerApp.executor": "Run",
+    "Application.HelloApplication.executor": "Run",
+    "Application.Main_Dummy.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "git-widget-placeholder": "main",
+    "go.import.settings.migrated": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Jimly/Documents/OOP2/IF2210_TB2_L23/Gui",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\maula\OneDrive\Documents\ITB\S4\PBO\IF2210_TB2_L23\Gui\src\main\resources\com\lamongan234\gui" />
@@ -131,6 +135,10 @@
       <workItem from="1716391559882" duration="783000" />
       <workItem from="1716461461044" duration="18007000" />
       <workItem from="1716547585557" duration="4850000" />
+      <workItem from="1716621107493" duration="2061000" />
+      <workItem from="1716623750682" duration="34000" />
+      <workItem from="1716623799199" duration="738000" />
+      <workItem from="1716626398087" duration="2759000" />
     </task>
     <servers />
   </component>
@@ -138,6 +146,7 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="merge" />
     <MESSAGE value="Merge remote-tracking branch 'origin/main'" />
     <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/main'" />

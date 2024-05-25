@@ -1,0 +1,33 @@
+{
+  "uang": 1500,
+  "deckSize": 5,
+  "activeDeck": [
+      {
+          "position": "A01",
+          "name": "SAPI"
+      },
+      {
+          "position": "B01",
+          "name": "DOMBA"
+      }
+  ],
+  "ladang": [
+      {
+          "position": "A01",
+          "name": "HIU_DARAT",
+          "umurOrBerat": 10,
+          "appliedItems": [
+              "SIRIP_HIU"
+          ]
+      },
+      {
+          "position": "B02",
+          "name": "JAGUNG",
+          "umurOrBerat": 5,
+          "appliedItems": [
+              "BIJI_JAGUNG",
+              "ACCELERATE"
+          ]
+      }
+  ]
+}

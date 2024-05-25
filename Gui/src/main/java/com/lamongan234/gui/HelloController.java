@@ -33,11 +33,11 @@ public class HelloController {
     private static boolean onLadangku = true;
 
 
-    private Card[] handPlayer1 = new Card[6];
-    private Card[] handPlayer2 = new Card[6];
+    public Card[] handPlayer1 = new Card[6];
+    public Card[] handPlayer2 = new Card[6];
 
-    private Card[] ladangPlayer1 = new Card[20];
-    private Card[] ladangPlayer2 = new Card[20];
+    public Card[] ladangPlayer1 = new Card[20];
+    public Card[] ladangPlayer2 = new Card[20];
 
     private GameManager game = new GameManager();
 
@@ -52,13 +52,13 @@ public class HelloController {
     private Pane turnClock;
 
     @FXML
-    private Label player1Gold;
+    public Label player1Gold;
 
     @FXML
-    private Label player2Gold;
+    public Label player2Gold;
 
     @FXML
-    private Label clockCounter;
+    public Label clockCounter;
 
     @FXML
     private Label clockLabel;
@@ -99,8 +99,8 @@ public class HelloController {
     @FXML
     public void initialize() {
         ladangPlayer1 = new Card[20];
-        SaveAndLoad saveAndLoad = new TxtSaveAndLoad();
-        saveAndLoad.loadState(game, "statefiles");
+//        SaveAndLoad saveAndLoad = new TxtSaveAndLoad();
+//        saveAndLoad.loadState(game, "statefiles");
         clockCounter.setText(String.valueOf(game.getTurn())+"/20");
         player1Gold.setText("Player 1:"+String.valueOf(game.getPlayer1().getUang()));
         player2Gold.setText("Player 2:"+String.valueOf(game.getPlayer2().getUang()));
@@ -204,6 +204,9 @@ public class HelloController {
         b3Toko.getStyleClass().add("button-style");
         b4SaveState.getStyleClass().add("button-style");
         b5LoadState.getStyleClass().add("button-style");
+        b5LoadState.setOnAction(event ->{
+            openLoad();
+        });
         b6LoadPlugin.getStyleClass().add("button-style");
 
         b7Deck.getStyleClass().add("button-style");
@@ -335,7 +338,6 @@ public class HelloController {
                             if(kode.equals("l")){
                                 System.out.println(posAwal + " " + Integer.parseInt(pane.getId().substring(1)));
                                 game.getCurrPlayer().moveDeckToLadang(posAwal,Integer.parseInt(pane.getId().substring(1)));
-                                System.out.println("berat sekarang : "+game.getCurrPlayer().ladang[Integer.parseInt(pane.getId().substring(1))].getUmurOrBerat());
 
                             }
                             else{
@@ -513,6 +515,37 @@ public class HelloController {
             popupController.initialize(game);
             popupController.setMainController(this);
             popupController.setFreeslot();
+            popupController.setOverlay(overlay);
+
+            Stage popupStage = new Stage();
+            popupStage.initModality(Modality.APPLICATION_MODAL);
+            popupStage.initStyle(StageStyle.UNDECORATED);
+            Scene scene = new Scene(root);
+            //scene.setFill(null);
+            popupStage.setScene(scene);
+            popupStage.showAndWait();
+
+            anchor.getChildren().remove(overlay);
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @FXML
+    private void openLoad(){
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Load.fxml"));
+        try {
+
+            Rectangle overlay = new Rectangle(anchor.getWidth(), anchor.getHeight());
+            overlay.setFill(Color.rgb(0, 0, 0, 0.5));
+            anchor.getChildren().add(overlay);
+
+            Parent root = fxmlLoader.load();
+
+            loadController popupController = fxmlLoader.getController();
+            popupController.initialize(game);
+            popupController.setMainController(this);
             popupController.setOverlay(overlay);
 
             Stage popupStage = new Stage();

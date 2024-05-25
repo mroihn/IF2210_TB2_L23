@@ -24,6 +24,16 @@ public class Main_Dummy {
         txtSaveAndLoad.saveState(gameManager, "tes");
 
 
+        //SECTION untuk mencoba save and load plugin, dalam hal ini test buat txt
+        GameManager gameManager2 = new GameManager();
+        String jarPath = "TxtSaveAndLoad.jar";
+        SaveAndLoad txtPluginSaveAndLoad = gameManager2.SaveAndLoadPlugin(jarPath, "com.lamongan234.gui.Models.TxtSaveAndLoad");
+        txtPluginSaveAndLoad.loadState(gameManager2, "tes2");
+        gameManager2.getPlayer1().setUang(2024);
+        txtPluginSaveAndLoad.saveState(gameManager2, "tes2");
+
+
+
 
         //SECTION UNTUK MANUAL MENGGUNAKAN PLAYER, tidak ada hubungan dengan GameManager di atas
         Player p = new Player();

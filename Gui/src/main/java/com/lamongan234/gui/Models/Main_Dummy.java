@@ -9,7 +9,7 @@ public class Main_Dummy {
         Product tempe = new Tempe();
 
 
-        // //SECTION UNTUK SEDDING GAMEMANAGER
+        // //SECTION UNTUK SEEDING GAMEMANAGER
         // TxtSaveAndLoad txtSaveAndLoad = new TxtSaveAndLoad();
         // GameManager gameManager = new GameManager();
         // txtSaveAndLoad.loadState(gameManager, "tes");
@@ -32,8 +32,9 @@ public class Main_Dummy {
         //cek isi player2.txt
         gameManager2.getPlayer2().printDetails();
         gameManager2.getPlayer1().setUang(2024);
+        //simpan perubahan
         txtPluginSaveAndLoad.saveState(gameManager2, "tes");
-
+        // harusnya uang berubah jadi 2024 untuk player1, lihat di player1.txt
 
 
 

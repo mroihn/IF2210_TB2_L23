@@ -87,12 +87,12 @@ public class TxtSaveAndLoad implements SaveAndLoad {
         for (int i =0; i < player.getLadang().length; i ++) {
           if(player.getLadang()[i] != null){
             int row = i/5;
-            int col = i - row;
-            char colNumber = (char) ('A' + col);
+            // int col = i - row;
+            char colNumber = (char) ('A' + row);
   
             // Format column index to start from 1
             String rowLetter = String.format("%02d", row + 1);
-            bw.write(rowLetter + colNumber + " " + player.getLadang()[i].getName().toUpperCase().replace(" ", "_") + " " +
+            bw.write(colNumber + rowLetter + " " + player.getLadang()[i].getName().toUpperCase().replace(" ", "_") + " " +
             player.getLadang()[i].getUmurOrBerat() + " " + player.getLadang()[i].getListAppliedItem().size());
             for (Map.Entry<String, Integer> entry : player.getLadang()[i].getListAppliedItem().entrySet()) {
               bw.write(" " + entry.getKey().toUpperCase().replace(" ", "_"));

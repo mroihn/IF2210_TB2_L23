@@ -9,19 +9,19 @@ public class Main_Dummy {
         Product tempe = new Tempe();
 
 
-        //SECTION UNTUK SEDDING GAMEMANAGER
-        TxtSaveAndLoad txtSaveAndLoad = new TxtSaveAndLoad();
-        GameManager gameManager = new GameManager();
-        txtSaveAndLoad.loadState(gameManager, "tes");
-        //cek isi
-        gameManager.getToko().displayToko();
-        gameManager.getPlayer1().printDetails();
-        gameManager.getPlayer2().printDetails();
-        //lakukan perubahan
-        gameManager.getPlayer1().setUang(1010);
-        //save state dan lihat pada direktori Gui\src\main\java\com\lamongan234\gui\Models\tes\
-        //apakah ada perubahan uang pada player1.txt
-        txtSaveAndLoad.saveState(gameManager, "tes");
+        // //SECTION UNTUK SEDDING GAMEMANAGER
+        // TxtSaveAndLoad txtSaveAndLoad = new TxtSaveAndLoad();
+        // GameManager gameManager = new GameManager();
+        // txtSaveAndLoad.loadState(gameManager, "tes");
+        // //cek isi
+        // gameManager.getToko().displayToko();
+        // gameManager.getPlayer1().printDetails();
+        // gameManager.getPlayer2().printDetails();
+        // //lakukan perubahan
+        // gameManager.getPlayer1().setUang(1010);
+        // //save state dan lihat pada direktori Gui\src\main\java\com\lamongan234\gui\Models\tes\
+        // //apakah ada perubahan uang pada player1.txt
+        // txtSaveAndLoad.saveState(gameManager, "tes");
 
 
         //SECTION untuk mencoba save and load plugin, dalam hal ini test buat txt
@@ -80,7 +80,7 @@ public class Main_Dummy {
 
         p.startShuffle();
 
-        p.setLadang(jagung, 0, 0);
+        p.setLadang(jagung, 0);
         p.printLadang();
         System.out.println("Uang: " + p.getUang());
         p.addUang(100);

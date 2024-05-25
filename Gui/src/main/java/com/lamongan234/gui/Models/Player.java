@@ -97,8 +97,21 @@ public class Player {
             if(activeDeck[posDeck] instanceof Item){
                 System.out.println("Using Item");
                 Item item = (Item) activeDeck[posDeck];
-                item.Efek(ladang[posDeck]);
+                item.Efek(ladang[posLadang]);
                 activeDeck[posDeck] = null;
+            }
+            if(activeDeck[posDeck] instanceof Product){
+                System.out.println("Mamam");
+                Product p = (Product) activeDeck[posDeck];
+                if(ladang[posLadang] instanceof Hewan){
+                    Hewan h = (Hewan) ladang[posLadang];
+                    int beratawal = h.getUmurOrBerat();
+                    h.makan(p);
+                    if(beratawal<h.getUmurOrBerat()){
+                        activeDeck[posDeck] = null;
+                    }
+
+                }
             }
 
         }
@@ -261,11 +274,10 @@ public class Player {
     //else, shuffle sejumlah 4 kartu
     // kosongAwal = jumlah slot terisi activeDeck saat pemain shuffle di awal turn
     // return True kalau shuffle berhasil, False kalau tidak
-    public void Panen(int row, int cols){
+    public void Panen(int pos){
         if(filledSlotActiveDeck()>5){
             System.out.println("Active Deck penuh");
         }
-        int pos = row*5 + cols;
         Product hasilPanen = ladang[pos].panenKartu();
         addToActiveDeck(hasilPanen);
         ladang[pos] = null;
@@ -352,14 +364,33 @@ public class Player {
 
     public void shuffleSelesai(){
         for (Kartu k : selectedKartu){
-            deck.remove(k);
+            addToActiveDeck(k);
         }
         for (Kartu k : selectedKartu){
-            addToActiveDeck(k);
+            deck.remove(k);
         }
         selectedKartu.clear();
         shuffleArr = new Kartu[4];
     }
+
+    public void shuffleSelesai(Kartu[] arrKartu){
+        for (Kartu k : arrKartu){
+            if(k != null){
+                deck.remove(k);
+            }
+            ;
+        }
+        for (Kartu k : arrKartu){
+            if(k!= null){
+                addToActiveDeck(k);
+            }
+
+        }
+        selectedKartu.clear();
+        shuffleArr = new Kartu[4];
+    }
+
+
 
     public void startShuffle(){
         boolean lanjut = true;

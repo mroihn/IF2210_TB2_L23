@@ -7,7 +7,7 @@ public class Sapi extends Herbivora {
   public Product panenKartu(){
     if(isSiapPanen()){
       System.out.println("Sapi dipanen!");
-      return new DagingDomba();
+      return new Susu();
     }else{
       System.out.println("Sapi belum bisa dipanen!");
     }

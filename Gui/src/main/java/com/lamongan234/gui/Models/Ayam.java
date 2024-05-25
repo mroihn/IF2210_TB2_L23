@@ -7,7 +7,7 @@ public class Ayam extends Omnivora {
   public Product panenKartu(){
     if(isSiapPanen()){
       System.out.println("Ayam dipanen!");
-      return new DagingDomba();
+      return new Telur();
     }else{
       System.out.println("Ayam belum bisa dipanen!");
     }

@@ -1,6 +1,7 @@
 package com.lamongan234.gui;
 
 import com.lamongan234.gui.Models.*;
+import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 
@@ -22,7 +23,7 @@ public class Card extends Pane {
         Name = temp;
         kartu = DictKartu.get(Name);
         temp = temp.replaceAll(" ","-");
-        System.out.println(temp);
+
         this.getStyleClass().add("card-style");
         this.setPrefSize(80,100);
         this.getStyleClass().add(temp+"-style");
@@ -34,7 +35,7 @@ public class Card extends Pane {
         generateDictKartu();
 
         this.kartu = DictKartu.get(name);
-
+        name = name.replaceAll(" ","-");
         this.getStyleClass().add("card-style");
         this.setPrefSize(80,100);
         this.getStyleClass().add(name + "-style");
@@ -43,9 +44,15 @@ public class Card extends Pane {
     public Card (Kartu kartu){
         this.kartu = kartu;
         this.Name = kartu.getName();
+        Label label1 = new Label();
+        label1.setText(Name);
+        label1.getStyleClass().add("label-card-style");
+        this.getChildren().add(label1);
+        String name = kartu.getName();
         this.getStyleClass().add("card-style");
+        name = name.replaceAll(" ","-");
         this.setPrefSize(80,100);
-        this.getStyleClass().add(Name + "-style");
+        this.getStyleClass().add(name + "-style");
     }
 
     private  void generateDictKartu(){

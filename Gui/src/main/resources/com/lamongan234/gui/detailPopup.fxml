@@ -3,10 +3,9 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lamongan234.gui.DetailPopupController">
+<AnchorPane fx:id="detailAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lamongan234.gui.DetailPopupController">
    <children>
       <Button fx:id="buttonBack" layoutX="50.0" layoutY="25.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="67.0" text="Kembali" />
       <Label fx:id="nama" alignment="CENTER" layoutX="166.0" layoutY="52.0" prefHeight="22.0" prefWidth="367.0" text="Nama">
@@ -15,6 +14,12 @@
          </font>
       </Label>
       <Label fx:id="data" layoutX="48.0" layoutY="107.0" prefHeight="22.0" prefWidth="145.0" text="Umur :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="panen" layoutX="276.0" layoutY="241.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="146.0" text="Panen" />
+      <Label fx:id="item" layoutX="50.0" layoutY="166.0" prefHeight="22.0" prefWidth="390.0" text="Item Aktif :">
          <font>
             <Font size="15.0" />
          </font>

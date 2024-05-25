@@ -7,7 +7,7 @@ public class BijiJagung extends Tanaman{
   public Product panenKartu(){
     if(isSiapPanen()){
       System.out.println("Biji Jagung berhasil dipanen");
-      return new DagingDomba();
+      return new Jagung();
     }else{
       System.out.println("Umur belum cukup");
       return null;

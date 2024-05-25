@@ -190,7 +190,7 @@ public class TxtSaveAndLoad implements SaveAndLoad {
               p.setLadang(hewan, pos);
             }else{
               Tanaman tanaman = (Tanaman) card;
-              tanaman.setUmur(umur_or_berat);
+              tanaman.setBeratOrUmur(umur_or_berat);
               for(int i = 0; i< appliedItems; i++){
                 Item item = (Item) DictKartu.get(parts[4+i]);
                 tanaman.AppliedItem(item);
@@ -258,7 +258,7 @@ public class TxtSaveAndLoad implements SaveAndLoad {
               p.setLadang(hewan, pos);
             }else{
               Tanaman tanaman = (Tanaman) card;
-              tanaman.setUmur(umur_or_berat);
+              tanaman.setBeratOrUmur(umur_or_berat);
               for(int i = 0; i< appliedItems; i++){
                 Item item = (Item) DictKartu.get(parts[4+i]);
                 tanaman.AppliedItem(item);

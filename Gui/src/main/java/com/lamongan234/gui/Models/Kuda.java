@@ -7,7 +7,7 @@ public class Kuda extends Herbivora {
   public Product panenKartu(){
     if(isSiapPanen()){
       System.out.println("Kuda dipanen!");
-      return new DagingDomba();
+      return new DagingKuda();
     }else{
       System.out.println("Kuda belum bisa dipanen!");
     }

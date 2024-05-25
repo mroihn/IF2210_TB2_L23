@@ -7,7 +7,7 @@ public class Beruang extends Omnivora {
   public Product panenKartu(){
     if(isSiapPanen()){
       System.out.println("Beruang dipanen!");
-      return new DagingDomba();
+      return new DagingBeruang();
     }else{
       System.out.println("Beruang belum bisa dipanen!");
     }

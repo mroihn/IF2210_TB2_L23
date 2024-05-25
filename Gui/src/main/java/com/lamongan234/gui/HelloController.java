@@ -67,10 +67,10 @@ public class HelloController {
     private Pane playerGoldContainer;
 
     @FXML
-    private GridPane ladangA;
+    public GridPane ladangA;
 
     @FXML
-    private GridPane hand;
+    public GridPane hand;
 
     @FXML
     private Button b0Next;
@@ -159,6 +159,7 @@ public class HelloController {
                 pane.setId("l"+i);
 
                 makeDraggable((Pane) pane);
+                int pos = Integer.parseInt(pane.getId().substring(1));
                 showDetail((Pane) pane);
                 //pane.setOnDragDetected();
                 i++;
@@ -228,6 +229,22 @@ public class HelloController {
         }
     }
 
+    public Card[] getHandPlayer(){
+        if (game.getTurn()%2 ==1){
+            return handPlayer1;
+        }else{
+            return handPlayer2;
+        }
+    }
+
+    public Card[] getLadangPlayer(){
+        if (game.getTurn()%2 ==1){
+            return ladangPlayer1;
+        }else{
+            return ladangPlayer2;
+        }
+    }
+
     protected  void renderHand(Card[] hand, Kartu[] h){
         for(int i =0; i<6; i++){
             if(h[i]!=null){
@@ -243,7 +260,8 @@ public class HelloController {
         pane.setOnMouseClicked(event -> {
             if (!pane.getChildren().isEmpty()) {
 //                System.out.println(((Card)pane.getChildren().get(0)).getName());
-                openDetail(((Card)pane.getChildren().get(0)));
+                int pos = Integer.parseInt(pane.getId().substring(1));
+                openDetail(((Card)pane.getChildren().get(0)),pos);
             }
         });
     }
@@ -317,6 +335,7 @@ public class HelloController {
                             if(kode.equals("l")){
                                 System.out.println(posAwal + " " + Integer.parseInt(pane.getId().substring(1)));
                                 game.getCurrPlayer().moveDeckToLadang(posAwal,Integer.parseInt(pane.getId().substring(1)));
+                                System.out.println("berat sekarang : "+game.getCurrPlayer().ladang[Integer.parseInt(pane.getId().substring(1))].getUmurOrBerat());
 
                             }
                             else{
@@ -491,6 +510,7 @@ public class HelloController {
             Parent root = fxmlLoader.load();
 
             ShufflePopupController popupController = fxmlLoader.getController();
+            popupController.initialize(game);
             popupController.setMainController(this);
             popupController.setFreeslot();
             popupController.setOverlay(overlay);
@@ -510,7 +530,7 @@ public class HelloController {
         }
     }
 
-    private void openDetail(Card card){
+    private void openDetail(Card card,int pos){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("detailPopup.fxml"));
         try {
 
@@ -521,9 +541,11 @@ public class HelloController {
             Parent root = fxmlLoader.load();
 
             DetailPopupController popupController = fxmlLoader.getController();
+            popupController.initialize(game);
             popupController.setMainController(this);
             popupController.setOverlay(overlay);
             popupController.setCard(card);
+            popupController.setPos(pos);
 
             Stage detailStage = new Stage();
             detailStage.initModality(Modality.APPLICATION_MODAL);

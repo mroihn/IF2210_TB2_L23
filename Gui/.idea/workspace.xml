@@ -12,9 +12,36 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/Models/Main_Dummy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/Models/Main_Dummy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/DetailPopupController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/DetailPopupController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/HelloApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/HelloApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/HelloController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/GameManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/GameManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Accelerate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Accelerate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Ayam.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Ayam.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Beruang.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Beruang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/BijiJagung.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/BijiJagung.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/BijiLabu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/BijiLabu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/BijiStroberi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/BijiStroberi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/DagingBeruang.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/DagingBeruang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/DagingDomba.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/DagingDomba.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/DagingKuda.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/DagingKuda.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Delay.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Delay.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Destroy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Destroy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Domba.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Domba.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Harvestable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Harvestable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Herbivora.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Herbivora.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Hewan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Hewan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Hewani.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Hewani.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/HiuDarat.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/HiuDarat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/InstantHarvest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/InstantHarvest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Jagung.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Jagung.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Karnivora.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Karnivora.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Kartu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Kartu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Kuda.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Kuda.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Labu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Labu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Main_Dummy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Main_Dummy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Nabati.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Nabati.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Omnivora.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Omnivora.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/PetakLadang.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/PetakLadang.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Player$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Player$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Player$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Player$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Player.class" afterDir="false" />
@@ -165,6 +192,16 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="2" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lamongan234/gui/Models/Harvestable.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/lamongan234/gui/Models/Hewan.java</url>
+          <line>5</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

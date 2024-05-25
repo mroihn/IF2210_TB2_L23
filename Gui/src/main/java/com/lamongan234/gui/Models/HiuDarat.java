@@ -7,7 +7,7 @@ public class HiuDarat extends Karnivora {
   public Product panenKartu(){
     if(isSiapPanen()){
       System.out.println("Hiu darat dipanen!");
-      return new DagingDomba();
+      return new SiripHiu();
     }else{
       System.out.println("Hiu darat belum bisa dipanen!");
     }

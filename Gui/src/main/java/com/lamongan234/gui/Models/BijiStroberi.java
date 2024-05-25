@@ -7,7 +7,7 @@ public class BijiStroberi extends Tanaman{
   public Product panenKartu(){
     if(isSiapPanen()){
       System.out.println("Biji Stroberi berhasil dipanen");
-      return new Tempe();
+      return new Stroberi();
     }else{
       System.out.println("Umur belum cukup");
       return null;

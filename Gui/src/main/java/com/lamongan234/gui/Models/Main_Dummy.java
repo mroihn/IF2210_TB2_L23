@@ -38,9 +38,9 @@ public class Main_Dummy {
 
 
         //SECTION tes XmlSaveAndLoad
-        GameManager gameManager = new GameManager();
-        XmlSaveAndLoad xmlSaveAndLoad = new XmlSaveAndLoad();
-        xmlSaveAndLoad.loadState(gameManager, "tes");
+        // GameManager gameManager = new GameManager();
+        // XmlSaveAndLoad xmlSaveAndLoad = new XmlSaveAndLoad();
+        // xmlSaveAndLoad.loadState(gameManager, "tes");
         // gameManager.getPlayer1().setUang(2215);
         // xmlSaveAndLoad.saveState(gameManager, "tes");
         // xmlSaveAndLoad.loadState(gameManager, "tes");
@@ -59,10 +59,19 @@ public class Main_Dummy {
 
         //SECTION tes JsonSaveAndLoad
         // GameManager gameManager = new GameManager();
-        JsonSaveAndLoad jsonSaveAndLoad = new JsonSaveAndLoad();
+        // JsonSaveAndLoad jsonSaveAndLoad = new JsonSaveAndLoad();
         // jsonSaveAndLoad.loadState(gameManager, "tes");
-        gameManager.getPlayer1().setUang(115);
-        jsonSaveAndLoad.saveState(gameManager, "tes");
+        // gameManager.getPlayer1().setUang(115);
+        // jsonSaveAndLoad.saveState(gameManager, "tes");
+
+        //SECTION test JsonSaveAndLoad.jar plugin
+        GameManager gameManager = new GameManager();
+        String jarPath = "JsonSaveAndLoad.jar";
+        SaveAndLoad jsonPluginSaveAndLoad = gameManager.SaveAndLoadPlugin(jarPath, "com.lamongan234.gui.Models.JsonSaveAndLoad");
+        jsonPluginSaveAndLoad.loadState(gameManager, "tes");
+        System.out.println("Uang Player 1 == " + gameManager.getPlayer1().getUang());
+        gameManager.getPlayer1().setUang(252);
+        jsonPluginSaveAndLoad.saveState(gameManager, "tes");
 
         //SECTION UNTUK MANUAL MENGGUNAKAN PLAYER, tidak ada hubungan dengan GameManager di atas
         Player p = new Player();

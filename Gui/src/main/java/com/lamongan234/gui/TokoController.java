@@ -88,7 +88,11 @@ public class TokoController {
         });
     }
 
-    public void makeBuyable(Pane pane){
+    public void buyButton(){
+        tokoContainer
+    }
+
+    public void sellButton(){
 
     }
 

@@ -1,3 +1,4 @@
+
 package com.lamongan234.gui.Models;
 
 import java.io.BufferedReader;
@@ -64,10 +65,16 @@ public class TxtSaveAndLoad implements SaveAndLoad {
   }
   private void savePlayerState(Player player, String filePath) {
     try (BufferedWriter bw = new BufferedWriter(new FileWriter(filePath))) {
+        System.out.println("Saving player state to: " + filePath);
         bw.write(String.valueOf(player.getUang()));
         bw.newLine();
         bw.write(String.valueOf(player.sizeDeck()));
         bw.newLine();
+        
+        // Debug print
+        System.out.println("Player uang: " + player.getUang());
+        System.out.println("Player deck size: " + player.sizeDeck());
+
         // Save deck state
         // for (Kartu kartu : player.getDeck()) {
         //     bw.write(kartu.getName());
@@ -76,36 +83,54 @@ public class TxtSaveAndLoad implements SaveAndLoad {
         // Save active deck state
         bw.write(String.valueOf(player.filledSlotActiveDeck()));
         bw.newLine();
-        for (int i = 0; i<player.sizeActiveDeck(); i++) {
-          if(player.getActiveDeck()[i] != null){
-            char rowChar = (char) ('A' + i);
-            bw.write(rowChar + "01" + " " + player.getActiveDeck()[i].getName().toUpperCase().replace(" ", "_"));
-            bw.newLine();
-          }
+        
+        // Debug print
+        System.out.println("Player filled active deck slots: " + player.filledSlotActiveDeck());
+        System.out.println("+++printladang");
+        player.printLadang();
+        System.out.println("+++printladang");
+
+        for (int i = 0; i < player.sizeActiveDeck(); i++) {
+            System.out.println("iterasi ke: " + i);
+            if (player.getActiveDeck()[i] != null) {
+                char rowChar = (char) ('A' + i);
+                bw.write(rowChar + "01" + " " + player.getActiveDeck()[i].getName().toUpperCase().replace(" ", "_"));
+                System.out.println("rowChar: " + rowChar + "01" + " " + player.getActiveDeck()[i].getName().toUpperCase().replace(" ", "_"));
+                bw.newLine();
+
+                // Debug print
+                System.out.println("Active deck card: " + player.getActiveDeck()[i].getName());
+            }
         }
         // Save ladang state
         bw.write(String.valueOf(player.jumlahSlotLadangTerisi()));
         bw.newLine();
-        for (int i =0; i < player.getLadang().length; i ++) {
-          if(player.getLadang()[i] != null){
-            int row = i/5;
-            // int col = i - row;
-            char colNumber = (char) ('A' + row);
-  
-            // Format column index to start from 1
-            String rowLetter = String.format("%02d", row + 1);
-            bw.write(colNumber + rowLetter + " " + player.getLadang()[i].getName().toUpperCase().replace(" ", "_") + " " +
-            player.getLadang()[i].getUmurOrBerat() + " " + player.getLadang()[i].getListAppliedItem().size());
-            for (Map.Entry<String, Integer> entry : player.getLadang()[i].getListAppliedItem().entrySet()) {
-              bw.write(" " + entry.getKey().toUpperCase().replace(" ", "_"));
+        
+        // Debug print
+        System.out.println("Player filled ladang slots: " + player.jumlahSlotLadangTerisi());
+
+        for (int i = 0; i < player.getLadang().length; i++) {
+            if (player.getLadang()[i] != null) {
+                int row = i % 5;
+                int col = i /5 ;
+                char colNumber = (char) ('A' + row);
+                String rowLetter = String.format("%02d", col + 1);
+                bw.write(colNumber + rowLetter + " " + player.getLadang()[i].getName().toUpperCase().replace(" ", "_") + " " +
+                        player.getLadang()[i].getUmurOrBerat() + " " + player.getLadang()[i].getListAppliedItem().size());
+                for (Map.Entry<String, Integer> entry : player.getLadang()[i].getListAppliedItem().entrySet()) {
+                    bw.write(" " + entry.getKey().toUpperCase().replace(" ", "_"));
+                }
+                bw.newLine();
+                
+                // Debug print
+                System.out.println("Ladang card: " + player.getLadang()[i].getName());
             }
-            bw.newLine();
-          }
         }
     } catch (IOException e) {
-      e.printStackTrace();
+        e.printStackTrace();
     }
-  }
+}
+
   public void loadState(GameManager g, String fileDir){
     fileDir = "src\\main\\java\\com\\lamongan234\\gui\\Models\\" + fileDir;
     String gamestate = fileDir + "\\gamestate.txt";

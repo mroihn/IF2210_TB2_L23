@@ -38,6 +38,9 @@ public class Player {
     public Harvestable[] getLadang(){
         return ladang;
     }
+    public Harvestable getLadang(int index){
+        return ladang[index];
+    }
     public void setUang(int uang){
         this.uang = uang;
     }

@@ -17,5 +17,20 @@ git clone https://github.com/mroihn/IF2210_TB2_L23.git
 ```
 2. Go into the root directory
 ```
-cd IF2210_TB2_L23
+cd IF2210_TB2_L23/Gui
+```
+3. Compile using maven
+```
+mvn clean package
+```
+4. Run jar file
+```
+java -jar target/MainProgram.java
+```
+
+## How to run
+
+Run the java bytcode executable using java
+```
+java -jar MainProgram.java
 ```

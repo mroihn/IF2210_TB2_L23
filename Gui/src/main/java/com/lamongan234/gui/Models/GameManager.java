@@ -3,13 +3,14 @@ package com.lamongan234.gui.Models;
 import java.io.File;
 import java.net.URL;
 import java.net.URLClassLoader;
+import java.util.Random;
 
 public class GameManager {
   private Player p1;
   private Player p2;
   private int turnCount;
   private Toko toko;
-  private GameState state;
+  private SeranganBeruang state;
 
 
   public GameManager(){
@@ -65,6 +66,7 @@ public class GameManager {
         t.addweight(1);
       }
     }
+    cekBeruang();
     turnCount++;
   }
 
@@ -78,6 +80,15 @@ public class GameManager {
       return  p2;
     }else{
       return p1;
+    }
+  }
+
+  private void cekBeruang(){
+    Random random = new Random();
+    double prob = random.nextDouble();
+    if(prob<0.2){
+      state = new SeranganBeruang();
+      state.handle(this, turnCount);
     }
   }
 

@@ -6,6 +6,7 @@ module com.lamongan234.gui {
     // requires com.google.gson;
     requires java.xml;
     requires org.yaml.snakeyaml;
+    requires org.json;
 
     opens com.lamongan234.gui to javafx.fxml;
     exports com.lamongan234.gui;

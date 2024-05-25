@@ -71,6 +71,7 @@ public class DetailPopupController {
             umur_or_berat_harvest = tanaman.getweight_to_harvest();
             data.setText("Umur : " + String.valueOf(tanaman.getUmurOrBerat())+" ("+String.valueOf(tanaman.getweight_to_harvest())+")");
         }
+        System.out.println(pos);
         ListItem = game.getCurrPlayer().ladang[pos].getListAppliedItem();
         if(!ListItem.isEmpty()){
             StringBuilder itemsText = new StringBuilder();
@@ -110,8 +111,9 @@ public class DetailPopupController {
     }
 
     @FXML
-    public void initialize(GameManager game){
+    public void initialize(GameManager game,int pos){
         this.game = game;
+        setPos(pos);
         buttonBack.setOnAction(actionEvent -> {
             Stage stage = (Stage)buttonBack.getScene().getWindow();
             stage.close();

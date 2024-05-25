@@ -203,6 +203,9 @@ public class HelloController {
 
         b3Toko.getStyleClass().add("button-style");
         b4SaveState.getStyleClass().add("button-style");
+        b4SaveState.setOnAction(event -> {
+            openSave();
+        });
         b5LoadState.getStyleClass().add("button-style");
         b5LoadState.setOnAction(event ->{
             openLoad();
@@ -544,6 +547,37 @@ public class HelloController {
             Parent root = fxmlLoader.load();
 
             loadController popupController = fxmlLoader.getController();
+            popupController.initialize(game);
+            popupController.setMainController(this);
+            popupController.setOverlay(overlay);
+
+            Stage popupStage = new Stage();
+            popupStage.initModality(Modality.APPLICATION_MODAL);
+            popupStage.initStyle(StageStyle.UNDECORATED);
+            Scene scene = new Scene(root);
+            //scene.setFill(null);
+            popupStage.setScene(scene);
+            popupStage.showAndWait();
+
+            anchor.getChildren().remove(overlay);
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @FXML
+    private void openSave(){
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Save.fxml"));
+        try {
+
+            Rectangle overlay = new Rectangle(anchor.getWidth(), anchor.getHeight());
+            overlay.setFill(Color.rgb(0, 0, 0, 0.5));
+            anchor.getChildren().add(overlay);
+
+            Parent root = fxmlLoader.load();
+
+            saveController popupController = fxmlLoader.getController();
             popupController.initialize(game);
             popupController.setMainController(this);
             popupController.setOverlay(overlay);

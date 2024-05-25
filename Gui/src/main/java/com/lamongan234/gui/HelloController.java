@@ -1,5 +1,6 @@
 package com.lamongan234.gui;
 
+import com.lamongan234.gui.Models.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -31,11 +32,14 @@ public class HelloController {
     private static boolean currPlayer1 = false;
     private static boolean onLadangku = true;
 
+
     private Card[] handPlayer1 = new Card[6];
     private Card[] handPlayer2 = new Card[6];
 
     private Card[] ladangPlayer1 = new Card[20];
     private Card[] ladangPlayer2 = new Card[20];
+
+    private GameManager game = new GameManager();
 
 
     @FXML
@@ -94,6 +98,34 @@ public class HelloController {
 
     @FXML
     public void initialize() {
+        ladangPlayer1 = new Card[20];
+        SaveAndLoad saveAndLoad = new TxtSaveAndLoad();
+        saveAndLoad.loadState(game, "statefiles");
+        clockCounter.setText(String.valueOf(game.getTurn())+"/20");
+        player1Gold.setText("Player 1:"+String.valueOf(game.getPlayer1().getUang()));
+        player2Gold.setText("Player 2:"+String.valueOf(game.getPlayer2().getUang()));
+        Harvestable[] h = game.getPlayer1().ladang;
+        renderLadang(ladangPlayer1, h);
+
+
+        ladangPlayer2 = new Card[20];
+        h = game.getPlayer1().ladang;
+        renderLadang(ladangPlayer2, h);
+        handPlayer1= new Card[6];
+        Kartu[] h2 = game.getPlayer1().getActiveDeck();
+        renderHand(handPlayer1, h2);
+        handPlayer2= new Card[6];
+        Kartu[] h3 = game.getPlayer1().getActiveDeck();
+        renderHand(handPlayer2, h3);
+
+        if(game.getTurn()%2==0){
+            loadAll(ladangPlayer2,ladangA);
+            loadAll(handPlayer2, hand);
+        }
+        else{
+            loadAll(ladangPlayer1,ladangA);
+            loadAll(handPlayer1, hand);
+        }
         anchor.getStyleClass().add("encompassing-style");
 
         // hand
@@ -108,7 +140,7 @@ public class HelloController {
 //                card.setId("c"+i);
 //                ((Pane) pane).getChildren().add(card);
 //                System.out.println(card.getName());
-                //fillHandRandom();
+//                fillHandRandom();
                 makeDraggable((Pane) pane);
 
                 i++;
@@ -175,6 +207,24 @@ public class HelloController {
         buttonContainer.getStyleClass().add("container-style");
         buttonContainer.setAlignment(javafx.geometry.Pos.CENTER);
 
+
+    }
+
+    protected  void renderLadang(Card[] ladang,Harvestable[] h){
+        for(int i =0; i<20; i++){
+            if(h[i]!=null){
+                System.out.println(String.valueOf(h[i].getUmurOrBerat()));
+                ladang[i] = new Card(h[i]);
+            }
+        }
+    }
+
+    protected  void renderHand(Card[] hand, Kartu[] h){
+        for(int i =0; i<6; i++){
+            if(h[i]!=null){
+                hand[i] = new Card(h[i]);
+            }
+        }
     }
 
     protected void showDetail(Pane pane) {
@@ -236,7 +286,18 @@ public class HelloController {
                     sourcePane = (Pane) outerNode;
                     Node innerNode = sourcePane.getChildren().get(0);
                     if (innerNode instanceof Pane) {
-                        card = (Pane) innerNode;
+                        Card kartu = (Card) innerNode;
+                        kartu.getKartu();
+                        game.getCurrPlayer().setLadang(kartu.getKartu(),Integer.parseInt(pane.getId().substring(1)));
+                        if(game.getTurn() % 2 != 0){
+                            renderLadang(ladangPlayer1, game.getCurrPlayer().ladang);
+                            loadAll(ladangPlayer1,ladangA);
+                        }else {
+                            renderLadang(ladangPlayer2, game.getCurrPlayer().ladang);
+                            loadAll(ladangPlayer2,ladangA);
+                        }
+
+
                     }
                 }
                 sourcePane.getChildren().clear();
@@ -250,7 +311,7 @@ public class HelloController {
     protected void fillHandRandom(){
         for(int i = 0; i<6; i++){
             if (((Pane) hand.getChildren().get(i)).getChildren().isEmpty()) {
-                Card card = new Card();
+                Card card = new Card("Kuda");
                 card.setId("cd"+i);
                 ((Pane) hand.getChildren().get(i)).getChildren().add(card);
             }
@@ -265,16 +326,16 @@ public class HelloController {
                     fillHandRandom();
                 }
                 if (!onLadangku){
-                    saveAll(handPlayer1, hand);
-                    saveAll(ladangPlayer2, ladangA);
+//                    saveAll(handPlayer1, hand);
+//                    saveAll(ladangPlayer2, ladangA);
                     clearAll(hand);
                     clearAll(ladangA);
                     loadAll(handPlayer2, hand);
                     loadAll(ladangPlayer1, ladangA);
                 }
                 else {
-                    saveAll(handPlayer1, hand);
-                    saveAll(ladangPlayer1, ladangA);
+//                    saveAll(handPlayer1, hand);
+//                    saveAll(ladangPlayer1, ladangA);
                     clearAll(hand);
                     clearAll(ladangA);
                     loadAll(handPlayer2, hand);
@@ -284,8 +345,8 @@ public class HelloController {
             else{
 
                 if (!onLadangku){
-                    saveAll(handPlayer2, hand);
-                    saveAll(ladangPlayer1, ladangA);
+//                    saveAll(handPlayer2, hand);
+//                    saveAll(ladangPlayer1, ladangA);
                     clearAll(hand);
                     clearAll(ladangA);
                     loadAll(handPlayer1, hand);
@@ -293,8 +354,8 @@ public class HelloController {
                 }
 
                 else {
-                    saveAll(handPlayer2, hand);
-                    saveAll(ladangPlayer2, ladangA);
+//                    saveAll(handPlayer2, hand);
+//                    saveAll(ladangPlayer2, ladangA);
                     clearAll(hand);
                     clearAll(ladangA);
                     loadAll(handPlayer1, hand);
@@ -303,8 +364,11 @@ public class HelloController {
             }
 
             currPlayer1 = !currPlayer1;
+            game.setTurn(game.getTurn()+1);
             currTurn++;
-            clockCounter.setText(currTurn+"/"+"20");
+            clockCounter.setText(game.getTurn()+"/"+"20");
+            player1Gold.setText("Player 1:"+String.valueOf(game.getPlayer1().getUang()));
+            player2Gold.setText("Player 2:"+String.valueOf(game.getPlayer2().getUang()));
         }
     }
 

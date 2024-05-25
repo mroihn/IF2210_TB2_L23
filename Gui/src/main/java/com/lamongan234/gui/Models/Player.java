@@ -65,9 +65,7 @@ public class Player {
         return count;
     }
 
-    public void setLadang(Kartu kartu, int x, int y){
-        int row = x*5;
-        int pos = row+y;
+    public void setLadang(Kartu kartu, int pos){
         if(kartu instanceof Harvestable){
             Harvestable h = (Harvestable) kartu;
             ladang[pos] = h;

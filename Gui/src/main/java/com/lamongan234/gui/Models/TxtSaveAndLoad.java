@@ -39,7 +39,7 @@ public class TxtSaveAndLoad implements SaveAndLoad {
     DictKartu.put("TRAP", new Trap());    
   }
   public void saveState(GameManager g, String fileDir) {
-    fileDir = "Gui\\src\\main\\java\\com\\lamongan234\\gui\\Models\\" + fileDir;
+    fileDir = "src\\main\\java\\com\\lamongan234\\gui\\Models\\" + fileDir;
     String gamestate = fileDir + "\\gamestate.txt";
     String player1 = fileDir + "\\player1.txt";
     String player2 = fileDir + "\\player2.txt";
@@ -105,7 +105,7 @@ public class TxtSaveAndLoad implements SaveAndLoad {
     }
   }
   public void loadState(GameManager g, String fileDir){
-    fileDir = "Gui\\src\\main\\java\\com\\lamongan234\\gui\\Models\\" + fileDir;
+    fileDir = "src\\main\\java\\com\\lamongan234\\gui\\Models\\" + fileDir;
     String gamestate = fileDir + "\\gamestate.txt";
     String player1 = fileDir + "\\player1.txt";
     String player2 = fileDir + "\\player2.txt";
@@ -174,9 +174,9 @@ public class TxtSaveAndLoad implements SaveAndLoad {
             int col = position.charAt(0) - 'A';
             int row = Integer.parseInt(position.substring(1)) - 1;
             System.out.println("coordinates" + row + " " + col);
+            int pos = row*5 + col;
             String itemName = parts[1];
             int umur_or_berat = Integer.parseInt(parts[2]);
-            umur_or_berat = 1;
             int appliedItems = Integer.parseInt(parts[3]);
             Kartu card = DictKartu.get(itemName);
             if(card instanceof Hewan){
@@ -187,7 +187,7 @@ public class TxtSaveAndLoad implements SaveAndLoad {
                 hewan.AppliedItem(item);
               }
               System.out.println("flag1");
-              p.setLadang(hewan, row, col);
+              p.setLadang(hewan, pos);
             }else{
               Tanaman tanaman = (Tanaman) card;
               tanaman.setUmur(umur_or_berat);
@@ -195,7 +195,7 @@ public class TxtSaveAndLoad implements SaveAndLoad {
                 Item item = (Item) DictKartu.get(parts[4+i]);
                 tanaman.AppliedItem(item);
               }
-              p.setLadang(tanaman, row, col);
+              p.setLadang(tanaman, pos);
             }
           }
         }
@@ -243,6 +243,7 @@ public class TxtSaveAndLoad implements SaveAndLoad {
             String position = parts[0];
             int col = position.charAt(0) - 'A';
             int row = Integer.parseInt(position.substring(1)) - 1;
+            int pos = row*5+col;
             String itemName = parts[1];
             int umur_or_berat = Integer.parseInt(parts[2]);
             int appliedItems = Integer.parseInt(parts[3]);
@@ -254,7 +255,7 @@ public class TxtSaveAndLoad implements SaveAndLoad {
                 Item item = (Item) DictKartu.get(parts[4+i]);
                 hewan.AppliedItem(item);
               }
-              p.setLadang(hewan, row, col);
+              p.setLadang(hewan, pos);
             }else{
               Tanaman tanaman = (Tanaman) card;
               tanaman.setUmur(umur_or_berat);
@@ -262,7 +263,7 @@ public class TxtSaveAndLoad implements SaveAndLoad {
                 Item item = (Item) DictKartu.get(parts[4+i]);
                 tanaman.AppliedItem(item);
               }
-              p.setLadang(tanaman, row, col);
+              p.setLadang(tanaman, pos);
             }
           }
         }

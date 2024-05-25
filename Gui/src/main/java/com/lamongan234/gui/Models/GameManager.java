@@ -49,6 +49,13 @@ public class GameManager {
     state = new SeranganBeruang();
     state.handle(this, turnCount);
   }
+  public Player getCurrPlayer(){
+    if(turnCount%2==0){
+      return  p2;
+    }else{
+      return p1;
+    }
+  }
 
 
   public void saveState(String jarPath, String pluginClassName){

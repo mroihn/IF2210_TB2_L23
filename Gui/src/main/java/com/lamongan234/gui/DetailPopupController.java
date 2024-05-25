@@ -1,5 +1,6 @@
 package com.lamongan234.gui;
 
+import com.lamongan234.gui.Models.Harvestable;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -18,6 +19,9 @@ public class DetailPopupController {
     @FXML
     Label nama;
 
+    @FXML
+    Label data;
+
     private HelloController mainController;
     private Rectangle overlay;
     private Card card;
@@ -34,6 +38,11 @@ public class DetailPopupController {
     public void setCard(Card card){
         this.card = card;
         nama.setText(card.getName());
+        if(card.getKartu() instanceof Harvestable){
+            Harvestable hewan = (Harvestable) card.getKartu();
+            data.setText("Berat : " + String.valueOf(hewan.getUmurOrBerat()));
+        }
+
     }
 
     @FXML

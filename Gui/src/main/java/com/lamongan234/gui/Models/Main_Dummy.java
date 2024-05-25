@@ -9,19 +9,29 @@ public class Main_Dummy {
         Product tempe = new Tempe();
 
 
-        //SECTION UNTUK SEDDING GAMEMANAGER
-        TxtSaveAndLoad txtSaveAndLoad = new TxtSaveAndLoad();
-        GameManager gameManager = new GameManager();
-        txtSaveAndLoad.loadState(gameManager, "tes");
-        //cek isi
-        gameManager.getToko().displayToko();
-        gameManager.getPlayer1().printDetails();
-        gameManager.getPlayer2().printDetails();
-        //lakukan perubahan
-        gameManager.getPlayer1().setUang(1010);
-        //save state dan lihat pada direktori Gui\src\main\java\com\lamongan234\gui\Models\tes\
-        //apakah ada perubahan uang pada player1.txt
-        txtSaveAndLoad.saveState(gameManager, "tes");
+        // //SECTION UNTUK SEDDING GAMEMANAGER
+        // TxtSaveAndLoad txtSaveAndLoad = new TxtSaveAndLoad();
+        // GameManager gameManager = new GameManager();
+        // txtSaveAndLoad.loadState(gameManager, "tes");
+        // //cek isi
+        // gameManager.getToko().displayToko();
+        // gameManager.getPlayer1().printDetails();
+        // gameManager.getPlayer2().printDetails();
+        // //lakukan perubahan
+        // gameManager.getPlayer1().setUang(1010);
+        // //save state dan lihat pada direktori Gui\src\main\java\com\lamongan234\gui\Models\tes\
+        // //apakah ada perubahan uang pada player1.txt
+        // txtSaveAndLoad.saveState(gameManager, "tes");
+
+
+        //SECTION untuk mencoba save and load plugin, dalam hal ini test buat txt
+        GameManager gameManager2 = new GameManager();
+        String jarPath = "TxtSaveAndLoad.jar";
+        SaveAndLoad txtPluginSaveAndLoad = gameManager2.SaveAndLoadPlugin(jarPath, "com.lamongan234.gui.Models.TxtSaveAndLoad");
+        txtPluginSaveAndLoad.loadState(gameManager2, "tes2");
+        gameManager2.getPlayer1().setUang(2024);
+        txtPluginSaveAndLoad.saveState(gameManager2, "tes2");
+
 
 
 
@@ -80,6 +90,6 @@ public class Main_Dummy {
 
 
         //tes serangan beruang
-        gameManager.SeranganBeruang();
+        // gameManager.SeranganBeruang();
     }
 }

@@ -68,4 +68,17 @@ public class GameManager {
         e.printStackTrace();
     }
   }
+
+
+  public SaveAndLoad SaveAndLoadPlugin(String jarPath, String pluginClassName){
+    File jarFile = new File(jarPath);
+    try (URLClassLoader urlClassLoader = new URLClassLoader(new URL[]{jarFile.toURI().toURL()})) {
+        Class<?> pluginClass = urlClassLoader.loadClass(pluginClassName);
+        SaveAndLoad saveAndLoad = (SaveAndLoad) pluginClass.getDeclaredConstructor().newInstance();
+        return saveAndLoad;
+    }  catch (Exception e) {
+      e.printStackTrace();
+      return null;
+    }
+  }
 }

@@ -4,21 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d91d162f-74cf-4864-ae76-10a03ae7e10c" name="Changes" comment="merge">
+    <list default="true" id="d91d162f-74cf-4864-ae76-10a03ae7e10c" name="Changes" comment="Merge remote-tracking branch 'origin/main'">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/DetailPopupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/DetailPopupController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/Models/Main_Dummy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/Models/Main_Dummy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/Models/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/Models/GameManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/Models/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/Models/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/Models/statefiles/player1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/lamongan234/gui/Models/statefiles/player1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/detailPopup.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/lamongan234/gui/detailPopup.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/DetailPopupController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/DetailPopupController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/HelloController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/GameManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/GameManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Main_Dummy.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Main_Dummy.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Player$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Player$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Player$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Player$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/SeranganBeruang.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/SeranganBeruang.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/ShuffleState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/ShuffleState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/TxtSaveAndLoad.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/TxtSaveAndLoad.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Toko.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/Models/Toko.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/detailPopup.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/lamongan234/gui/detailPopup.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +139,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="merge" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/main'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/main'" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

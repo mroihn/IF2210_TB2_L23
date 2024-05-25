@@ -117,15 +117,19 @@ public class HelloController {
         handPlayer2= new Card[6];
         Kartu[] h3 = game.getPlayer1().getActiveDeck();
         renderHand(handPlayer2, h3);
-
-        if(game.getTurn()%2==0){
-            loadAll(ladangPlayer2,ladangA);
-            loadAll(handPlayer2, hand);
-        }
-        else{
-            loadAll(ladangPlayer1,ladangA);
-            loadAll(handPlayer1, hand);
-        }
+        showLadangku();
+//        if(game.getTurn()%2==0){
+//            clearAll(ladangA);
+//            clearAll(hand);
+//            loadAll(ladangPlayer2,ladangA);
+//            loadAll(handPlayer2, hand);
+//        }
+//        else{
+//            clearAll(ladangA);
+//            clearAll(hand);
+//            loadAll(ladangPlayer1,ladangA);
+//            loadAll(handPlayer1, hand);
+//        }
         anchor.getStyleClass().add("encompassing-style");
 
         // hand
@@ -180,6 +184,7 @@ public class HelloController {
         b1Ladangku.setOnAction(event -> {
             if (!onLadangku) {
                 showLadangku();
+                onLadangku=true;
                 b1Ladangku.getStyleClass().add("style-toggled");
                 b2LadangLawan.getStyleClass().remove("style-toggled");
             }
@@ -189,6 +194,7 @@ public class HelloController {
         b2LadangLawan.setOnAction(event -> {
             if(onLadangku) {
                 showLadangLawan();
+                onLadangku=false;
                 b1Ladangku.getStyleClass().remove("style-toggled");
                 b2LadangLawan.getStyleClass().add("style-toggled");
             }
@@ -243,12 +249,14 @@ public class HelloController {
     }
 
     int posAwal = 0;
+    String kodeAwal = "";
     protected void makeDraggable(Pane pane) {
         pane.setOnDragDetected(
                 event -> {
                     if (!pane.getChildren().isEmpty()) {
                         System.out.println("Start Drag: " + pane.getId());
                         posAwal = Integer.parseInt(pane.getId().substring(1));
+                        kodeAwal = pane.getId().substring(0,1);
                         Dragboard db = pane.startDragAndDrop(TransferMode.MOVE);
                         ClipboardContent content = new ClipboardContent();
 
@@ -298,42 +306,54 @@ public class HelloController {
                         kartu.getKartu();
                         String kode = pane.getId().substring(0,1);
                         System.out.println(String.valueOf(posAwal));
-                        if(kode.equals("l")){
-                            System.out.println(posAwal + " " + Integer.parseInt(pane.getId().substring(1)));
-                            game.getCurrPlayer().moveDeckToLadang(posAwal,Integer.parseInt(pane.getId().substring(1)));
-                            if(game.getTurn() % 2 != 0){
+                        if(kodeAwal.equals("l")) {
+                            if (kode.equals("l")) {
+                                System.out.println(posAwal + " " + Integer.parseInt(pane.getId().substring(1)));
+                                game.getCurrPlayer().moveLadangToLadang(posAwal, Integer.parseInt(pane.getId().substring(1)));
 
-                                renderLadang(ladangPlayer1, game.getCurrPlayer().ladang);
-                                game.getCurrPlayer().printLadang();
-                                game.getCurrPlayer().printActiveDeck();
-                                renderHand(handPlayer1, game.getCurrPlayer().getActiveDeck());
-                                sourcePane.getChildren().clear();
-                                pane.getChildren().add(card);
-                                clearAll(ladangA);
-                                clearAll(hand);
-                                loadAll(ladangPlayer1,ladangA);
-                                loadAll(handPlayer1, hand);
+                            }
+                        }
+                        if(kodeAwal.equals("d")){
+                            if(kode.equals("l")){
+                                System.out.println(posAwal + " " + Integer.parseInt(pane.getId().substring(1)));
+                                game.getCurrPlayer().moveDeckToLadang(posAwal,Integer.parseInt(pane.getId().substring(1)));
 
-                            }else {
-//                                clearAll(ladangA);
-//                                clearAll(hand);
-                                renderLadang(ladangPlayer2, game.getCurrPlayer().ladang);
-                                renderHand(handPlayer2, game.getCurrPlayer().getActiveDeck());
-                                sourcePane.getChildren().clear();
-                                pane.getChildren().add(card);
-                                clearAll(ladangA);
-                                clearAll(hand);
-                                loadAll(ladangPlayer2,ladangA);
-                                loadAll(handPlayer2, hand);
+                            }
+                            else{
+                                System.out.println(posAwal + " " + Integer.parseInt(pane.getId().substring(1)));
+                                game.getCurrPlayer().moveDeckToDeck(posAwal,Integer.parseInt(pane.getId().substring(1)));
 
                             }
                         }
 
+                        if(game.getTurn() % 2 != 0){
 
+                            renderLadang(ladangPlayer1, game.getCurrPlayer().ladang);
+                            game.getCurrPlayer().printLadang();
+                            game.getCurrPlayer().printActiveDeck();
+                            renderHand(handPlayer1, game.getCurrPlayer().getActiveDeck());
+                            sourcePane.getChildren().clear();
+                            pane.getChildren().add(card);
+                            clearAll(ladangA);
+                            clearAll(hand);
+                            loadAll(ladangPlayer1,ladangA);
+                            loadAll(handPlayer1, hand);
+
+                        }else {
+
+                            renderLadang(ladangPlayer2, game.getCurrPlayer().ladang);
+                            renderHand(handPlayer2, game.getCurrPlayer().getActiveDeck());
+                            sourcePane.getChildren().clear();
+                            pane.getChildren().add(card);
+                            clearAll(ladangA);
+                            clearAll(hand);
+                            loadAll(ladangPlayer2,ladangA);
+                            loadAll(handPlayer2, hand);
+
+                        }
 
                     }
                 }
-
             }
             //event.setDropCompleted(success);
             System.out.println("Drag Dropped: " + pane.getId());
@@ -351,57 +371,42 @@ public class HelloController {
     }
 
     protected void nextTurn(){
-        if (currTurn < 20){
-
-            if (currPlayer1){
-                if(currTurn <2){
+        if (game.getTurn() < 20){
+            game.next();
+            if (game.getTurn() % 2 == 1 ){
+                if(game.getTurn()<2){
                     fillHandRandom();
                 }
                 if (!onLadangku){
-//                    saveAll(handPlayer1, hand);
-//                    saveAll(ladangPlayer2, ladangA);
-                    clearAll(hand);
-                    clearAll(ladangA);
-                    loadAll(handPlayer2, hand);
-                    loadAll(ladangPlayer1, ladangA);
+                    showLadangLawan();
                 }
                 else {
-//                    saveAll(handPlayer1, hand);
-//                    saveAll(ladangPlayer1, ladangA);
-                    clearAll(hand);
-                    clearAll(ladangA);
-                    loadAll(handPlayer2, hand);
-                    loadAll(ladangPlayer2, ladangA);
+                    showLadangku();
                 }
             }
             else{
 
                 if (!onLadangku){
-//                    saveAll(handPlayer2, hand);
-//                    saveAll(ladangPlayer1, ladangA);
-                    clearAll(hand);
-                    clearAll(ladangA);
-                    loadAll(handPlayer1, hand);
-                    loadAll(ladangPlayer2, ladangA);
+                    showLadangLawan();
                 }
 
                 else {
-//                    saveAll(handPlayer2, hand);
-//                    saveAll(ladangPlayer2, ladangA);
-                    clearAll(hand);
-                    clearAll(ladangA);
-                    loadAll(handPlayer1, hand);
-                    loadAll(ladangPlayer1, ladangA);
+                    showLadangku();
                 }
             }
 
-            currPlayer1 = !currPlayer1;
-            game.setTurn(game.getTurn()+1);
-            currTurn++;
             clockCounter.setText(game.getTurn()+"/"+"20");
             player1Gold.setText("Player 1:"+String.valueOf(game.getPlayer1().getUang()));
             player2Gold.setText("Player 2:"+String.valueOf(game.getPlayer2().getUang()));
         }
+        else{
+            if(game.cekMenang() == 1){
+                System.out.println("Anies menang");
+            }else{
+                System.out.println("owo menang");
+            }
+        }
+
     }
 
     protected boolean isValid(){
@@ -435,31 +440,43 @@ public class HelloController {
     }
 
     protected void showLadangku(){
-        if (!currPlayer1){
-
+        if (game.getTurn()%2 ==1){
+            renderLadang(ladangPlayer1,game.getPlayer1().ladang);
+            renderHand(handPlayer1,game.getPlayer1().getActiveDeck());
             clearAll(ladangA);
-            loadAll(ladangPlayer2,ladangA);
+            clearAll(hand);
+            loadAll(ladangPlayer1,ladangA);
+            loadAll(handPlayer1,hand);
         }
         else{
-
+            renderLadang(ladangPlayer2,game.getPlayer2().ladang);
+            renderHand(handPlayer2,game.getPlayer2().getActiveDeck());
             clearAll(ladangA);
-            loadAll(ladangPlayer1,ladangA);
+            clearAll(hand);
+            loadAll(ladangPlayer2,ladangA);
+            loadAll(handPlayer2,hand);
         }
-        onLadangku=true;
+
     }
 
     protected void showLadangLawan(){
-        if (currPlayer1){
-
+        if (game.getTurn()%2 ==1){
+            renderLadang(ladangPlayer2,game.getPlayer2().ladang);
+            renderHand(handPlayer1,game.getPlayer1().getActiveDeck());
             clearAll(ladangA);
+            clearAll(hand);
             loadAll(ladangPlayer2,ladangA);
+            loadAll(handPlayer1,hand);
         }
         else{
-
+            renderLadang(ladangPlayer1,game.getPlayer1().ladang);
+            renderHand(handPlayer2,game.getPlayer2().getActiveDeck());
             clearAll(ladangA);
+            clearAll(hand);
             loadAll(ladangPlayer1,ladangA);
+            loadAll(handPlayer2,hand);
         }
-        onLadangku=false;
+
     }
 
     @FXML

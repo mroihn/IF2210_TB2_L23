@@ -45,6 +45,30 @@ public class GameManager {
     this.toko = t;
   }
 
+  public Integer cekMenang(){
+    if(p1.getUang()>p2.getUang()){
+      return 1;
+    }else{
+      return 2;
+    }
+  }
+  public void next() {
+    for (Harvestable h : p1.ladang) {
+      if (h instanceof Tanaman) {
+        Tanaman t = (Tanaman) h;
+        t.addweight(1);
+      }
+    }
+    for (Harvestable h : p2.ladang) {
+      if (h instanceof Tanaman) {
+        Tanaman t = (Tanaman) h;
+        t.addweight(1);
+      }
+    }
+    turnCount++;
+  }
+
+
   public void SeranganBeruang(){
     state = new SeranganBeruang();
     state.handle(this, turnCount);

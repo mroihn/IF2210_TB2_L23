@@ -71,6 +71,19 @@ public class Player {
             ladang[posLadang] = null;
         }
     }
+    public void moveLadangToLadang(int posAwal,int posAkhir){
+        if(ladang[posAkhir]==null && ladang[posAwal]!=null){
+            ladang[posAkhir] = ladang[posAwal];
+            ladang[posAwal] = null;
+        }
+    }
+
+    public void moveDeckToDeck(int posAwal,int posAkhir){
+        if(activeDeck[posAkhir]==null && activeDeck[posAwal]!=null){
+            activeDeck[posAkhir] = activeDeck[posAwal];
+            activeDeck[posAwal] = null;
+        }
+    }
 
     public void moveDeckToLadang(int posDeck,int posLadang){
         if(activeDeck[posDeck]!=null && ladang[posLadang]==null){

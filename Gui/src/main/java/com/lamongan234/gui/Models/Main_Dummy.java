@@ -3,10 +3,10 @@ package com.lamongan234.gui.Models;
 public class Main_Dummy {
     public static void main(String[] args) {
         //inisialisasi
-        Hewan hiuDarat = new HiuDarat();
-        Tanaman jagung = new BijiJagung();
-        Product daging = new DagingDomba();
-        Product tempe = new Tempe();
+        // Hewan hiuDarat = new HiuDarat();
+        // Tanaman jagung = new BijiJagung();
+        // Product daging = new DagingDomba();
+        // Product tempe = new Tempe();
 
 
         // //SECTION UNTUK SEEDING GAMEMANAGER
@@ -23,12 +23,15 @@ public class Main_Dummy {
         //save state dan lihat pada direktori Gui\src\main\java\com\lamongan234\gui\Models\tes\
         //apakah ada perubahan uang pada player1.txt
         System.out.println("isi ladang 0: "+ gameManager.getPlayer1().getLadang(0));
-        System.out.println("isi ladang 1: "+ gameManager.getPlayer1().getLadang(1));
-        gameManager.getPlayer1().moveLadangToLadang(0, 1);
+        System.out.println("isi ladang 1: "+ gameManager.getPlayer1().getLadang(3));
+        gameManager.getPlayer1().moveLadangToLadang(0, 3);
         System.out.println("isi ladang 0: "+ gameManager.getPlayer1().getLadang(0));
-        System.out.println("isi ladang 1: "+ gameManager.getPlayer1().getLadang(1));
+        System.out.println("isi ladang 1: "+ gameManager.getPlayer1().getLadang(3));
         txtSaveAndLoad.saveState(gameManager, "tes");
-
+        // System.out.println("pemisah");
+        // txtSaveAndLoad.loadState(gameManager, "tes");
+        // System.out.println("isi ladang 0: "+ gameManager.getPlayer1().getLadang(0));
+        // System.out.println("isi ladang 1: "+ gameManager.getPlayer1().getLadang(3));
 
         // //SECTION untuk mencoba save and load plugin, dalam hal ini test buat txt
         // GameManager gameManager2 = new GameManager();
@@ -80,56 +83,56 @@ public class Main_Dummy {
         // jsonPluginSaveAndLoad.saveState(gameManager, "tes");
 
         //SECTION UNTUK MANUAL MENGGUNAKAN PLAYER, tidak ada hubungan dengan GameManager di atas
-        Player p = new Player();
-        p.generateRandomCards(40);
-        p.printDeck();
-        System.out.println("hello");
-        //Test Using Items
-        Item accelerate = new Accelerate();
-        Item delay = new Delay();
-        jagung.panenKartu();
-        System.out.println("");
-        System.out.println("berat awal hiu darat: " + hiuDarat.getUmurOrBerat());
-        accelerate.Efek(hiuDarat);
-        accelerate.Efek(hiuDarat);
-        accelerate.Efek(hiuDarat);
-        System.out.println("Accelerating!!!!");
-        hiuDarat.Display();
-        System.out.println(hiuDarat.getUmurOrBerat());
-        delay.Efek(hiuDarat);
-        delay.Efek(hiuDarat);
-        delay.Efek(hiuDarat);
-        System.out.println("Delaying!!!!");
-        hiuDarat.Display();
-        System.out.println(hiuDarat.getUmurOrBerat());
-        hiuDarat.panenKartu();
-        hiuDarat.makan(daging);
-        System.out.println(hiuDarat.getUmurOrBerat());
-        hiuDarat.panenKartu();
-        hiuDarat.makan(tempe);
+        // Player p = new Player();
+        // p.generateRandomCards(40);
+        // p.printDeck();
+        // System.out.println("hello");
+        // //Test Using Items
+        // Item accelerate = new Accelerate();
+        // Item delay = new Delay();
+        // jagung.panenKartu();
+        // System.out.println("");
+        // System.out.println("berat awal hiu darat: " + hiuDarat.getUmurOrBerat());
+        // accelerate.Efek(hiuDarat);
+        // accelerate.Efek(hiuDarat);
+        // accelerate.Efek(hiuDarat);
+        // System.out.println("Accelerating!!!!");
+        // hiuDarat.Display();
+        // System.out.println(hiuDarat.getUmurOrBerat());
+        // delay.Efek(hiuDarat);
+        // delay.Efek(hiuDarat);
+        // delay.Efek(hiuDarat);
+        // System.out.println("Delaying!!!!");
+        // hiuDarat.Display();
+        // System.out.println(hiuDarat.getUmurOrBerat());
+        // hiuDarat.panenKartu();
+        // hiuDarat.makan(daging);
+        // System.out.println(hiuDarat.getUmurOrBerat());
+        // hiuDarat.panenKartu();
+        // hiuDarat.makan(tempe);
 
-        p.printDeck();
-        p.printActiveDeck();
+        // p.printDeck();
+        // p.printActiveDeck();
 
-        Toko t = new Toko();
-        System.out.println("Uang: " + p.getUang());
-        t.beli(tempe, p);
-        System.out.println("Uang: " + p.getUang());
-        t.displayToko();
+        // Toko t = new Toko();
+        // System.out.println("Uang: " + p.getUang());
+        // t.beli(tempe, p);
+        // System.out.println("Uang: " + p.getUang());
+        // t.displayToko();
 
 
-        //tes shuffle
+        // //tes shuffle
 
-        System.out.println("===========================================");
+        // System.out.println("===========================================");
 
-        p.startShuffle();
+        // p.startShuffle();
 
-        p.setLadang(jagung, 0);
-        p.printLadang();
-        System.out.println("Uang: " + p.getUang());
-        p.addUang(100);
-        System.out.println("Uang: " + p.getUang());
-        p.addToActiveDeck(delay);
+        // p.setLadang(jagung, 0);
+        // p.printLadang();
+        // System.out.println("Uang: " + p.getUang());
+        // p.addUang(100);
+        // System.out.println("Uang: " + p.getUang());
+        // p.addToActiveDeck(delay);
 
 
 

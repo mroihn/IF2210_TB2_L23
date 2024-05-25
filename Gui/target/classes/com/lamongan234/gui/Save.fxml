@@ -19,6 +19,6 @@
       <ChoiceBox fx:id="pilihFormat" layoutX="152.0" layoutY="93.0" prefHeight="26.0" prefWidth="452.0" />
       <Label alignment="CENTER" layoutX="70.0" layoutY="158.0" prefHeight="20.0" prefWidth="74.0" text="Folder" />
       <TextField fx:id="folder" layoutX="149.0" layoutY="155.0" prefHeight="26.0" prefWidth="452.0" />
-      <Button fx:id="submit" layoutX="33.0" layoutY="239.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="568.0" text="Load" />
+      <Button fx:id="submit" layoutX="33.0" layoutY="239.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="568.0" text="Save" />
    </children>
 </AnchorPane>

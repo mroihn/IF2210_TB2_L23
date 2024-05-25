@@ -26,6 +26,7 @@ public class Player {
         selectedKartu = new ArrayList<>();
         generateRedArea();
         uang = 0;
+        generateRandomCards(40);
     }
 
     public int getUang(){
@@ -95,10 +96,17 @@ public class Player {
             }
         }else if(activeDeck[posDeck] != null && ladang[posLadang] != null){
             if(activeDeck[posDeck] instanceof Item){
-                System.out.println("Using Item");
                 Item item = (Item) activeDeck[posDeck];
-                item.Efek(ladang[posLadang]);
-                activeDeck[posDeck] = null;
+                if(item instanceof  Destroy){
+                    ladang[posLadang]= null;
+                    activeDeck[posDeck] = null;
+                }else {
+                    System.out.println("Using Item");
+                    item.Efek(ladang[posLadang]);
+                    activeDeck[posDeck] = null;
+                }
+
+
             }
             if(activeDeck[posDeck] instanceof Product){
                 System.out.println("Mamam");

@@ -71,14 +71,6 @@ public class  ShufflePopupController {
     }
 
     @FXML
-    private void addElementToMain() {
-        if (mainController != null) {
-            //mainController.addToCurHand();
-            closePopup();
-        }
-    }
-
-    @FXML
     private void closePopup() {
         Stage stage = (Stage) b11Accept.getScene().getWindow();
         Card[] cards = new Card[4];

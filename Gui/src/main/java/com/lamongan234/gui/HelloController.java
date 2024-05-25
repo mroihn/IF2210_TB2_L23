@@ -202,6 +202,12 @@ public class HelloController {
         });
 
         b3Toko.getStyleClass().add("button-style");
+        b3Toko.setOnAction(event -> {
+            System.out.println("button toko");
+            openToko();
+
+        });
+
         b4SaveState.getStyleClass().add("button-style");
         b4SaveState.setOnAction(event -> {
             openSave();
@@ -620,6 +626,37 @@ public class HelloController {
             //scene.setFill(null);
             detailStage.setScene(scene);
             detailStage.showAndWait();
+
+            anchor.getChildren().remove(overlay);
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void openToko(){
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TokoPopup.fxml"));
+        try {
+
+            Rectangle overlay = new Rectangle(anchor.getWidth(), anchor.getHeight());
+            overlay.setFill(Color.rgb(0, 0, 0, 0.5));
+            anchor.getChildren().add(overlay);
+
+            Parent root = fxmlLoader.load();
+
+            TokoController tokoController = fxmlLoader.getController();
+            tokoController.initialize(game);
+            tokoController.setMainController(this);
+            tokoController.setOverlay(overlay);
+
+            Stage popupStage = new Stage();
+            popupStage.initModality(Modality.APPLICATION_MODAL);
+            popupStage.initStyle(StageStyle.UNDECORATED);
+
+            Scene scene = new Scene(root);
+            //scene.setFill(null);
+            popupStage.setScene(scene);
+            popupStage.showAndWait();
 
             anchor.getChildren().remove(overlay);
 

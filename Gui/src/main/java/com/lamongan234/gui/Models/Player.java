@@ -431,7 +431,7 @@ public class Player {
         Random random = new Random();
 
         for (int i = 0; i < numberOfCards; i++) {
-            int cardType = random.nextInt(24); // Assuming 3 types of cards
+            int cardType = random.nextInt(23); // Assuming 3 types of cards
             switch (cardType) {
                 case 0:
                     deck.add(new HiuDarat());
@@ -449,7 +449,7 @@ public class Player {
                     deck.add(new Ayam());
                     break;
                 case 5:
-                    deck.add(new Beruang());
+                    deck.add(new InstantHarvest());
                     break;
                 case 6:
                     deck.add(new BijiJagung());
@@ -501,9 +501,6 @@ public class Player {
                     break;
                 case 22:
                     deck.add(new Stroberi());
-                    break;
-                case 23:
-                    deck.add(new InstantHarvest());
                     break;
                 default:
                     throw new IllegalStateException("Unexpected value: " + cardType);

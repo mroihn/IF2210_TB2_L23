@@ -50,8 +50,10 @@ public class TxtSaveAndLoad implements SaveAndLoad {
       bw.write(String.valueOf(g.getToko().getUniqueItemCnt()));
       bw.newLine();
       for (Map.Entry<String, Integer> entry : g.getToko().getListQuantity().entrySet()) {
-        bw.write(entry.getKey().toUpperCase().replace(" ", "_") + " " + entry.getValue());
-        bw.newLine();
+        if (entry.getValue() > 0) {
+          bw.write(entry.getKey().toUpperCase().replace("-", "_") + " " + entry.getValue());
+          bw.newLine();
+        }
       }
     } catch (IOException e) {
       e.printStackTrace();

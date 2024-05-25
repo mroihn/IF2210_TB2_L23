@@ -216,6 +216,9 @@ public class HelloController {
                 System.out.println(String.valueOf(h[i].getUmurOrBerat()));
                 ladang[i] = new Card(h[i]);
             }
+            else{
+                ladang[i] = null;
+            }
         }
     }
 
@@ -223,6 +226,9 @@ public class HelloController {
         for(int i =0; i<6; i++){
             if(h[i]!=null){
                 hand[i] = new Card(h[i]);
+            }
+            else{
+                hand[i] = null;
             }
         }
     }
@@ -236,12 +242,13 @@ public class HelloController {
         });
     }
 
+    int posAwal = 0;
     protected void makeDraggable(Pane pane) {
         pane.setOnDragDetected(
                 event -> {
                     if (!pane.getChildren().isEmpty()) {
                         System.out.println("Start Drag: " + pane.getId());
-
+                        posAwal = Integer.parseInt(pane.getId().substring(1));
                         Dragboard db = pane.startDragAndDrop(TransferMode.MOVE);
                         ClipboardContent content = new ClipboardContent();
 
@@ -273,6 +280,7 @@ public class HelloController {
             Dragboard db = event.getDragboard();
             if (db.hasString()) {
                 String id = db.getString();
+                ;
                 Pane sourcePane = new Pane();
                 Pane card = new Pane();
                 int idx = Integer.parseInt(id.substring(1));
@@ -288,20 +296,44 @@ public class HelloController {
                     if (innerNode instanceof Pane) {
                         Card kartu = (Card) innerNode;
                         kartu.getKartu();
-                        game.getCurrPlayer().setLadang(kartu.getKartu(),Integer.parseInt(pane.getId().substring(1)));
-                        if(game.getTurn() % 2 != 0){
-                            renderLadang(ladangPlayer1, game.getCurrPlayer().ladang);
-                            loadAll(ladangPlayer1,ladangA);
-                        }else {
-                            renderLadang(ladangPlayer2, game.getCurrPlayer().ladang);
-                            loadAll(ladangPlayer2,ladangA);
+                        String kode = pane.getId().substring(0,1);
+                        System.out.println(String.valueOf(posAwal));
+                        if(kode.equals("l")){
+                            System.out.println(posAwal + " " + Integer.parseInt(pane.getId().substring(1)));
+                            game.getCurrPlayer().moveDeckToLadang(posAwal,Integer.parseInt(pane.getId().substring(1)));
+                            if(game.getTurn() % 2 != 0){
+
+                                renderLadang(ladangPlayer1, game.getCurrPlayer().ladang);
+                                game.getCurrPlayer().printLadang();
+                                game.getCurrPlayer().printActiveDeck();
+                                renderHand(handPlayer1, game.getCurrPlayer().getActiveDeck());
+                                sourcePane.getChildren().clear();
+                                pane.getChildren().add(card);
+                                clearAll(ladangA);
+                                clearAll(hand);
+                                loadAll(ladangPlayer1,ladangA);
+                                loadAll(handPlayer1, hand);
+
+                            }else {
+//                                clearAll(ladangA);
+//                                clearAll(hand);
+                                renderLadang(ladangPlayer2, game.getCurrPlayer().ladang);
+                                renderHand(handPlayer2, game.getCurrPlayer().getActiveDeck());
+                                sourcePane.getChildren().clear();
+                                pane.getChildren().add(card);
+                                clearAll(ladangA);
+                                clearAll(hand);
+                                loadAll(ladangPlayer2,ladangA);
+                                loadAll(handPlayer2, hand);
+
+                            }
                         }
+
 
 
                     }
                 }
-                sourcePane.getChildren().clear();
-                pane.getChildren().add(card);
+
             }
             //event.setDropCompleted(success);
             System.out.println("Drag Dropped: " + pane.getId());
@@ -404,12 +436,12 @@ public class HelloController {
 
     protected void showLadangku(){
         if (!currPlayer1){
-            saveAll(ladangPlayer1,ladangA);
+
             clearAll(ladangA);
             loadAll(ladangPlayer2,ladangA);
         }
         else{
-            saveAll(ladangPlayer2,ladangA);
+
             clearAll(ladangA);
             loadAll(ladangPlayer1,ladangA);
         }
@@ -418,12 +450,12 @@ public class HelloController {
 
     protected void showLadangLawan(){
         if (currPlayer1){
-            saveAll(ladangPlayer1,ladangA);
+
             clearAll(ladangA);
             loadAll(ladangPlayer2,ladangA);
         }
         else{
-            saveAll(ladangPlayer2,ladangA);
+
             clearAll(ladangA);
             loadAll(ladangPlayer1,ladangA);
         }

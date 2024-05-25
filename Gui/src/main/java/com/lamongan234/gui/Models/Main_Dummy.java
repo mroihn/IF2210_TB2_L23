@@ -70,7 +70,7 @@ public class Main_Dummy {
 
         p.startShuffle();
 
-        p.setLadang(jagung, 0, 0);
+        p.setLadang(jagung, 0);
         p.printLadang();
         System.out.println("Uang: " + p.getUang());
         p.addUang(100);

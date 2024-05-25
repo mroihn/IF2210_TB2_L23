@@ -65,6 +65,32 @@ public class Player {
         return count;
     }
 
+    public void moveLadangToDeck(int posLadang,int posDeck){
+        if(activeDeck[posDeck]==null && ladang[posLadang]!=null){
+            activeDeck[posDeck] = ladang[posLadang];
+            ladang[posLadang] = null;
+        }
+    }
+
+    public void moveDeckToLadang(int posDeck,int posLadang){
+        if(activeDeck[posDeck]!=null && ladang[posLadang]==null){
+            if(activeDeck[posDeck] instanceof Harvestable){
+                System.out.println("Planting");
+                Harvestable hewan_or_tanaman = (Harvestable) activeDeck[posDeck];
+                ladang[posLadang] = hewan_or_tanaman;
+                activeDeck[posDeck] = null;
+            }
+        }else if(activeDeck[posDeck] != null && ladang[posLadang] != null){
+            if(activeDeck[posDeck] instanceof Item){
+                System.out.println("Using Item");
+                Item item = (Item) activeDeck[posDeck];
+                item.Efek(ladang[posDeck]);
+                activeDeck[posDeck] = null;
+            }
+
+        }
+    }
+
     public void setLadang(Kartu kartu, int pos){
         if(kartu instanceof Harvestable){
             Harvestable h = (Harvestable) kartu;

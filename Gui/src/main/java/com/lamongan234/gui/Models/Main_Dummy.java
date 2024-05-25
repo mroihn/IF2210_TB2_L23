@@ -10,18 +10,24 @@ public class Main_Dummy {
 
 
         // //SECTION UNTUK SEEDING GAMEMANAGER
-        // TxtSaveAndLoad txtSaveAndLoad = new TxtSaveAndLoad();
-        // GameManager gameManager = new GameManager();
-        // txtSaveAndLoad.loadState(gameManager, "tes");
-        // //cek isi
+        TxtSaveAndLoad txtSaveAndLoad = new TxtSaveAndLoad();
+        GameManager gameManager = new GameManager();
+        txtSaveAndLoad.loadState(gameManager, "tes");
+        //cek isi
+        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         // gameManager.getToko().displayToko();
-        // gameManager.getPlayer1().printDetails();
-        // gameManager.getPlayer2().printDetails();
-        // //lakukan perubahan
+        gameManager.getPlayer1().printDetails();
+        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        //lakukan perubahan
         // gameManager.getPlayer1().setUang(1010);
-        // //save state dan lihat pada direktori Gui\src\main\java\com\lamongan234\gui\Models\tes\
-        // //apakah ada perubahan uang pada player1.txt
-        // txtSaveAndLoad.saveState(gameManager, "tes");
+        //save state dan lihat pada direktori Gui\src\main\java\com\lamongan234\gui\Models\tes\
+        //apakah ada perubahan uang pada player1.txt
+        System.out.println("isi ladang 0: "+ gameManager.getPlayer1().getLadang(0));
+        System.out.println("isi ladang 1: "+ gameManager.getPlayer1().getLadang(1));
+        gameManager.getPlayer1().moveLadangToLadang(0, 1);
+        System.out.println("isi ladang 0: "+ gameManager.getPlayer1().getLadang(0));
+        System.out.println("isi ladang 1: "+ gameManager.getPlayer1().getLadang(1));
+        txtSaveAndLoad.saveState(gameManager, "tes");
 
 
         // //SECTION untuk mencoba save and load plugin, dalam hal ini test buat txt
@@ -65,13 +71,13 @@ public class Main_Dummy {
         // jsonSaveAndLoad.saveState(gameManager, "tes");
 
         //SECTION test JsonSaveAndLoad.jar plugin
-        GameManager gameManager = new GameManager();
-        String jarPath = "JsonSaveAndLoad.jar";
-        SaveAndLoad jsonPluginSaveAndLoad = gameManager.SaveAndLoadPlugin(jarPath, "com.lamongan234.gui.Models.JsonSaveAndLoad");
-        jsonPluginSaveAndLoad.loadState(gameManager, "tes");
-        System.out.println("Uang Player 1 == " + gameManager.getPlayer1().getUang());
-        gameManager.getPlayer1().setUang(252);
-        jsonPluginSaveAndLoad.saveState(gameManager, "tes");
+        // GameManager gameManager = new GameManager();
+        // String jarPath = "JsonSaveAndLoad.jar";
+        // SaveAndLoad jsonPluginSaveAndLoad = gameManager.SaveAndLoadPlugin(jarPath, "com.lamongan234.gui.Models.JsonSaveAndLoad");
+        // jsonPluginSaveAndLoad.loadState(gameManager, "tes");
+        // System.out.println("Uang Player 1 == " + gameManager.getPlayer1().getUang());
+        // gameManager.getPlayer1().setUang(252);
+        // jsonPluginSaveAndLoad.saveState(gameManager, "tes");
 
         //SECTION UNTUK MANUAL MENGGUNAKAN PLAYER, tidak ada hubungan dengan GameManager di atas
         Player p = new Player();

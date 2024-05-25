@@ -90,6 +90,6 @@ public class Main_Dummy {
 
 
         //tes serangan beruang
-        gameManager.SeranganBeruang();
+        // gameManager.SeranganBeruang();
     }
 }

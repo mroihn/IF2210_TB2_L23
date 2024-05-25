@@ -28,9 +28,11 @@ public class Main_Dummy {
         GameManager gameManager2 = new GameManager();
         String jarPath = "TxtSaveAndLoad.jar";
         SaveAndLoad txtPluginSaveAndLoad = gameManager2.SaveAndLoadPlugin(jarPath, "com.lamongan234.gui.Models.TxtSaveAndLoad");
-        txtPluginSaveAndLoad.loadState(gameManager2, "tes2");
+        txtPluginSaveAndLoad.loadState(gameManager2, "tes");
+        //cek isi player2.txt
+        gameManager2.getPlayer2().printDetails();
         gameManager2.getPlayer1().setUang(2024);
-        txtPluginSaveAndLoad.saveState(gameManager2, "tes2");
+        txtPluginSaveAndLoad.saveState(gameManager2, "tes");
 
 
 

@@ -244,7 +244,7 @@ public class XmlSaveAndLoad implements SaveAndLoad {
                     player.setLadang(hewan, pos);
                 } else if (card instanceof Tanaman) {
                     Tanaman tanaman = (Tanaman) card;
-                    tanaman.setUmur(umurOrBerat);
+                    tanaman.setBeratOrUmur(umurOrBerat);
                     for (int j = 0; j < appliedItems.getLength(); j++) {
                         String appliedItemName = appliedItems.item(j).getTextContent();
                         Item item = (Item) DictKartu.get(appliedItemName);

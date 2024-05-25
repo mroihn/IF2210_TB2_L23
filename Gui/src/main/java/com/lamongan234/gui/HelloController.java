@@ -533,7 +533,7 @@ public class HelloController {
     private void openDetail(Card card,int pos){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("detailPopup.fxml"));
         try {
-
+            System.out.println("pos sekarang : "+pos);
             Rectangle overlay = new Rectangle(anchor.getWidth(), anchor.getHeight());
             overlay.setFill(Color.rgb(0, 0, 0, 0.5));
             anchor.getChildren().add(overlay);
@@ -541,11 +541,10 @@ public class HelloController {
             Parent root = fxmlLoader.load();
 
             DetailPopupController popupController = fxmlLoader.getController();
-            popupController.initialize(game);
+            popupController.initialize(game,pos);
             popupController.setMainController(this);
             popupController.setOverlay(overlay);
             popupController.setCard(card);
-            popupController.setPos(pos);
 
             Stage detailStage = new Stage();
             detailStage.initModality(Modality.APPLICATION_MODAL);
